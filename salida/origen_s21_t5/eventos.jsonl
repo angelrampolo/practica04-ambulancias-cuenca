@@ -1,7 +1,7 @@
 {"t": 0, "evento": "HOSPITAL", "detalle": "VCM publico -> 208782596#1 | Avenida Del Paraíso | 102.2 m | stock 1"}
 {"t": 0, "evento": "HOSPITAL", "detalle": "IESS publico -> 357285817#5 | Circunvalación Sur | 117.8 m | stock 2"}
 {"t": 0, "evento": "HOSPITAL", "detalle": "MILITAR publico -> 334948974#1 | Avenida 12 de Abril | 26.7 m | stock 3"}
-{"t": 0, "evento": "HOSPITAL", "detalle": "MUNI_PATAMARCA publico -> 378364650#0 | Via Checa Chiquintad | 158.1 m | stock 2"}
+{"t": 0, "evento": "HOSPITAL", "detalle": "MUNI_PATAMARCA publico -> 378364650#0 | Via Checa Chiquintad | 135.3 m | stock 2"}
 {"t": 0, "evento": "HOSPITAL", "detalle": "MUNI_VALLE publico -> 171302162#22 |  | 54.8 m | stock 3"}
 {"t": 0, "evento": "HOSPITAL", "detalle": "MONTE_SINAI privado -> 269103111#3 | Avenida Fray Vicente Solano | 29.0 m | stock 1"}
 {"t": 0, "evento": "HOSPITAL", "detalle": "DEL_RIO privado -> 40972441#0 | Avenida de las Américas | 88.7 m | stock 1"}
@@ -106,22 +106,22 @@
 {"t": 9686.0, "evento": "CANDIDATO", "detalle": "ACC13 MUNI_PATAMARCA rango=1 ETA=326.4 stock=2 despacho"}
 {"t": 9686.0, "evento": "DESPACHO", "detalle": "ACC13 <- MUNI_PATAMARCA U07 | espera 0 s | 20 aristas, 6632 m, ETA 326 s"}
 {"t": 9751.0, "evento": "RETORNO", "detalle": "ACC12 amb_U12_ACC12 -> MONTE_SINAI"}
-{"t": 10054.0, "evento": "DISPONIBLE", "detalle": "U12 en MONTE_SINAI | ACC12 misión 638 s | stock=1"}
+{"t": 10047.0, "evento": "DISPONIBLE", "detalle": "U12 en MONTE_SINAI | ACC12 misión 631 s | stock=1"}
 {"t": 10091.0, "evento": "LLEGADA", "detalle": "ACC13 amb_U07_ACC13 | desplazamiento 405 s | desde accidente 405 s | carretera_50m"}
 {"t": 10211.0, "evento": "RETORNO", "detalle": "ACC13 amb_U07_ACC13 -> MUNI_PATAMARCA"}
 {"t": 10465.0, "evento": "IMPRUDENTE", "detalle": "imprudente_14_14 persigue a bus275; plan 14"}
 {"t": 10472.0, "evento": "ACCIDENTE", "detalle": "ACC14 collision bus275 x imprudente_14_14 en 48552542#1", "accidente": "ACC14"}
-{"t": 10472.0, "evento": "CANDIDATO", "detalle": "ACC14 VCM rango=1 ETA=313.9 stock=1 despacho"}
-{"t": 10472.0, "evento": "DESPACHO", "detalle": "ACC14 <- VCM U01 | espera 0 s | 38 aristas, 3529 m, ETA 314 s"}
-{"t": 10551.0, "evento": "DISPONIBLE", "detalle": "U07 en MUNI_PATAMARCA | ACC13 misión 865 s | stock=2"}
+{"t": 10472.0, "evento": "CANDIDATO", "detalle": "ACC14 VCM rango=1 ETA=312.2 stock=1 despacho"}
+{"t": 10472.0, "evento": "DESPACHO", "detalle": "ACC14 <- VCM U01 | espera 0 s | 38 aristas, 3529 m, ETA 312 s"}
 {"t": 10552.0, "evento": "IMPRUDENTE", "detalle": "imprudente_15_15 persigue a bus284; plan 15"}
 {"t": 10556.0, "evento": "ACCIDENTE", "detalle": "ACC15 collision bus284 x imprudente_15_15 en 79793741#3", "accidente": "ACC15"}
-{"t": 10556.0, "evento": "CANDIDATO", "detalle": "ACC15 VCM rango=1 ETA=165.7 stock=0 sin_stock"}
-{"t": 10556.0, "evento": "CANDIDATO", "detalle": "ACC15 IESS rango=2 ETA=276.9 stock=2 despacho"}
+{"t": 10556.0, "evento": "CANDIDATO", "detalle": "ACC15 VCM rango=1 ETA=165.9 stock=0 sin_stock"}
+{"t": 10556.0, "evento": "CANDIDATO", "detalle": "ACC15 IESS rango=2 ETA=276.8 stock=2 despacho"}
 {"t": 10556.0, "evento": "DESPACHO", "detalle": "ACC15 <- IESS U03 | espera 0 s | 30 aristas, 3996 m, ETA 277 s"}
-{"t": 10764.0, "evento": "LLEGADA", "detalle": "ACC14 amb_U01_ACC14 | desplazamiento 292 s | desde accidente 292 s | carretera_50m"}
-{"t": 10805.0, "evento": "LLEGADA", "detalle": "ACC15 amb_U03_ACC15 | desplazamiento 249 s | desde accidente 249 s | carretera_50m"}
-{"t": 10884.0, "evento": "RETORNO", "detalle": "ACC14 amb_U01_ACC14 -> VCM"}
-{"t": 10925.0, "evento": "RETORNO", "detalle": "ACC15 amb_U03_ACC15 -> IESS"}
-{"t": 11295.0, "evento": "DISPONIBLE", "detalle": "U01 en VCM | ACC14 misión 823 s | stock=1"}
-{"t": 11404.0, "evento": "DISPONIBLE", "detalle": "U03 en IESS | ACC15 misión 848 s | stock=2"}
+{"t": 10584.0, "evento": "DISPONIBLE", "detalle": "U07 en MUNI_PATAMARCA | ACC13 misión 898 s | stock=2"}
+{"t": 10809.0, "evento": "LLEGADA", "detalle": "ACC14 amb_U01_ACC14 | desplazamiento 337 s | desde accidente 337 s | carretera_50m"}
+{"t": 10810.0, "evento": "LLEGADA", "detalle": "ACC15 amb_U03_ACC15 | desplazamiento 254 s | desde accidente 254 s | carretera_50m"}
+{"t": 10929.0, "evento": "RETORNO", "detalle": "ACC14 amb_U01_ACC14 -> VCM"}
+{"t": 10930.0, "evento": "RETORNO", "detalle": "ACC15 amb_U03_ACC15 -> IESS"}
+{"t": 11394.0, "evento": "DISPONIBLE", "detalle": "U01 en VCM | ACC14 misión 922 s | stock=1"}
+{"t": 11399.0, "evento": "DISPONIBLE", "detalle": "U03 en IESS | ACC15 misión 843 s | stock=2"}

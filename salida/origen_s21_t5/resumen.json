@@ -8,14 +8,14 @@
   "censurados": 0,
   "respuesta_total": {
     "n": 15,
-    "media": 215.93333333333334,
+    "media": 219.26666666666668,
     "mediana": 202.0,
     "p90": 382.59999999999997,
     "maximo": 428.0
   },
   "desplazamiento": {
     "n": 15,
-    "media": 215.93333333333334,
+    "media": 219.26666666666668,
     "mediana": 202.0,
     "p90": 382.59999999999997,
     "maximo": 428.0
@@ -29,9 +29,9 @@
   },
   "mision": {
     "n": 15,
-    "media": 651.7333333333333,
+    "media": 659.7333333333333,
     "mediana": 702.0,
-    "p90": 884.2,
+    "p90": 912.4,
     "maximo": 948.0
   },
   "migracion_pct": 0.0,
@@ -43,5 +43,5 @@
   "vehiculos_fondo_retirados": 12,
   "running_final": 0,
   "expected_final": 0,
-  "wall_seconds": 47.686750100000154
+  "wall_seconds": 71.15064620200064
 }

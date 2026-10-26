@@ -119,8 +119,8 @@
       },
       {
         "prueba": "Distancia de hospitales <150 m",
-        "ok": false,
-        "detalle": "Máxima: 158.08 m",
+        "ok": true,
+        "detalle": "Máxima: 135.32 m",
         "nivel": "advertencia"
       },
       {
@@ -362,10 +362,16 @@
         "ok": true,
         "detalle": "",
         "nivel": "error"
+      },
+      {
+        "prueba": "Elección por ETA ACC16",
+        "ok": true,
+        "detalle": "",
+        "nivel": "error"
       }
     ],
     "errores": 0,
-    "advertencias": 1
+    "advertencias": 0
   },
   {
     "carpeta": "cercano_s21_t5",
@@ -408,8 +414,8 @@
       },
       {
         "prueba": "Distancia de hospitales <150 m",
-        "ok": false,
-        "detalle": "Máxima: 158.08 m",
+        "ok": true,
+        "detalle": "Máxima: 135.32 m",
         "nivel": "advertencia"
       },
       {
@@ -651,16 +657,10 @@
         "ok": true,
         "detalle": "",
         "nivel": "error"
-      },
-      {
-        "prueba": "Elección por ETA ACC16",
-        "ok": true,
-        "detalle": "",
-        "nivel": "error"
       }
     ],
     "errores": 0,
-    "advertencias": 2
+    "advertencias": 1
   },
   {
     "carpeta": "cercano_s42_t15",
@@ -703,8 +703,8 @@
       },
       {
         "prueba": "Distancia de hospitales <150 m",
-        "ok": false,
-        "detalle": "Máxima: 158.08 m",
+        "ok": true,
+        "detalle": "Máxima: 135.32 m",
         "nivel": "advertencia"
       },
       {
@@ -1126,16 +1126,10 @@
         "ok": true,
         "detalle": "",
         "nivel": "error"
-      },
-      {
-        "prueba": "Elección por ETA ACC46",
-        "ok": true,
-        "detalle": "",
-        "nivel": "error"
       }
     ],
     "errores": 0,
-    "advertencias": 1
+    "advertencias": 0
   },
   {
     "carpeta": "cercano_s84_t5",
@@ -1178,8 +1172,8 @@
       },
       {
         "prueba": "Distancia de hospitales <150 m",
-        "ok": false,
-        "detalle": "Máxima: 158.08 m",
+        "ok": true,
+        "detalle": "Máxima: 135.32 m",
         "nivel": "advertencia"
       },
       {
@@ -1421,10 +1415,16 @@
         "ok": true,
         "detalle": "",
         "nivel": "error"
+      },
+      {
+        "prueba": "Elección por ETA ACC16",
+        "ok": true,
+        "detalle": "",
+        "nivel": "error"
       }
     ],
     "errores": 0,
-    "advertencias": 1
+    "advertencias": 0
   },
   {
     "carpeta": "cercano_s8_t5",
@@ -1467,8 +1467,8 @@
       },
       {
         "prueba": "Distancia de hospitales <150 m",
-        "ok": false,
-        "detalle": "Máxima: 158.08 m",
+        "ok": true,
+        "detalle": "Máxima: 135.32 m",
         "nivel": "advertencia"
       },
       {
@@ -1713,7 +1713,7 @@
       }
     ],
     "errores": 0,
-    "advertencias": 1
+    "advertencias": 0
   },
   {
     "carpeta": "denegacion_total",
@@ -1756,8 +1756,8 @@
       },
       {
         "prueba": "Distancia de hospitales <150 m",
-        "ok": false,
-        "detalle": "Máxima: 158.08 m",
+        "ok": true,
+        "detalle": "Máxima: 135.32 m",
         "nivel": "advertencia"
       },
       {
@@ -1912,7 +1912,7 @@
       }
     ],
     "errores": 0,
-    "advertencias": 3
+    "advertencias": 2
   },
   {
     "carpeta": "origen_s123_t5",
@@ -1955,8 +1955,8 @@
       },
       {
         "prueba": "Distancia de hospitales <150 m",
-        "ok": false,
-        "detalle": "Máxima: 158.08 m",
+        "ok": true,
+        "detalle": "Máxima: 135.32 m",
         "nivel": "advertencia"
       },
       {
@@ -2207,7 +2207,7 @@
       }
     ],
     "errores": 0,
-    "advertencias": 1
+    "advertencias": 0
   },
   {
     "carpeta": "origen_s21_t5",
@@ -2250,8 +2250,8 @@
       },
       {
         "prueba": "Distancia de hospitales <150 m",
-        "ok": false,
-        "detalle": "Máxima: 158.08 m",
+        "ok": true,
+        "detalle": "Máxima: 135.32 m",
         "nivel": "advertencia"
       },
       {
@@ -2496,7 +2496,7 @@
       }
     ],
     "errores": 0,
-    "advertencias": 2
+    "advertencias": 1
   },
   {
     "carpeta": "origen_s42_t5",
@@ -2539,8 +2539,8 @@
       },
       {
         "prueba": "Distancia de hospitales <150 m",
-        "ok": false,
-        "detalle": "Máxima: 158.08 m",
+        "ok": true,
+        "detalle": "Máxima: 135.32 m",
         "nivel": "advertencia"
       },
       {
@@ -2785,7 +2785,7 @@
       }
     ],
     "errores": 0,
-    "advertencias": 1
+    "advertencias": 0
   },
   {
     "carpeta": "origen_s84_t5",
@@ -2828,8 +2828,8 @@
       },
       {
         "prueba": "Distancia de hospitales <150 m",
-        "ok": false,
-        "detalle": "Máxima: 158.08 m",
+        "ok": true,
+        "detalle": "Máxima: 135.32 m",
         "nivel": "advertencia"
       },
       {
@@ -3074,7 +3074,7 @@
       }
     ],
     "errores": 0,
-    "advertencias": 1
+    "advertencias": 0
   },
   {
     "carpeta": "origen_s8_t5",
@@ -3117,8 +3117,8 @@
       },
       {
         "prueba": "Distancia de hospitales <150 m",
-        "ok": false,
-        "detalle": "Máxima: 158.08 m",
+        "ok": true,
+        "detalle": "Máxima: 135.32 m",
         "nivel": "advertencia"
       },
       {
@@ -3360,16 +3360,10 @@
         "ok": true,
         "detalle": "",
         "nivel": "error"
-      },
-      {
-        "prueba": "Elección por ETA ACC16",
-        "ok": true,
-        "detalle": "",
-        "nivel": "error"
       }
     ],
     "errores": 0,
-    "advertencias": 1
+    "advertencias": 0
   },
   {
     "carpeta": "principal",
@@ -3412,8 +3406,8 @@
       },
       {
         "prueba": "Distancia de hospitales <150 m",
-        "ok": false,
-        "detalle": "Máxima: 158.08 m",
+        "ok": true,
+        "detalle": "Máxima: 135.32 m",
         "nivel": "advertencia"
       },
       {
@@ -3657,15 +3651,9 @@
         "nivel": "error"
       },
       {
-        "prueba": "Elección por ETA ACC16",
-        "ok": true,
-        "detalle": "",
-        "nivel": "error"
-      },
-      {
         "prueba": "B1: 15 ± 2 accidentes",
         "ok": true,
-        "detalle": "Observados=16",
+        "detalle": "Observados=15",
         "nivel": "error"
       },
       {
@@ -3694,7 +3682,7 @@
       }
     ],
     "errores": 0,
-    "advertencias": 1
+    "advertencias": 0
   },
   {
     "carpeta": "repeticion",
@@ -3737,8 +3725,8 @@
       },
       {
         "prueba": "Distancia de hospitales <150 m",
-        "ok": false,
-        "detalle": "Máxima: 158.08 m",
+        "ok": true,
+        "detalle": "Máxima: 135.32 m",
         "nivel": "advertencia"
       },
       {
@@ -3980,15 +3968,9 @@
         "ok": true,
         "detalle": "",
         "nivel": "error"
-      },
-      {
-        "prueba": "Elección por ETA ACC16",
-        "ok": true,
-        "detalle": "",
-        "nivel": "error"
       }
     ],
     "errores": 0,
-    "advertencias": 1
+    "advertencias": 0
   }
 ]

@@ -51,9 +51,9 @@
   "fleet": 13,
   "demanda_h": 3,
   "atencion_s": 120,
-  "fecha_utc": "2026-10-26T12:40:14.665453+00:00",
+  "fecha_utc": "2026-10-26T14:06:58.712364+00:00",
   "red_origen_sha256": "feae31bc9534bc7d8a35fef2a592dd579b8447e8e428eb2271b66313c4b8cbbf",
-  "hospitales_sha256": "af6f546afe78356127db7c44be2400073194049ad87bd38c630f80fdd6807f98",
+  "hospitales_sha256": "f5021dd3fda30c8d6ca2fe3d905a1e11e041f3074d4b43fae1bc8e8df64359e9",
   "controlador_sha256": "00b2ff9d0ce167f75b6dfea9617b20bf68f47be07597d158ce6470b87188b7ea",
   "sha256": {
     "cuenca_ciudad.net.xml": "e8e1282fd69a6fd4f7824e6f66f9eed170b3c5629dd7ca85dfe518c391271d5e",

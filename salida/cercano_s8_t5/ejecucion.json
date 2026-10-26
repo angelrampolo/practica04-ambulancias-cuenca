@@ -2,10 +2,10 @@
   "teleports": 0,
   "accidentes": 15,
   "cerrados": 15,
-  "intentos": 17,
+  "intentos": 16,
   "planes_pendientes": 0,
-  "vehiculos_fondo_retirados": 17,
+  "vehiculos_fondo_retirados": 13,
   "running_final": 0,
   "expected_final": 0,
-  "wall_seconds": 61.467045996000024
+  "wall_seconds": 78.35387183900002
 }

@@ -44,7 +44,8 @@ def main():
         ". El límite es estrictamente menor de 150 m. Hace falta verificar el acceso o recibir la coordenada del capítulo. "
         "No se desplazaron puntos para aparentar cumplimiento.") if len(bad) else "Los siete hospitales cumplen distancia menor de 150 m."
     scope=("La red original del ZIP docente produce 1.745 aristas y 176 semáforos con los filtros del taller. "
-        "El ZIP incluye únicamente cuenca_net.xml. Los puntos hospitalarios siguen procediendo de OSM y los tipos de vehículo "
+        "El ZIP incluye únicamente cuenca_net.xml. Seis puntos hospitalarios proceden de OSM; Patamarca usa el Plus Code "
+        "679342M9+H35 de la ficha cartográfica aportada por el autor. Los tipos de vehículo "
         "son los implementados en este proyecto. SUMO 1.12.0. "+spatial)
     result=(f"Semilla 42: {s['accidentes']} accidentes, {s['cerrados']} misiones cerradas y {s['censurados']} censuradas; "
         f"{s['teleports']} teleports. Respuesta: media {num(s['respuesta_total']['media'])} s, mediana {num(s['respuesta_total']['mediana'])} s, "
@@ -71,7 +72,7 @@ def main():
         e=load(f"salida/{r.escenario}/ejecucion.json")
         if e["running_final"] or e["expected_final"]:residual.append(f"{r.escenario}: {e['running_final']} activos, {e['expected_final']} esperados")
     drain="Vaciado: "+("; ".join(residual) if residual else "todas las corridas comparadas terminan sin tráfico pendiente.")
-    failure=("La semilla 7/origen abortó a 7.815 s por una aserción interna de MSVehicle::getBackPositionOnLane, SUMO 1.12.0. "
+    failure=("En la versión previa de las coordenadas, la semilla 7/origen abortó a 7.815 s por una aserción interna de MSVehicle::getBackPositionOnLane, SUMO 1.12.0. "
         "Se excluyen sus salidas incompletas. Se eligió la semilla 8 para ambas políticas antes de ver sus resultados. "
         "Log y parámetros: salida/fallos/origen_s7_t5/. Cercano/7 queda como diagnóstico local fuera de la comparación pareada.")
     rubric=pd.DataFrame([
@@ -86,8 +87,8 @@ def main():
         ["GUI","Comprobada" if gui_ok else "Pendiente","Presentación ante docente a cargo del estudiante"],
         ["Extensión","Ejecutada",f"{len(pairs)} semillas × 2 políticas; 15/h; fallo de semilla 7 documentado"]],columns=["Criterio","Estado técnico","Evidencia"])
     validation=(f"{checks} controles: {errors} errores de invariantes y {warnings} advertencias. "
-        f"Repetición: {repeated}/{len(replay)} archivos idénticos por SHA-256. Cero errores de invariantes no equivale "
-        "a cumplimiento total: revisar A3. Las advertencias incluyen distancia, prueba negativa y casos de otras semillas.")
+        f"Repetición: {repeated}/{len(replay)} archivos idénticos por SHA-256. "+spatial+
+        " Las advertencias se detallan por corrida; la presentación ante el docente sigue a cargo del estudiante.")
     sections=[]
     def add(title,texts=(),table=None,figure=None,height=310,code=None):
         sections.append(dict(title=title,texts=list(texts),table=table,figure=figure,height=height,code=code))

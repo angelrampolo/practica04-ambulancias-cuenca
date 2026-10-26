@@ -2,7 +2,7 @@ SHELL := /bin/bash
 PYTHON ?= python3
 SUMO := ./scripts/en_docker.sh
 
-.PHONY: ayuda red demanda base principal extension estres repetir modos denegacion validar graficas informe pruebas reproducir gui gui-validar
+.PHONY: ayuda red demanda base ubicacion principal extension estres repetir modos denegacion validar graficas informe pruebas reproducir gui gui-validar
 ayuda:
 	@echo 'make reproducir  — prepara, simula, compara, valida y genera el informe'
 	@echo 'make base principal extension estres repetir modos validar graficas informe pruebas'
@@ -18,6 +18,8 @@ demanda:
 	$(SUMO) python3 scripts/preparar.py demanda
 base:
 	$(SUMO) python3 scripts/linea_base.py
+ubicacion:
+	$(SUMO) python3 scripts/comprobar_patamarca.py
 principal:
 	mkdir -p salida/principal
 	$(SUMO) bash -c 'python3 scripts/reto_ambulancias.py > salida/principal/ejecutor.log 2>&1'
@@ -45,6 +47,7 @@ reproducir:
 	$(MAKE) red
 	$(MAKE) demanda
 	$(MAKE) base
+	$(MAKE) ubicacion
 	$(MAKE) principal
 	$(MAKE) extension
 	$(MAKE) estres

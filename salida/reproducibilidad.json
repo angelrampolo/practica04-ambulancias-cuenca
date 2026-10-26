@@ -1,38 +1,38 @@
 [
   {
     "archivo": "accidentes.csv",
-    "principal_sha256": "b2a38cb1a44dd35ba04a9bae7d2275e6314738a970f1b160d74c1be124e4d6d5",
-    "repeticion_sha256": "b2a38cb1a44dd35ba04a9bae7d2275e6314738a970f1b160d74c1be124e4d6d5",
+    "principal_sha256": "cf6ab6a3554579a891ab67a3cc2de3c41fcec43107ecc602635849697d2af409",
+    "repeticion_sha256": "cf6ab6a3554579a891ab67a3cc2de3c41fcec43107ecc602635849697d2af409",
     "identico": true
   },
   {
     "archivo": "hospitales.csv",
-    "principal_sha256": "470195f953741814d3eac75882671b4024ce946444b4b34a98739daa97c3b984",
-    "repeticion_sha256": "470195f953741814d3eac75882671b4024ce946444b4b34a98739daa97c3b984",
+    "principal_sha256": "c644ecdd1f1fce66e51c1dba525f69332ac6d1d350e421821bdc2aa0b95e53a6",
+    "repeticion_sha256": "c644ecdd1f1fce66e51c1dba525f69332ac6d1d350e421821bdc2aa0b95e53a6",
     "identico": true
   },
   {
     "archivo": "decisiones.csv",
-    "principal_sha256": "05eb88a65a98c0bb2d4f685d06465f1d202f7ab691b8a99fb84e29f220d5768a",
-    "repeticion_sha256": "05eb88a65a98c0bb2d4f685d06465f1d202f7ab691b8a99fb84e29f220d5768a",
+    "principal_sha256": "76071b461430404c948122503a96f94a0ca068a10c2b80779d582528d79ed944",
+    "repeticion_sha256": "76071b461430404c948122503a96f94a0ca068a10c2b80779d582528d79ed944",
     "identico": true
   },
   {
     "archivo": "stock_tiempo.csv",
-    "principal_sha256": "ebb163f5338635c7a01b8d41142360ede4661dc9763968a1ad497a80abcb6b0a",
-    "repeticion_sha256": "ebb163f5338635c7a01b8d41142360ede4661dc9763968a1ad497a80abcb6b0a",
+    "principal_sha256": "5e0505d1cede8b546f2350f24e01a89f2a6a3d2d9a62a5dc52b5af7b123b757e",
+    "repeticion_sha256": "5e0505d1cede8b546f2350f24e01a89f2a6a3d2d9a62a5dc52b5af7b123b757e",
     "identico": true
   },
   {
     "archivo": "hospitales_ubicados.csv",
-    "principal_sha256": "fbec7a62c41efcae89d21e874c55c514f5e2dcf1e733e63a97b9428ad8f0973d",
-    "repeticion_sha256": "fbec7a62c41efcae89d21e874c55c514f5e2dcf1e733e63a97b9428ad8f0973d",
+    "principal_sha256": "8aa944f8b762242dc8a0d16ae94db7ef92c3491edb4dcdcfda31e5da336daf40",
+    "repeticion_sha256": "8aa944f8b762242dc8a0d16ae94db7ef92c3491edb4dcdcfda31e5da336daf40",
     "identico": true
   },
   {
     "archivo": "eventos.jsonl",
-    "principal_sha256": "0e0bd068f99dfbcee60fd3773614a3d82182dd2c541de23ea7265c7526dd5fdf",
-    "repeticion_sha256": "0e0bd068f99dfbcee60fd3773614a3d82182dd2c541de23ea7265c7526dd5fdf",
+    "principal_sha256": "06fecc6232a50c895fe366d727a9a319a904d7cf494ca1c6a4384a7be9f98c77",
+    "repeticion_sha256": "06fecc6232a50c895fe366d727a9a319a904d7cf494ca1c6a4384a7be9f98c77",
     "identico": true
   },
   {

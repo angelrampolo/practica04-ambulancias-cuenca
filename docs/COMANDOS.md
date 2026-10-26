@@ -70,10 +70,23 @@ documentar su fuente y método. Si se proporciona, incorporar también el archiv
 `escenario/vtypes.add.xml`. Mantener
 las columnas `id,nombre,tipo,lon,lat` y los identificadores de tipo
 `car,bus,moto,ambulance`. Después regenerar demanda, simulaciones y análisis.
-Con las coordenadas actuales, Patamarca queda a 158,08 m y A3 sigue parcial.
-Después de corregir ese dato con una fuente válida, ejecutar `make reproducir`,
-`make gui-validar`, `make validar informe` y volver a empaquetar. La distancia
-debe ser estrictamente menor de 150 m: no se cambia el umbral de la auditoría.
+Patamarca utiliza el Plus Code `679342M9+H35`, recuperado de `42M9+H35` con
+referencia Cuenca y documentado en `datos/patamarca_ubicacion.json`. Su centro
+es latitud −2,866112500 y longitud −78,982265625. La distancia vial es 135,32 m.
+La captura original queda en `datos/evidencias/patamarca_google_maps.png`.
+Para decodificarlo de nuevo, medir la distancia y comprobar los 49 pares de rutas:
+
+```bash
+make ubicacion
+# Equivalente:
+scripts/en_docker.sh python3 scripts/comprobar_patamarca.py
+```
+
+El resultado es `salida/ubicacion/patamarca.json`; también comprueba las cuatro
+esquinas de la celda (máximo 137,12 m). No identifica una entrada de urgencias.
+`hospitales_osm.py` conserva esta actualización al regenerar los demás puntos.
+Tras cambiar coordenadas, ejecutar `make reproducir` y volver a empaquetar.
+El umbral permanece estrictamente menor de 150 m.
 
 ## 2. F0: derivar las avenidas
 

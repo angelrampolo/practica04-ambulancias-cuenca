@@ -3,45 +3,45 @@
   "semilla": 42,
   "retorno": "cercano",
   "tasa": 5,
-  "accidentes": 16,
-  "cerrados": 16,
+  "accidentes": 15,
+  "cerrados": 15,
   "censurados": 0,
   "respuesta_total": {
-    "n": 16,
-    "media": 359.125,
-    "mediana": 355.5,
-    "p90": 590.5,
+    "n": 15,
+    "media": 375.8,
+    "mediana": 401.0,
+    "p90": 473.2,
     "maximo": 648.0
   },
   "desplazamiento": {
-    "n": 16,
-    "media": 359.125,
-    "mediana": 355.5,
-    "p90": 590.5,
+    "n": 15,
+    "media": 375.8,
+    "mediana": 401.0,
+    "p90": 473.2,
     "maximo": 648.0
   },
   "espera": {
-    "n": 16,
+    "n": 15,
     "media": 0.0,
     "mediana": 0.0,
     "p90": 0.0,
     "maximo": 0.0
   },
   "mision": {
-    "n": 16,
-    "media": 761.75,
-    "mediana": 769.0,
-    "p90": 1061.0,
-    "maximo": 1142.0
+    "n": 15,
+    "media": 758.2,
+    "mediana": 777.0,
+    "p90": 972.2,
+    "maximo": 1001.0
   },
-  "migracion_pct": 62.5,
+  "migracion_pct": 66.66666666666666,
   "rechazos": 9,
   "flota": 10,
   "teleports": 0,
   "intentos": 18,
   "planes_pendientes": 0,
-  "vehiculos_fondo_retirados": 34,
+  "vehiculos_fondo_retirados": 22,
   "running_final": 0,
   "expected_final": 0,
-  "wall_seconds": 84.50900037399992
+  "wall_seconds": 90.32543216399972
 }

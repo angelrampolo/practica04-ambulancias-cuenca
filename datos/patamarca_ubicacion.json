@@ -1,0 +1,43 @@
+{
+  "fecha": "2026-10-26T14:03:57.914253+00:00",
+  "hospital": "MUNI_PATAMARCA",
+  "codigo_corto": "42M9+H35",
+  "codigo_completo": "679342M9+H35",
+  "referencia_recuperacion": {
+    "lat": -2.9,
+    "lon": -79.0,
+    "ciudad": "Cuenca"
+  },
+  "coordenada_anterior": {
+    "id": "MUNI_PATAMARCA",
+    "nombre": "Hospital Municipal del Niño y la Mujer",
+    "tipo": "publico",
+    "lon": "-78.98205893",
+    "lat": "-2.86607435",
+    "fuente": "https://www.openstreetmap.org/way/379757480",
+    "metodo": "centroide del polígono OSM (aproximación plana local)"
+  },
+  "coordenada_actual": {
+    "id": "MUNI_PATAMARCA",
+    "nombre": "Hospital Municipal del Niño y la Mujer",
+    "tipo": "publico",
+    "lon": "-78.982265625",
+    "lat": "-2.866112500",
+    "fuente": "https://www.google.com/maps/search/?api=1&query=679342M9%2BH35",
+    "metodo": "centro de celda Plus Code 679342M9+H35; ficha Google Maps aportada por el autor; no es entrada de urgencias verificada"
+  },
+  "limites_celda": {
+    "sur": -2.866125,
+    "norte": -2.8661,
+    "oeste": -78.98228125,
+    "este": -78.98225
+  },
+  "captura": "datos/evidencias/patamarca_google_maps.png",
+  "captura_sha256": "c687a6d17f9cea17b52a173fd3737ddad01b68e7b984c4d6e08358f09abe6c64",
+  "direccion_corrobora": "https://www.hospitalmunicipalcuenca.gob.ec/directorio-telefonico/",
+  "decodificador_referencia": "https://github.com/google/open-location-code/blob/main/python/openlocationcode/openlocationcode.py",
+  "decodificador_sha256": "d861b10b526a47d43d5ef5d8a0de2a7abdde556b79a744159b42cd328d1714b1",
+  "alcance": "Punto de la ficha hospitalaria aportada por el autor. No identifica por sí solo una entrada de urgencias. No se modifica la red ni el umbral de 150 m.",
+  "distancia_previa_m": 158.07720112433284,
+  "distancia_comprobacion_m": 135.32151538896838
+}

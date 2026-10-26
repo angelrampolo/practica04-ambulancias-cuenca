@@ -18,7 +18,7 @@
 \maketitle
 
 \begin{abstract}
-Esta práctica estudia cómo los accidentes entre buses y motocicletas afectan el despacho y la disponibilidad de ambulancias en una red de Cuenca. El escenario se ejecutó con un simulador de tráfico microscópico y un controlador en Python que detecta colisiones, asigna unidades hospitalarias y sigue cada misión hasta su retorno. La red docente recortada contiene 1.745 aristas y 176 semáforos. La línea base incorporó \Demanda{} vehículos durante tres horas de demanda. En la corrida principal se atendieron \Accidentes{} accidentes y se cerraron todas las misiones, con una mediana de respuesta de \Mediana{} segundos y un percentil 90 de \Pnoventa{} segundos. La flota conservó sus diez unidades y no se registraron teletransportaciones. La repetición produjo siete archivos idénticos. También se compararon dos políticas de retorno con cinco semillas y una carga de quince accidentes por hora. La validación espacial permanece parcial: el punto de Patamarca está a \GeoMax{} metros del acceso vial asignado, por encima del límite de 150 metros.
+Esta práctica estudia cómo los accidentes entre buses y motocicletas afectan el despacho y la disponibilidad de ambulancias en una red de Cuenca. El escenario se ejecutó con un simulador de tráfico microscópico y un controlador en Python que detecta colisiones, asigna unidades hospitalarias y sigue cada misión hasta su retorno. La red docente recortada contiene 1.745 aristas y 176 semáforos. La línea base incorporó \Demanda{} vehículos durante tres horas de demanda. En la corrida principal se atendieron \Accidentes{} accidentes y se cerraron todas las misiones, con una mediana de respuesta de \Mediana{} segundos y un percentil 90 de \Pnoventa{} segundos. La flota conservó sus diez unidades y no se registraron teletransportaciones. La repetición produjo siete archivos idénticos. También se compararon dos políticas de retorno con cinco semillas y una carga de quince accidentes por hora. Los siete hospitales cumplen el límite espacial de 150 metros, con una distancia máxima de \GeoMax{} metros después de documentar la ubicación de Patamarca mediante un Plus Code.
 \end{abstract}
 \begin{IEEEkeywords}
 simulación de tráfico, despacho de ambulancias, colisiones, SUMO, TraCI.
@@ -49,7 +49,7 @@ La demanda dura 10.800 s y solicita 1.200 automóviles/h, 100 buses/h y 300 moto
 La simulación utiliza SUMO 1.12.0, disponible en la imagen \archivo{van3twin:jammy}. Las opciones \archivo{time-to-teleport=-1} y \archivo{time-to-teleport.disconnected=-1} impiden resolver bloqueos mediante teletransportación. La acción de colisión es \archivo{warn}; se revisan cruces y se usa \archivo{collision.mingap-factor=0} para exigir contacto físico. El 30\% de los vehículos actualiza su ruta cada 120 s. Las opciones y tipos de vehículo completos están en \archivo{escenario/}.
 
 \subsection{Hospitales y conservación de unidades}
-El ZIP docente contiene únicamente la red. Por ello, los siete puntos hospitalarios se obtienen del archivo OpenStreetMap conservado en el proyecto\cite{osm}. Los polígonos se representan por su centroide; El Valle es un nodo. Estas coordenadas identifican instalaciones y no equivalen a entradas de urgencias verificadas. La Fig.~\ref{fig:mapa} muestra su distribución y los incidentes de la corrida principal.
+El ZIP docente contiene únicamente la red. Seis puntos hospitalarios proceden del archivo OpenStreetMap conservado en el proyecto\cite{osm}: los polígonos se representan por su centroide y El Valle por un nodo. Para Patamarca se utiliza el punto de la ficha de Google Maps aportada por el autor, identificado por el Plus Code \archivo{42M9+H35}. Estas coordenadas identifican instalaciones y no equivalen a entradas de urgencias verificadas. La Fig.~\ref{fig:mapa} muestra su distribución y los incidentes de la corrida principal.
 
 Cada punto se proyecta mediante \archivo{convertRoad} con clase \archivo{emergency}. Se comprueba el acceso de ida y vuelta respecto a Vicente Corral Moscoso. Cuando la proyección más próxima carece de retorno, se busca el carril permitido más cercano con ambas rutas. La tabla de resultados conserva tanto la proyección inicial como el acceso corregido. La conectividad dirigida se verifica para los 49 pares de hospitales.
 
@@ -133,10 +133,10 @@ La línea base insertó \Demanda{} vehículos y terminó sin activos ni teletran
 \label{fig:fundamental}
 \end{figure*}
 
-Los 49 pares hospitalarios tienen rutas dirigidas válidas para la clase de ambulancia. Seis puntos cumplen el límite espacial del taller. Patamarca queda a \GeoMax{} m del acceso asignado: el criterio A3 continúa parcial. Su coordenada representa el centroide del establecimiento y la vía local Del Camal se excluye al conservar avenidas. Corregir este punto requiere una entrada verificada o la coordenada del capítulo del estudiante.
+Los 49 pares hospitalarios tienen rutas dirigidas válidas para la clase de ambulancia y los siete puntos cumplen el límite espacial del taller. El centroide OSM inicial de Patamarca producía una distancia de 158,08 m. La ficha cartográfica aportada por el autor proporciona el código \archivo{42M9+H35}; recuperado con referencia Cuenca, corresponde a \archivo{679342M9+H35}\cite{olc}. El centro de su celda es latitud $-2{,}866112500$ y longitud $-78{,}982265625$. TraCI lo proyecta sobre la misma arista de la vía Checa Chiquintad, a \GeoMax{} m. Las cuatro esquinas de la celda quedan como máximo a 137,12 m. La dirección en Del Camal se corrobora en el directorio del hospital\cite{hospital}. Se conserva la red de avenidas original y se documentan captura, coordenada anterior y método en \archivo{datos/patamarca_ubicacion.json}. Todas las simulaciones con hospitales se repitieron después de actualizar el punto.
 
 \subsection{Respuesta y distribución de ambulancias}
-La corrida principal produjo \Planeados{} incidentes de la agenda y \Naturales{} natural, para un total de \Accidentes. Todas las misiones cerraron. La mediana de respuesta fue \Mediana{} s y el percentil 90, \Pnoventa{} s; la media alcanzó \Media{} s y el máximo, \Maximo{} s. La espera de despacho fue cero, de modo que la respuesta total coincide con el desplazamiento en esta corrida. La mediana de misión completa fue \MedianaMision{} s.
+La corrida principal produjo \Planeados{} incidentes de la agenda y \Naturales{} colisiones naturales adicionales, para un total de \Accidentes. Todas las misiones cerraron. La mediana de respuesta fue \Mediana{} s y el percentil 90, \Pnoventa{} s; la media alcanzó \Media{} s y el máximo, \Maximo{} s. La espera de despacho fue cero, de modo que la respuesta total coincide con el desplazamiento en esta corrida. La mediana de misión completa fue \MedianaMision{} s.
 
 La Fig.~\ref{fig:respuesta} permite comparar los incidentes sin ocultar los casos lentos. La selección por tiempo de ruta tampoco implica que siempre salga el primer hospital del ranking. Por ejemplo, \EjemploAcc{} fue atendido desde \EjemploHospital{}, que ocupaba el puesto \EjemploRango. La Tabla~\ref{tab:despacho} muestra los descartes previos registrados por el controlador.
 
@@ -152,7 +152,7 @@ La Fig.~\ref{fig:respuesta} permite comparar los incidentes sin ocultar los caso
 \input{tabla_despacho.tex}
 \end{table*}
 
-La flota conservó \Flota{} unidades. El \Migracion\% de las misiones terminó en un hospital diferente del de salida. Patamarca pasó de tres a cinco unidades disponibles, mientras Monte Sinaí pasó de cero a tres. Este último pudo despachar después de recibir unidades. La Tabla~\ref{tab:hospitales} y las Figs.~\ref{fig:hospitales} y~\ref{fig:migracion} muestran el balance y su evolución temporal.
+La flota conservó \Flota{} unidades. El \Migracion\% de las misiones terminó en un hospital diferente del de salida. Patamarca pasó de tres a \PatamarcaFinal{} unidades disponibles, mientras Monte Sinaí pasó de cero a \MonteFinal{}. Este último pudo despachar después de recibir unidades. La Tabla~\ref{tab:hospitales} y las Figs.~\ref{fig:hospitales} y~\ref{fig:migracion} muestran el balance y su evolución temporal.
 
 \begin{table*}[!t]
 \caption{Acceso hospitalario, balance de flota e índice de utilización}
@@ -191,12 +191,12 @@ La media de las medianas fue \MediaCercano{} s para retorno cercano y \MediaOrig
 
 Con quince intentos por hora se observaron \EstresAcc{} accidentes y se cerraron \EstresCerr{} misiones. La mediana fue \EstresMed{} s y el percentil 90, \EstresP{} s. La espera de despacho siguió en cero. En esta ejecución no apareció saturación por falta de unidades; aumentar la agenda también cambió los lugares y la secuencia de choques, por lo que la mediana no creció de forma monótona. Todas las corridas comparadas terminaron sin tráfico pendiente.
 
-La semilla 7 con retorno al origen se interrumpió a los 7.815 s por una aserción interna de \archivo{MSVehicle::getBackPositionOnLane} en SUMO 1.12.0. Sus resultados incompletos se excluyeron. Se eligió la semilla 8 para ambas políticas antes de observar sus resultados y se conservaron el log y los parámetros del fallo en \archivo{salida/fallos/origen_s7_t5/}.
+En la versión previa de las coordenadas hospitalarias, la semilla 7 con retorno al origen se interrumpió a los 7.815 s por una aserción interna de \archivo{MSVehicle::getBackPositionOnLane} en SUMO 1.12.0. Sus resultados incompletos se excluyeron. Se eligió la semilla 8 para ambas políticas antes de observar sus resultados y se mantuvo ese conjunto de semillas en esta actualización. Se conservaron el log y los parámetros del fallo en \archivo{salida/fallos/origen_s7_t5/}.
 
 \section{Validación y evidencia visual}
-La auditoría ejecutó \Controles{} controles y no encontró errores de invariantes. Emitió \Advertencias{} advertencias, entre ellas la distancia hospitalaria, la ausencia de stock cero en una semilla distinta de la principal y los casos abiertos de la prueba negativa. Repetir la semilla 42 produjo \Repetidos{} archivos idénticos por SHA-256. Cinco pruebas adicionales aceptan la corrida válida y detectan un inventario alterado, tiempos modificados y un choque sin soporte XML; la prueba de negativa total verifica reintentos cada 30 s y conservación de unidades.
+La auditoría ejecutó \Controles{} controles y no encontró errores de invariantes. Emitió \Advertencias{} advertencias, asociadas a la ausencia de stock cero en otras semillas y a los casos abiertos o al tráfico restante de la prueba negativa. Repetir la semilla 42 produjo \Repetidos{} archivos idénticos por SHA-256. Cinco pruebas adicionales aceptan la corrida válida y detectan un inventario alterado, tiempos modificados y un choque sin soporte XML; la prueba de negativa total verifica reintentos cada 30 s y conservación de unidades.
 
-La validación A exige preparar red, tráfico, hospitales y flota. A1, A2 y A4 tienen evidencia técnica; A3 queda parcial por Patamarca. La validación B verifica los incidentes físicos, la elección de hospital, el retorno y los resultados. En la corrida principal se observaron \Accidentes{} choques dentro del rango $15\pm2$, en aristas distintas, con cero teletransportaciones, \Negativas{} negativas aleatorias y retornos que modifican el stock.
+La validación A exige preparar red, tráfico, hospitales y flota. A1, A2, A3 y A4 tienen evidencia técnica; A3 cumple el límite de distancia y la conectividad dirigida después de incorporar la ubicación documentada de Patamarca. La validación B verifica los incidentes físicos, la elección de hospital, el retorno y los resultados. En la corrida principal se observaron \Accidentes{} choques dentro del rango $15\pm2$, en aristas distintas, con cero teletransportaciones, \Negativas{} negativas aleatorias y retornos que modifican el stock.
 
 La demostración gráfica usa el mismo controlador. La Fig.~\ref{fig:guihospitales} conserva los siete puntos hospitalarios. En la Fig.~\ref{fig:guicola}, \GuiAcc{} presenta bus y moto inmóviles y tráfico detenido detrás, a los \GuiTiempo{} s. La Fig.~\ref{fig:guiretorno} corresponde al retorno de \GuiUnidad{} desde \GuiOrigen{} hacia \GuiDestino{}; el stock receptor aumentó de \GuiAntes{} a \GuiDespues{} a los \GuiRetorno{} s. Los estados se contrastan con los registros de TraCI. Las capturas apoyan la presentación ante el docente; esa evaluación aún debe realizarse.
 
@@ -219,14 +219,14 @@ La demostración gráfica usa el mismo controlador. La Fig.~\ref{fig:guihospital
 \section{Discusión y limitaciones}
 La asignación de ambulancias depende de rutas dirigidas y disponibilidad. El ejemplo de despacho muestra por qué la distancia visual entre hospital y accidente resulta insuficiente para explicar la elección. El retorno cambia las bases desde las que podrán atenderse los siguientes incidentes; incluso un hospital inicialmente vacío puede participar después de recibir unidades.
 
-Los tiempos obtenidos describen este escenario y sus parámetros. La flota no representa una medición del sistema sanitario de Cuenca. Los puntos hospitalarios son aproximaciones geométricas y el acceso de Patamarca supera el umbral solicitado. El criterio de atención a pie y la eliminación de vehículos por colisiones de fondo también influyen en la respuesta. Estos supuestos deben revisarse antes de interpretar la simulación como una estimación operativa.
+Los tiempos obtenidos describen este escenario y sus parámetros. La flota no representa una medición del sistema sanitario de Cuenca. Los puntos hospitalarios representan instalaciones mediante centroides o referencias cartográficas; no constituyen accesos de urgencias verificados en campo. El criterio de atención a pie y la eliminación de vehículos por colisiones de fondo también influyen en la respuesta. Estos supuestos deben revisarse antes de interpretar la simulación como una estimación operativa.
 
 La comparación utiliza cinco pares de semillas con demanda fija. Como las decisiones de retorno cambian el tráfico, los incidentes no son réplicas idénticas entre políticas. La diferencia media observada permite describir el experimento, pero no establece una ventaja universal. El fallo interno de una semilla confirma además la necesidad de conservar versión del simulador y registros de ejecución.
 
 \section{Conclusiones}
 El controlador completó las \Cerrados{} misiones de la corrida principal, conservó las diez ambulancias y terminó con la red vacía. La respuesta tuvo una mediana de \Mediana{} s y un percentil 90 de \Pnoventa{} s. La repetición exacta y la auditoría respaldan la consistencia de los registros de colisión, despacho y retorno.
 
-El retorno cercano redistribuyó unidades y obtuvo una mediana menor en \ParesGana{} de cinco comparaciones. La carga de quince accidentes por hora completó todas sus misiones sin espera de despacho. Queda pendiente resolver el acceso hospitalario de Patamarca con una coordenada verificada para cumplir A3. La presentación de las validaciones A y B ante el docente completa la revisión de la práctica.
+El retorno cercano redistribuyó unidades y obtuvo una mediana menor en \ParesGana{} de cinco comparaciones. La carga de quince accidentes por hora completó todas sus misiones sin espera de despacho. La ubicación documentada de Patamarca permitió cumplir A3 sin modificar la red ni el límite de 150 m. La presentación de las validaciones A y B ante el docente completa la revisión de la práctica.
 
 \appendices
 \section{Reproducción y archivos de entrega}
@@ -248,12 +248,14 @@ El código, las capturas de SUMO-GUI y los resultados de esta práctica se reún
 \end{center}
 El archivo \archivo{README.md} describe la instalación y \archivo{docs/COMANDOS.md} detalla los comandos para reproducir cada fase.
 
-\begin{thebibliography}{6}
+\begin{thebibliography}{8}
 \bibitem{guia} Universidad de Cuenca, ``Reto de accidentes bus-moto y despacho de ambulancias en Cuenca'', guía docente de Redes Vehiculares y Heterogéneas, archivo \archivo{Reto_Ambulancias_Docente_RVH.pdf}, 30 láminas, s. f.
 \bibitem{osm} OpenStreetMap contributors, ``Copyright and License''. [En línea]. Disponible: \url{https://www.openstreetmap.org/copyright}. Consulta: 26 de octubre de 2026.
 \bibitem{traci} Eclipse SUMO, ``Change Vehicle State'', documentación TraCI. [En línea]. Disponible: \url{https://sumo.dlr.de/docs/TraCI/Change_Vehicle_State.html}. Consulta: 26 de octubre de 2026.
 \bibitem{routing} Eclipse SUMO, ``Routing''. [En línea]. Disponible: \url{https://sumo.dlr.de/docs/Simulation/Routing.html}. Consulta: 26 de octubre de 2026.
 \bibitem{macro} Eclipse SUMO, ``Lane- or Edge-based Traffic Measures''. [En línea]. Disponible: \url{https://sumo.dlr.de/docs/Simulation/Output/Lane-_or_Edge-based_Traffic_Measures.html}. Consulta: 26 de octubre de 2026.
 \bibitem{ieee} IEEE Author Center, ``Authoring Tools and Templates''. [En línea]. Disponible: \url{https://conferences.ieeeauthorcenter.ieee.org/write-your-paper/authoring-tools-and-templates/}. Consulta: 26 de octubre de 2026.
+\bibitem{olc} Google, ``Open Location Code, implementación y especificación de Plus Codes. [En línea]. Disponible: \url{https://github.com/google/open-location-code}. Consulta: 26 de octubre de 2026.
+\bibitem{hospital} Hospital Municipal Cuenca, ``Directorio Telefónico. [En línea]. Disponible: \url{https://www.hospitalmunicipalcuenca.gob.ec/directorio-telefonico/}. Consulta: 26 de octubre de 2026.
 \end{thebibliography}
 \end{document}

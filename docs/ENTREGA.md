@@ -27,10 +27,10 @@ en `salida/visual/`: hospitales, accidente con cola y retorno. El archivo
 - Red docente incorporada y simulaciones recalculadas.
 - Código, capturas, gráficas y resultados preparados.
 - Informe en LaTeX con IEEEtran y datos de autor.
-- A3 parcial: Patamarca está a 158,08 m del acceso asignado; se exige menos de 150 m.
+- A3 verificado: Patamarca queda a 135,32 m con el Plus Code aportado por el autor; los siete hospitales cumplen menos de 150 m y conservan las 49 rutas dirigidas.
 - Presentación de A y B ante el docente pendiente.
 - GitHub: [repositorio público de código, informe y capturas](https://github.com/angelrampolo/practica04-ambulancias-cuenca).
-- Enlace al repositorio incorporado como vínculo clicable en la página 10 del informe IEEE.
+- Enlace al repositorio incorporado como vínculo clicable en el apéndice del informe IEEE.
 - Carga en Talleres pendiente de indicar el enlace y disponer de acceso a la plataforma.
 
 El repositorio padre apunta a `Pbarbecho/van3twin-docker`, que es la fuente del

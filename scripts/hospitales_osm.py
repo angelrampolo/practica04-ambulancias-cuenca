@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Extrae los siete hospitales del XML OSM archivado, con referencia de origen."""
 import xml.etree.ElementTree as ET
+import json
 from entorno import ROOT, guardar_csv
 
 
@@ -33,6 +34,10 @@ def main():
             method="centroide del polígono OSM (aproximación plana local)"
         rows.append(dict(id=ident,nombre=name,tipo=kind,lon=f"{lon:.8f}",lat=f"{lat:.8f}",
                          fuente=f"https://www.openstreetmap.org/{typ}/{ref}",metodo=method))
+    correction=ROOT/"datos/patamarca_ubicacion.json"
+    if correction.exists():
+        update=json.loads(correction.read_text())["coordenada_actual"]
+        next(row for row in rows if row["id"]==update["id"]).update(update)
     guardar_csv(ROOT/"datos/hospitales.csv",rows)
 
 

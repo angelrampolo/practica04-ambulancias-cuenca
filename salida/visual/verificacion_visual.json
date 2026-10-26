@@ -27,7 +27,7 @@
         "DEL_RIO": 0
       },
       "archivo": "salida/visual/01_hospitales.png",
-      "sha256": "e0c462af8f0dcb38b624b3b44083d12aac866d45e30220d9cbe29f65ed97b2d8"
+      "sha256": "05b4ec7fe1f0850b4080611b80cfdb5d09efc5b6872334beac82155a2759fc4a"
     },
     "02_accidente_cola": {
       "t_s": 2611.0,
@@ -56,13 +56,13 @@
       "stock_antes": 3,
       "stock_despues": 4,
       "archivo": "salida/visual/03_retorno.png",
-      "sha256": "51c1d299cde17fe843ee4b52ca5f6afd7554b384a76c8f5cc0cff59d507c59a8"
+      "sha256": "953b3889b4cfd11f2622603d11f153ae09dc90b3c36503766affba3df67b207b"
     }
   },
   "controles_visuales_observados": true,
   "controlador_sha256": "00b2ff9d0ce167f75b6dfea9617b20bf68f47be07597d158ce6470b87188b7ea",
   "demo_sha256": "482c6d5cc3ca839f5af78b544e13e7e3f5bdef76129a6fff0b9edcc39d2314f2",
   "red_sha256": "e8e1282fd69a6fd4f7824e6f66f9eed170b3c5629dd7ca85dfe518c391271d5e",
-  "hospitales_sha256": "af6f546afe78356127db7c44be2400073194049ad87bd38c630f80fdd6807f98",
+  "hospitales_sha256": "f5021dd3fda30c8d6ca2fe3d905a1e11e041f3074d4b43fae1bc8e8df64359e9",
   "demostracion_ante_docente": "Pendiente: debe realizarla el estudiante en su evaluación"
 }

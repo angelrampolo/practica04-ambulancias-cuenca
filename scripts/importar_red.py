@@ -35,7 +35,10 @@ def main():
         archivo_zip="datos/docente/cuenca_net.zip",nombre_original="cuenca_net.xml",
         zip_sha256=sha256(destination),red_sha256=digest,
         incorporado_utc=timestamp or datetime.datetime.now(datetime.timezone.utc).isoformat(),
-        hospitales="Se mantienen coordenadas OSM porque el ZIP contiene únicamente la red.",
+        hospitales=("Seis coordenadas OSM y Patamarca según el Plus Code aportado por el autor; "
+            "datos/patamarca_ubicacion.json documenta la actualización. El ZIP docente contiene únicamente la red."
+            if (ROOT/"datos/patamarca_ubicacion.json").exists() else
+            "Se mantienen coordenadas OSM porque el ZIP contiene únicamente la red."),
         respaldo_anterior="historial/Entrega_OSM_20261021.zip (respaldo local, excluido de la entrega)"))
     print(f"Red incorporada: {net}; SHA-256: {digest}")
 

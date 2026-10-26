@@ -32,14 +32,17 @@ La fuente editable está en [docs/latex/Informe_Reto_Ambulancias.tex](docs/latex
 
 La red procede del ZIP docente incorporado el 26 de octubre de 2026.
 Su recorte coincide con las 1.745 aristas y 176 semáforos de la guía.
-El ZIP contiene únicamente la red; los puntos hospitalarios mantienen su
-procedencia OpenStreetMap, documentada en `datos/hospitales.csv`.
+El ZIP contiene únicamente la red. Seis puntos hospitalarios proceden de
+OpenStreetMap; Patamarca usa el Plus Code de la ficha cartográfica aportada por
+el autor. Las fuentes se documentan en `datos/hospitales.csv` y
+`datos/patamarca_ubicacion.json`.
 Se ejecuta con SUMO **1.12.0**, disponible en la imagen local `van3twin:jammy`.
 
-**A3 sigue parcial:** Patamarca está a 158,08 m del acceso utilizable, por encima
-del límite de 150 m. Hace falta verificar su entrada o recibir la coordenada del
-capítulo. La comprobación técnica en SUMO-GUI está realizada; la demostración
-ante el docente corresponde al estudiante.
+**A3 verificado:** los siete hospitales están a menos de 150 m de sus vías
+asignadas. Patamarca queda a **135,32 m**, usando el punto `679342M9+H35` de la
+captura aportada por el autor; no se presenta como entrada de urgencias verificada.
+Se conservan las 49 rutas dirigidas entre hospitales. Para comprobarlo: `make ubicacion`.
+La demostración ante el docente corresponde al estudiante.
 
 ## Resultados principales, semilla 42
 
@@ -47,11 +50,11 @@ ante el docente corresponde al estudiante.
 |---|---:|
 | Red de avenidas | 1.745 aristas, 176 semáforos |
 | Demanda válida de fondo | 4.709 vehículos |
-| Accidentes / misiones cerradas | 16 / 16 |
+| Accidentes / misiones cerradas | 15 / 15 |
 | Teletransportaciones | 0 |
 | Flota inicial / final disponible | 10 / 10 |
-| Mediana de respuesta total | 355,5 s |
-| P90 de respuesta total | 590,5 s |
+| Mediana de respuesta total | 401,0 s |
+| P90 de respuesta total | 473,2 s |
 | Vehículos restantes al cierre | 0 |
 
 Respuesta total = accidente → llegada; incluye espera por disponibilidad.

@@ -73,9 +73,11 @@ una sola demanda.
 
 ## F2: hospitales y colas
 
-`datos/hospitales.csv` conserva siete identificadores OSM, sus coordenadas
-WGS84, nombres, clasificación usada en el ejercicio y método geométrico.
-Los polígonos aportan su centroide de área; El Valle es un nodo. Esos puntos
+`datos/hospitales.csv` conserva coordenadas WGS84, nombres, clasificación
+usada en el ejercicio y procedencia de cada punto. Seis instalaciones usan
+OpenStreetMap: centroides de área, salvo El Valle, que es un nodo. Patamarca
+usa el centro de la celda del Plus Code `679342M9+H35`, obtenido de la ficha
+de Google Maps aportada por el autor el 26 de octubre de 2026. Esos puntos
 representan instalaciones, no entradas de urgencias verificadas en campo.
 
 Se llama `convertRoad(lon, lat, isGeo=True, vClass='emergency')`. Se conserva
@@ -84,11 +86,21 @@ de vuelta respecto a VCM. Si el ramal más próximo no permite ambas, se elige
 el carril emergency más próximo que sí las permite. La tabla conserva ambas
 aristas y distancias: la corrección es visible, no se modifican las coordenadas
 para conseguir un umbral. Se validan los 49 pares dirigidos entre hospitales.
-El umbral docente de 150 m se reporta explícitamente como advertencia cuando
-la distancia observada lo excede. Con la red docente, Patamarca queda a 158,08 m:
-el criterio A3 continúa parcial. La vía local Del Camal se excluye por el filtro
-de jerarquía vial del taller. Hace falta verificar el punto de acceso o recibir
-la coordenada del capítulo; no se desplaza el centroide para aparentar cumplimiento.
+El umbral docente es estrictamente menor de 150 m. El centroide OSM original
+de Patamarca daba 158,08 m. La captura aportada incluye el código `42M9+H35`,
+recuperado con referencia Cuenca (−2,9; −79,0) mediante Open Location Code.
+Su centro es latitud −2,866112500 y longitud −78,982265625; proyectado con TraCI
+queda a **135,32 m** de la misma arista `378364650#0` (Vía Checa Chiquintad).
+Las cuatro esquinas de la celda quedan como máximo a 137,12 m. La calle Del Camal
+sigue excluida por el filtro vial: no se modificó la red ni el umbral.
+
+La dirección del hospital se corrobora en su [directorio oficial](https://www.hospitalmunicipalcuenca.gob.ec/directorio-telefonico/).
+La captura, la coordenada anterior y la nueva, los límites de celda y las
+huellas quedan en `datos/patamarca_ubicacion.json`. `make ubicacion` reproduce
+la decodificación y confirma los siete hospitales dentro del límite y los 49
+pares alcanzables. Se repitieron todas las corridas que dependen de hospitales,
+la comparación pareada, la repetición, la prueba negativa y las capturas GUI.
+La red, la demanda y la línea base no dependen de esta coordenada y se conservaron.
 
 Cada hospital tiene una cola `deque` FIFO. Con semilla 42, los cinco públicos
 obtienen `[3,1,1,3,2]` unidades y los dos privados `[0,0]`. No representa una

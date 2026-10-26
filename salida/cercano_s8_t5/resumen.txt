@@ -8,17 +8,17 @@
   "censurados": 0,
   "respuesta_total": {
     "n": 15,
-    "media": 251.46666666666667,
-    "mediana": 237.0,
-    "p90": 384.59999999999997,
-    "maximo": 497.0
+    "media": 274.93333333333334,
+    "mediana": 302.0,
+    "p90": 421.59999999999997,
+    "maximo": 498.0
   },
   "desplazamiento": {
     "n": 15,
-    "media": 251.46666666666667,
-    "mediana": 237.0,
-    "p90": 384.59999999999997,
-    "maximo": 497.0
+    "media": 274.93333333333334,
+    "mediana": 302.0,
+    "p90": 421.59999999999997,
+    "maximo": 498.0
   },
   "espera": {
     "n": 15,
@@ -29,19 +29,19 @@
   },
   "mision": {
     "n": 15,
-    "media": 570.4,
-    "mediana": 505.0,
-    "p90": 825.0,
-    "maximo": 846.0
+    "media": 632.6,
+    "mediana": 654.0,
+    "p90": 841.0,
+    "maximo": 1164.0
   },
-  "migracion_pct": 40.0,
+  "migracion_pct": 60.0,
   "rechazos": 4,
   "flota": 7,
   "teleports": 0,
-  "intentos": 17,
+  "intentos": 16,
   "planes_pendientes": 0,
-  "vehiculos_fondo_retirados": 17,
+  "vehiculos_fondo_retirados": 13,
   "running_final": 0,
   "expected_final": 0,
-  "wall_seconds": 61.467045996000024
+  "wall_seconds": 78.35387183900002
 }

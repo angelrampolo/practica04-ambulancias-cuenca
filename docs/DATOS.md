@@ -72,3 +72,14 @@ actuales. Las imágenes se escriben en el siguiente paso de SUMO al solicitarlas
 `docs/autor.json` contiene los datos de autor proporcionados por el estudiante.
 `docs/latex/datos.tex` y `tabla_*.tex` se generan desde los resultados; la prosa
 del informe está en `Informe_Reto_Ambulancias.tex`.
+
+## Procedencia y comprobación de Patamarca
+
+`datos/patamarca_ubicacion.json` conserva el Plus Code corto y completo, la
+referencia Cuenca, las coordenadas anterior y actual, los límites de la celda
+y la huella de la captura aportada por el autor.
+`salida/ubicacion/patamarca.json` contiene la distancia al carril de SUMO,
+las distancias de los siete hospitales, el máximo en las esquinas de la celda,
+los 49 pares alcanzables y las huellas de red y hospitales. Se regenera con
+`make ubicacion`; la fuente identifica una instalación, no una entrada de
+urgencias verificada.

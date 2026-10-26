@@ -1,0 +1,29 @@
+{
+  "codigo": "679342M9+H35",
+  "coordenada": {
+    "lat": -2.8661125,
+    "lon": -78.982265625,
+    "sur": -2.866125,
+    "norte": -2.8661,
+    "oeste": -78.98228125,
+    "este": -78.98225
+  },
+  "distancia_patamarca_m": 135.32151538896838,
+  "arista": "378364650#0",
+  "calle": "Via Checa Chiquintad",
+  "distancia_maxima_esquinas_m": 137.12371012901542,
+  "distancias_hospitales_m": {
+    "VCM": 102.20161495125707,
+    "IESS": 117.75744126218333,
+    "MILITAR": 26.677781697136496,
+    "MUNI_PATAMARCA": 135.32151538896838,
+    "MUNI_VALLE": 54.80581735402212,
+    "MONTE_SINAI": 29.036805375755552,
+    "DEL_RIO": 88.65164831798278
+  },
+  "pares_alcanzables": 49,
+  "cumple_A3": true,
+  "hospitales_sha256": "f5021dd3fda30c8d6ca2fe3d905a1e11e041f3074d4b43fae1bc8e8df64359e9",
+  "red_sha256": "e8e1282fd69a6fd4f7824e6f66f9eed170b3c5629dd7ca85dfe518c391271d5e",
+  "alcance": "Ubicación de ficha cartográfica; no entrada de urgencias verificada"
+}

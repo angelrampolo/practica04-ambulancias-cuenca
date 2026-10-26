@@ -39,8 +39,8 @@
     },
     {
       "prueba": "Distancia de hospitales <150 m",
-      "ok": false,
-      "detalle": "Máxima: 158.08 m",
+      "ok": true,
+      "detalle": "Máxima: 135.32 m",
       "nivel": "advertencia"
     },
     {
@@ -284,15 +284,9 @@
       "nivel": "error"
     },
     {
-      "prueba": "Elección por ETA ACC16",
-      "ok": true,
-      "detalle": "",
-      "nivel": "error"
-    },
-    {
       "prueba": "B1: 15 ± 2 accidentes",
       "ok": true,
-      "detalle": "Observados=16",
+      "detalle": "Observados=15",
       "nivel": "error"
     },
     {
@@ -321,5 +315,5 @@
     }
   ],
   "errores": 0,
-  "advertencias": 1
+  "advertencias": 0
 }
