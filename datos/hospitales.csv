@@ -1,0 +1,8 @@
+id,nombre,tipo,lon,lat,fuente,metodo
+VCM,Hospital Vicente Corral Moscoso,publico,-78.99275927,-2.91122603,https://www.openstreetmap.org/way/48591686,centroide del polígono OSM (aproximación plana local)
+IESS,Hospital José Carrasco Arteaga,publico,-78.97009462,-2.89864192,https://www.openstreetmap.org/way/109187251,centroide del polígono OSM (aproximación plana local)
+MILITAR,Hospital Militar,publico,-79.00413715,-2.90322454,https://www.openstreetmap.org/way/388587975,centroide del polígono OSM (aproximación plana local)
+MUNI_PATAMARCA,Hospital Municipal del Niño y la Mujer,publico,-78.98205893,-2.86607435,https://www.openstreetmap.org/way/379757480,centroide del polígono OSM (aproximación plana local)
+MUNI_VALLE,Hospital Básico Municipal de El Valle,publico,-78.96212200,-2.91894100,https://www.openstreetmap.org/node/13235900594,nodo OSM
+MONTE_SINAI,Hospital Monte Sinaí,privado,-79.00745974,-2.90861863,https://www.openstreetmap.org/way/374845885,centroide del polígono OSM (aproximación plana local)
+DEL_RIO,Hospital Universitario del Río,privado,-78.96099714,-2.89309031,https://www.openstreetmap.org/way/433553788,centroide del polígono OSM (aproximación plana local)

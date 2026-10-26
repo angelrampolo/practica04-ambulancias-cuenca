@@ -1,0 +1,79 @@
+{
+  "carpeta": "escenario",
+  "pruebas": [
+    {
+      "prueba": "A1: red original del ZIP docente",
+      "ok": true,
+      "detalle": "",
+      "nivel": "error"
+    },
+    {
+      "prueba": "F0: red derivada trazable",
+      "ok": true,
+      "detalle": "",
+      "nivel": "error"
+    },
+    {
+      "prueba": "A1: una componente débil y semáforos",
+      "ok": true,
+      "detalle": "",
+      "nivel": "error"
+    },
+    {
+      "prueba": "A2: teleport desactivado y colisión warn",
+      "ok": true,
+      "detalle": "",
+      "nivel": "error"
+    },
+    {
+      "prueba": "A2: >=4500 insertados",
+      "ok": true,
+      "detalle": "",
+      "nivel": "error"
+    },
+    {
+      "prueba": "A2: línea base sin teleports",
+      "ok": true,
+      "detalle": "",
+      "nivel": "error"
+    },
+    {
+      "prueba": "A2: línea base vacía al cierre",
+      "ok": true,
+      "detalle": "",
+      "nivel": "error"
+    },
+    {
+      "prueba": "A2: tres clases circulan",
+      "ok": true,
+      "detalle": "",
+      "nivel": "error"
+    },
+    {
+      "prueba": "F1.4: 14 intervalos de 900 s",
+      "ok": true,
+      "detalle": "",
+      "nivel": "error"
+    },
+    {
+      "prueba": "F3: experimento 31/30/23/0",
+      "ok": true,
+      "detalle": "",
+      "nivel": "error"
+    },
+    {
+      "prueba": "A4: siete salidas idénticas al repetir",
+      "ok": true,
+      "detalle": "",
+      "nivel": "error"
+    },
+    {
+      "prueba": "GUI: evidencia vigente de hospitales, cola y retorno",
+      "ok": true,
+      "detalle": "La demostración y calificación ante el docente corresponden al estudiante",
+      "nivel": "advertencia"
+    }
+  ],
+  "errores": 0,
+  "advertencias": 0
+}

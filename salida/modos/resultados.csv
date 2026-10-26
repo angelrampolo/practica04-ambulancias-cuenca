@@ -1,0 +1,5 @@
+speedMode,bit0,colision,tipo,t_s
+31,1,False,ninguna,91.0
+30,0,True,collision,5.0
+23,1,False,ninguna,91.0
+0,0,True,collision,4.0

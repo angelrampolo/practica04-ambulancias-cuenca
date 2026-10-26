@@ -1,0 +1,18 @@
+{
+  "formato": "IEEEtran conference A4 doble columna",
+  "paginas": 10,
+  "autor": "Angel Ramiro Apolo Aguilar",
+  "pdf_sha256": "436f844f389821f8c48034d9d459be7eb8b2919b725043203267222e7d8fe602",
+  "fuentes_zip_sha256": "fa50c69f07110bccfe1db1b6497b3621daf5d1798d2ddb572d72b2a1c12d28ed",
+  "compilacion_autocontenida_correcta": true,
+  "texto_identico_al_pdf_entregado": true,
+  "fuentes_times_incrustadas": true,
+  "referencias_indefinidas": false,
+  "caracteres_ausentes": false,
+  "cajas_desbordadas": false,
+  "observacion": "Persisten avisos Underfull por justificación de columnas y referencias; no hay desbordamientos ni glifos ausentes.",
+  "validacion_taller": "649 controles, 0 errores de invariantes; A3 sigue parcial por 158.08 m",
+  "github_url": "https://github.com/angelrampolo/practica04-ambulancias-cuenca",
+  "enlace_github_clicable": true,
+  "pagina_enlace_github": 10
+}

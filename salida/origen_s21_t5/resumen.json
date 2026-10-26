@@ -1,0 +1,47 @@
+{
+  "carpeta": "origen_s21_t5",
+  "semilla": 21,
+  "retorno": "origen",
+  "tasa": 5,
+  "accidentes": 15,
+  "cerrados": 15,
+  "censurados": 0,
+  "respuesta_total": {
+    "n": 15,
+    "media": 215.93333333333334,
+    "mediana": 202.0,
+    "p90": 382.59999999999997,
+    "maximo": 428.0
+  },
+  "desplazamiento": {
+    "n": 15,
+    "media": 215.93333333333334,
+    "mediana": 202.0,
+    "p90": 382.59999999999997,
+    "maximo": 428.0
+  },
+  "espera": {
+    "n": 15,
+    "media": 0.0,
+    "mediana": 0.0,
+    "p90": 0.0,
+    "maximo": 0.0
+  },
+  "mision": {
+    "n": 15,
+    "media": 651.7333333333333,
+    "mediana": 702.0,
+    "p90": 884.2,
+    "maximo": 948.0
+  },
+  "migracion_pct": 0.0,
+  "rechazos": 5,
+  "flota": 13,
+  "teleports": 0,
+  "intentos": 15,
+  "planes_pendientes": 0,
+  "vehiculos_fondo_retirados": 12,
+  "running_final": 0,
+  "expected_final": 0,
+  "wall_seconds": 47.686750100000154
+}

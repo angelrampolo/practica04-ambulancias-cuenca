@@ -1,0 +1,47 @@
+{
+  "carpeta": "origen_s8_t5",
+  "semilla": 8,
+  "retorno": "origen",
+  "tasa": 5,
+  "accidentes": 16,
+  "cerrados": 16,
+  "censurados": 0,
+  "respuesta_total": {
+    "n": 16,
+    "media": 276.1875,
+    "mediana": 285.0,
+    "p90": 392.0,
+    "maximo": 412.0
+  },
+  "desplazamiento": {
+    "n": 16,
+    "media": 276.1875,
+    "mediana": 285.0,
+    "p90": 392.0,
+    "maximo": 412.0
+  },
+  "espera": {
+    "n": 16,
+    "media": 0.0,
+    "mediana": 0.0,
+    "p90": 0.0,
+    "maximo": 0.0
+  },
+  "mision": {
+    "n": 16,
+    "media": 732.125,
+    "mediana": 756.5,
+    "p90": 923.5,
+    "maximo": 1011.0
+  },
+  "migracion_pct": 0.0,
+  "rechazos": 4,
+  "flota": 7,
+  "teleports": 0,
+  "intentos": 17,
+  "planes_pendientes": 0,
+  "vehiculos_fondo_retirados": 11,
+  "running_final": 0,
+  "expected_final": 0,
+  "wall_seconds": 58.101846068000214
+}

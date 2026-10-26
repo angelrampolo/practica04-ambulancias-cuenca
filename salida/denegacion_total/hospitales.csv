@@ -1,0 +1,8 @@
+hospital,tipo,stock_inicial,stock_final,despachos,recibidas,rechazos,sin_stock,ocupado_s,ocupado_3h_s,utilizacion_ref_pct,utilizacion_3h_pct
+VCM,publico,3,3,0,0,36,0,0,0,0.0,0.0
+IESS,publico,1,1,0,0,36,0,0,0,0.0,0.0
+MILITAR,publico,1,1,0,0,36,0,0,0,0.0,0.0
+MUNI_PATAMARCA,publico,3,3,0,0,36,0,0,0,0.0,0.0
+MUNI_VALLE,publico,2,2,0,0,36,0,0,0,0.0,0.0
+MONTE_SINAI,privado,0,0,0,0,0,36,0,0,,
+DEL_RIO,privado,0,0,0,0,0,36,0,0,,

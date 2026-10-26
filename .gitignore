@@ -1,0 +1,24 @@
+__pycache__/
+*.pyc
+.venv/
+.mplconfig/
+core
+core.*
+historial/
+publicacion/
+docs/latex/build/
+
+# Entradas extraíbles, productos de ejecución y paquetes locales
+datos/cuenca_net.xml
+datos/cuenca_osm.xml
+escenario/cuenca_ciudad.net.xml
+escenario/fondo_*
+salida/base/macro.xml
+salida/**/tripinfo.xml
+salida/**/summary.xml
+docs/latex/build/
+historial/
+publicacion/
+Entrega_Reto_Ambulancias.zip
+Codigo_GitHub.zip
+Informe_LaTeX.zip

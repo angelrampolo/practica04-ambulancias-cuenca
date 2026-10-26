@@ -1,0 +1,886 @@
+                                               Universidad de Cuenca
+                                               Facultad de Ingeniería · Telecomunicaciones
+INGENIERÍA
+
+
+
+Redes Vehiculares y Heterogéneas · Optativa III · INGE-00104 · PAO2 Sep 2026 – Feb 2027
+
+R E TO S U MO + T R AC I · G U Í A D O C E N T E CO N R ES P U ESTA S
+
+Accidentes bus–moto y despacho
+de ambulancias en Cuenca
+
+M AT E R I A L                                SESIONES                                H E R R A M I E N TA S                    DOCENTE
+
+
+
+Solo docente                                  2 × 2 h + autónomo                      SUMO 1.28 · TraCI · Python                Pablo Barbecho
+respuestas de cada fase y tarea               Validación A y Validación B             red de Cuenca (compartida)                Unidad académica: Ingeniería
+
+R E F E R E N C I A S Y M AT E R I A L
+
+  CLASE C04 · KRAUSS · «COLISIÓN IMPOSIBLE»           GUÍA DE TALLERES 2026 · TALLERES 2–3 · SUMO              SOLUCIÓN PROBADA · reto_ambulancias.py
+
+
+
+La U que vive la educación
+R E TO A M B U L A N C I A S · G U Í A D O C E N T E                                                                                                                        02 / 30
+
+Mapa del reto: seis fases y dos validaciones                                                                                                         RVH · Reto ambulancias · docente
+
+
+Sesión 1 construye el escenario (F0–F2); sesión 2 lo controla por TraCI y lo mide (F3–F5)
+
+
+  SESIÓN 1 · ESCENARIO                                                           S E S I Ó N 2 · CO N T R O L P O R T R A C I Y R E S U LTA D O S
+
+
+
+
+          F0                     F1                    F2           VAL A                 F3                         F4                         F5                    VAL B
+         Red                Tráfico 3 h            Hospitales      4 tareas          Accidentes                 Despacho                  Estadísticas               4 tareas
+   cuenca_net.xml            .sumocfg             convertRoad     fin sesión 1     speedMode(0)                 findRoute                     2 CSV                fin sesión 2
+     → avenidas                q, k, v             cola aleat.                      getCollisions             changeTarget                  2 gráficos
+
+
+
+
+   Historia que se simula                                                           Qué aprende el estudiante
+
+   Durante 3 h circulan autos, buses y motos. Cinco veces por hora una              Por qué Krauss no choca y cómo sacar a un vehículo del modelo (C04)
+   moto embiste a un bus en un punto distinto de Cuenca. El script                  · qué hacen time-to-teleport y collision.action ·
+   detecta el choque, pide una ambulancia al hospital más cercano en                geocodificación con TraCI · rutas por tiempo con findRoute ·
+   tiempo que tenga una libre, la lleva al sitio, la retiene 120 s, retira a        máquina de estados de una misión · estadísticas de un sistema de
+   los accidentados y la devuelve al hospital más cercano al accidente.             emergencias.
+                                                                                                                                                               03 / 30
+                                                                                                                                 Redes Vehiculares y Heterogéneas · Reto
+
+
+
+
+A
+BLOQUE A
+
+
+Escenario: red, tráfico de 3 h y hospitales
+Fases 0, 1 y 2 · Validación A
+
+
+  F0 · de cuenca_net.xml a                  F1 · .sumocfg + lectura                F2 · convertRoad + cola                    Validación A · 4 tareas
+  avenidas                                  macroscópica                           aleatoria
+
+
+
+
+                             B · A CC I D E N T E S                                                          D · E STA D Í ST I C A S
+
+
+
+A · ESCENARIO                                                         C · D E S PA C H O                                                                       CIERRE
+R E T O A M B U L A N C I A S · G U Í A D O C E N T E · FA S E 0                                                                                                               04 / 30
+
+F0 · De la red de calles a la red de avenidas                                                                                                           RVH · Reto ambulancias · docente
+
+
+Tareas 0.1–0.3: cuenca_net.xml (todas las calles) → cuenca_ciudad.net.xml (avenidas) con un solo netconvert
+
+TA R E A S 0 .1 – 0 . 3 · D E L A R E D D E C A L L E S C U E N C A _ N E T. X M L A L A R E D D E A V E N I D A S D E L R E TO
+                                                                                                                                  Por qué reducir la red
+El docente te comparte cuenca_net.xml, la red SUMO de todas las calles de                                                         El reto es microscópico: cada vehículo sigue a
+Cuenca. Con un solo netconvert obtén la red de avenidas en la que corre el reto.                                                  Krauss y los choques ocurren entre vehículos
+No hay poda.                                                                                                                      concretos. Simular 34 000 aristas a ese nivel
+                                                                                                                                  cuesta mucho; las avenidas, por donde
+ 1     0.1 · Explora. Abre cuenca_net.xml en sumo-gui y cuenta aristas, nodos, semáforos y km de
+                                                                                                                                  circulan buses y ambulancias, bastan.
+       vía con sumolib (getEdges(), getNodes(), getTrafficLights(), getLength()).
+
+ 2     0.2 · Deriva la red de avenidas. netconvert -s cuenca_net.xml -o
+       cuenca_ciudad.net.xml con los ocho filtros de la lámina siguiente (qué hace cada uno y                                     ¿Y mesoscópico?
+       por qué).                                                                                                                  sumo --mesosim modela cada arista como una
+ 3     0.3 · Verifica y compara. Repite el conteo sobre cuenca_ciudad.net.xml, ubica tres                                         cola y correría la red completa en segundos,
+       hospitales en sumo-gui y calcula qué fracción de aristas y de km de vía conservaste.                                       pero sin seguimiento entre vehículos: no
+                                                                                                                                  puede haber choques. Por eso el reto reduce
+     Entregable · cuenca_ciudad.net.xml + tabla red completa frente a red de avenidas.                                            la red en vez de cambiar de nivel.
+     Comprobación · Un solo componente, semáforos en las avenidas y alrededor del 5 % de las
+     aristas y del 9 % de los km de la red completa.
+                                                                                                                                  Ayuda
+                                                                                                                                  Al cargar la red completa aparecen avisos has
+                                                                                                                                  no controlling detector de los semáforos
+                                                                                                                                  actuados: son normales.
+R E T O A M B U L A N C I A S · G U Í A D O C E N T E · FA S E 0                                                                                                                                     05 / 30
+
+F0 · Los filtros de netconvert, uno por uno                                                                                                                                   RVH · Reto ambulancias · docente
+
+
+Cómo pasar de toda la vialidad a las avenidas: tipo de vía, recorte geográfico, conectividad y cruces
+
+TA R E A 0 . 2 · N E TCO N V E RT -S C U E N C A _ N E T. X M L - O C U E N C A _C I U D A D. N E T. X M L + E STO S F I LT R O S ( TO D O S E X I ST E N E N S U M O 1 .1 2 . 0 )
+
+ Parámetro                                                                             Qué hace y por qué lo usa el reto
+ -s cuenca_net.xml                                                                     Lee una red SUMO ya construida (no OSM): la de todas las calles que comparte el docente.
+ -o cuenca_ciudad.net.xml                                                              Archivo de salida: la red del reto, que usarán gen_fondo.sh y reto.sumocfg.
+ --keep-edges.by-type                                                                  Conserva solo los tipos OSM de jerarquía tertiary o superior (autopista, troncal, primaria,
+ highway.motorway,…,highway.tertiary_link                                              secundaria, terciaria y sus enlaces): descarta residential, unclassified y service.
+ --keep-edges.in-geo-boundary -79.030,-2.930,-78.950,-2.860                            Recorta al rectángulo lonMin,latMin,lonMax,latMax que contiene los siete hospitales.
+ --keep-edges.components 1                                                             Se queda con la mayor componente conexa: ninguna isla de avenidas a la que una ambulancia no
+                                                                                       pueda llegar.
+ --remove-edges.isolated                                                               Quita las aristas sueltas que el filtro dejó sin conexión.
+
+ --geometry.remove                                                                     Fusiona aristas partidas por nodos que solo dibujan la forma: menos aristas, misma geometría.
+ --junctions.join                                                                      Une en un solo cruce los nodos muy cercanos (avenidas con parterre, redondeles partidos).
+ --junctions.join-dist 25                                                              Distancia máxima de unión en metros (por defecto 10). Con 25 se unen los cruces de dos calzadas;
+                                                                                       sin ella, 150 vehículos quedan atrapados en un gridlock a los 50 min.
+ --no-turnarounds.except-deadend                                                       No crea giros en U en los cruces, salvo en calles sin salida.
+R E T O A M B U L A N C I A S · G U Í A D O C E N T E · FA S E 0 · T R A M PA                                                                                                                06 / 30
+
+F0 · Sin teleporting, el gridlock es para siempre                                                                                                                 RVH · Reto ambulancias · docente
+
+
+Por qué --junctions.join-dist 25: sin unir cruces, o se atascan 150 vehículos o aparecen 26 choques espurios
+
+E X P E R I M E N TO D E L D O C E N T E · S U M O 1 .1 2 . 0 · M I S M O T R Á F I CO D E 3 H , TIME-TO-TELEPORT   -1 , F I N E N 1 2 6 0 0 S · « R U N N I N G » A L F I N A L = V E H Í C U LO S
+AT R A PA D O S E N U N G R I D LO C K
+
+                                                                                                                                                                           Colisiones
+ Variante de la red / configuración                                                                  Aristas            Semáforos             Running al final
+                                                                                                                                                                           naturales
+
+ Avenidas de cuenca_net.xml sin --junctions.join                                                     1 802              177                   150                          4
+
+ + ignore-junction-blocker 60 en el .sumocfg                                                         1 802              177                   0                            26
+
+ Avenidas + --junctions.join --junctions.join-dist 25                                                1 745              176                   0                            9
+
+ + ignore-junction-blocker 60 (configuración del reto)                                               1 745              176                   0                            9
+
+
+
+   Por qué importa en este reto                                                                     Qué debe concluir el estudiante
+   Sin teleporting, un cruce bloqueado (vehículos que se esperan                                    Localizar el cruce bloqueado con TraCI (vehículos por arista y
+   mutuamente) es permanente: la cola crece hasta el hospital y la                                  getWaitingTime de miles de segundos: Av. del Toril y Barrial Blanco
+   ambulancia nunca llega. Con time-to-teleport 300 (defecto) SUMO                                  desde t ≈ 50 min en la red sin unir) y atribuirlo a cruces partidos.
+   lo «resolvería» haciendo desaparecer vehículos… y la estadística                                 ignore-junction-blocker lo deshace, pero con 26 choques espurios
+   sería falsa.                                                                                     que ensuciarían el conteo de F3: la solución limpia es --
+                                                                                                    junctions.join-dist 25.
+R E T O A M B U L A N C I A S · G U Í A D O C E N T E · FA S E 1                                                                                                07 / 30
+
+F1 · Tipos de vehículo y tráfico de fondo                                                                                               RVH · Reto ambulancias · docente
+
+
+Tarea 1.1: archivos entregados; el estudiante los revisa y genera la demanda
+
+TA R E A 1 .1 · T I P O S Y D E M A N D A D E 3 H : A R C H I V O S E N T R E G A D O S P O R E L D O C E N T E
+                                                                                                                  Lo que conviene entender
+Los cuatro tipos de vehículo (vtypes.add.xml) y el generador de demanda                                           vClass decide por dónde circula cada tipo;
+(gen_fondo.sh) vienen hechos: revísalos y genera el tráfico de fondo.                                             tau y sigma son los parámetros de Krauss de
+                                                                                                                  C04. La moto es agresiva pero no choca sola:
+ 1     Lee vtypes.add.xml: identifica vClass, tau, sigma y speedFactor de auto, bus, moto y
+                                                                                                                  los choques los provocarás tú en F3.
+       ambulancia. ¿Cuál es el más agresivo?
+ 2     Ejecuta ./gen_fondo.sh (unos segundos): 3 h de tráfico, 1 200 autos/h, 100 buses/h y 300
+       motos/h con randomTrips.py.                                                                                Trampa
+ 3     Comprueba los tres fondo_*.rou.xml y cuántos vehículos tiene cada uno.                                     Si cambias tau por debajo de 1 s (el paso de
+                                                                                                                  simulación) aparecen choques moto–moto
+     Entregable · Los tres .rou.xml y una línea sobre el tipo más agresivo y por qué.                             «naturales» que ensucian el conteo de
+     Comprobación · Unos 3 500 / 300 / 880 vehículos de los 3 600 / 300 / 900 pedidos (--validate                 accidentes.
+     descarta los viajes sin ruta).
+
+                                                                                                                  Ayuda
+                                                                                                                  El guion ya quita el <vType> que duarouter
+                                                                                                                  copia en cada .rou.xml; sin eso SUMO aborta
+                                                                                                                  con Another vehicle type … exists.
+R E T O A M B U L A N C I A S · G U Í A D O C E N T E · FA S E 1                                                                                         08 / 30
+
+F1 · El .sumocfg sin teleporting                                                                                                  RVH · Reto ambulancias · docente
+
+
+Tareas 1.2 y 1.3: nadie desaparece, las colisiones se avisan y el script decide
+
+TA R E A S 1 . 2 Y 1 . 3 · R E TO. S U M O C F G Y L A CO R R I D A D E L Í N E A B A S E S I N T R A C I
+                                                                                                            Por qué warn y no remove
+Escribe reto.sumocfg para 3 h de demanda + 30 min de vaciado en los que nadie                               Con remove SUMO quita a los accidentados en
+desaparece, y corre la línea base.                                                                          el mismo paso y la ambulancia no tiene a
+                                                                                                            quién atender; con warn quedan en el sitio y
+ 1      1.2 · Red y tiempo. net-file cuenca_ciudad.net.xml, begin 0, end 12600, step-length 1.
+                                                                                                            es tu script quien los inmoviliza y retira (F3–
+ 2      Sin teleporting. time-to-teleport -1 y time-to-teleport.disconnected -1: un bloqueo                 F4).
+        real se queda y cuenta.
+
+ 3      Colisiones. collision.action warn (ni remove ni teleport), collision.check-junctions
+        true y collision.mingap-factor 0.                                                                   Por qué −1
+                                                                                                            Con time-to-teleport 300 (defecto) un
+ 4      Robustez y salidas. ignore-route-errors, ignore-junction-blocker 60, rerouting al 30 %
+                                                                                                            vehículo bloqueado se teleporta a los 5 min,
+        cada 120 s; tripinfo, collision-output y statistic-output en salida/.
+                                                                                                            la cola se evapora y el tiempo de respuesta
+ 5      1.3 · Línea base. sumo -c reto.sumocfg: anota insertados, teleports, colisiones y duración          medido sería optimista.
+        media de viaje.
+
+     Entregable · reto.sumocfg + las cifras de la corrida base.                                             Ayuda
+     Comprobación · Teleports: 0, más de 4 500 insertados de tres tipos y la corrida termina en             step-length 0.1 multiplica por 10 la
+     menos de un minuto.                                                                                    duración y no gana nada aquí. Si al final
+                                                                                                            quedan vehículos «running», vuelve a la
+                                                                                                            lámina del gridlock.
+R E T O A M B U L A N C I A S · G U Í A D O C E N T E · FA S E 1 · M A C R O                                                                                       09 / 30
+
+F1 · Lectura macroscópica del tráfico de fondo                                                                                              RVH · Reto ambulancias · docente
+
+
+Tarea 1.4: flujo, densidad y velocidad agregados con edgeData y su lugar en el diagrama fundamental
+
+TA R E A 1 .4 · L E C T U R A M A C R O S CÓ P I C A D E L A L Í N E A B A S E : Q, K Y V C A D A 1 5 M I N U TO S
+                                                                                                                     Tres niveles de modelado
+Mira el tráfico de la red de avenidas como un fluido: mide flujo, densidad y                                         Micro: cada vehículo (Krauss, choques) — el
+velocidad agregados cada 15 min y ubícalos en el diagrama fundamental.                                               reto. Meso: cada arista es una cola (--
+                                                                                                                     mesosim), rápido pero sin choques. Macro: la
+ 1      Activa la salida agregada. Crea macro.add.xml con un <edgeData id="macro" freq="900"
+                                                                                                                     red como fluido con q = k·v. Aquí se calcula lo
+        file="salida/macro.xml"/>, añádelo a additional-files y repite la corrida de 1.3.
+                                                                                                                     macro a partir de la simulación micro.
+ 2      Calcula por intervalo (pandas o ElementTree): q = entered·3600/900 (veh/h), k = density
+        (veh/km) y v = speed·3,6 (km/h); para la red, promedia ponderando por longitud de arista (y
+        v por flujo).                                                                                                Ojo en SUMO 1.12
+ 3      Identifica los regímenes: llenado inicial, estado estacionario y vaciado tras los 10 800 s.                  El intervalo de edgeData se fija con freq. Con
+                                                                                                                     period (nombre de versiones posteriores) 1.12
+ 4      Elige tres avenidas (p. ej. Circunvalación Sur, Huayna Capac, Américas), calcula su q, k, v
+                                                                                                                     lo ignora y escribe un solo intervalo de 3,5 h.
+        medios en la parte estacionaria, comprueba q ≈ k·v y di en qué rama del diagrama
+        fundamental están.
+                                                                                                                     Ayuda
+     Entregable · Tabla k, q, v por intervalo, la de las tres avenidas y un gráfico q–k.
+                                                                                                                     density es por arista (todos sus carriles). La
+     Comprobación · Régimen estacionario claro entre los 15 y los 180 min y todas las avenidas en la
+                                                                                                                     densidad crítica de una avenida urbana es del
+     rama de flujo libre.
+                                                                                                                     orden de 20–30 veh/km por carril: por debajo,
+                                                                                                                     flujo libre.
+R E T O A M B U L A N C I A S · G U Í A D O C E N T E · FA S E 2                                                                                                 10 / 30
+
+F2 · Hospitales como puntos de partida                                                                                                   RVH · Reto ambulancias · docente
+
+
+Tarea 2.1: convertRoad con isGeo=True y vClass=emergency, más un POI por hospital
+
+TA R E A 2 .1 · U B I C A R ( ) — CO O R D E N A D A S W G S 8 4 → A R I STA Q U E A D M I T E E M E R G E N C Y
+                                                                                                                   Por qué vClass=emergency
+Ubica los siete hospitales (coordenadas WGS84 del capítulo) sobre una arista de                                    convertRoad sin clase puede caer en una
+la red que admita ambulancias y márcalos en el mapa.                                                               acera o ciclovía y después vehicle.add
+                                                                                                                   fallaría. Con emergency la arista elegida
+ 1     Coordenadas → arista. traci.simulation.convertRoad(lon, lat, isGeo=True,
+                                                                                                                   siempre admite la ambulancia.
+       vClass="emergency") devuelve arista, posición y carril.
+ 2     Distancia. Calcula la distancia punto–arista (convert2D de la arista + getDistance2D) y
+       guárdala: es tu control de calidad de la red.                                                               Ayuda
+ 3     Marcador. Un POI rojo por hospital (traci.poi.add, poiType="hospital") con las                              convertRoad devuelve la arista más cercana
+       coordenadas de convertGeo.                                                                                  aunque esté lejos: pide siempre la distancia.
+                                                                                                                   Sin isGeo=True usa lon/lat como x/y y los
+ 4     Tabla. Imprime hospital → tipo (público / privado) → arista · calle → distancia.
+                                                                                                                   POIs aparecen en el campo.
+
+     Entregable · Clase Hospital con ubicar() y la tabla impresa al arrancar.
+     Comprobación · Siete POIs sobre las avenidas correctas en sumo-gui y todas las distancias < 150               Si sale a cientos de metros
+     m.
+                                                                                                                   Casi siempre es lon/lat intercambiados o
+                                                                                                                   isGeo olvidado: con la red de avenidas todos
+                                                                                                                   los hospitales tienen una arista a menos de
+                                                                                                                   140 m.
+R E T O A M B U L A N C I A S · G U Í A D O C E N T E · FA S E 2                                                                                                                11 / 30
+
+F2 · Cola de disponibilidad aleatoria                                                                                                                   RVH · Reto ambulancias · docente
+
+
+Tarea 2.2: deque por hospital, stock inicial aleatorio y negativa con probabilidad 0,25
+
+TA R E A 2 . 2 · CO L A F I F O P O R H O S P I TA L CO N STO C K A L E ATO R I O Y N E G AT I V A CO N P R O B A B I L I D A D
+P_S I N                                                                                                                           Dos fuentes de «no hay»
+                                                                                                                                  (1) Cola vacía: stock 0 o todas en misión. (2)
+Modela la disponibilidad: una cola FIFO por hospital con stock inicial aleatorio y                                                Negativa aleatoria aunque haya stock. Las dos
+una negativa con probabilidad psin aunque haya unidad.                                                                            deben verse en el log, porque explican que el
+                                                                                                                                  hospital elegido no siempre sea el más
+ 1      Generador propio. random.Random(args.seed) en el simulador: la flota debe ser
+                                                                                                                                  cercano.
+        reproducible corrida a corrida.
+ 2      Stock inicial. Públicos 1–3 unidades, privados 0–1 (randint); cada unidad con un
+        identificador U01… en un collections.deque.                                                                               Trampa
+ 3      Pedir una unidad. Cola vacía → «no hay»; si hay, se niega con psin = 0,25 (cuenta los                                     random.random() global sin semilla: cada
+        rechazos); si concede, popleft().                                                                                         corrida da otra flota y no podrás reproducir
+                                                                                                                                  tus cifras en la validación B.
+ 4      Devolver. Al cerrar una misión la unidad entra con append() en la cola del hospital donde
+        termina (lo usarás en 4.3).
+                                                                                                                                  Ayuda
+     Entregable · Log de arranque con el stock por hospital y el total de la flota.
+                                                                                                                                  Guarda stock_ini aparte de la cola: en F5
+     Comprobación · Al menos un hospital arranca con 0 unidades («a veces no hay ambulancia en                                    compararás el stock inicial con el final de
+     una ubicación») y la misma semilla da la misma flota.
+                                                                                                                                  cada hospital.
+R E TO A M B U L A N C I A S · G U Í A D O C E N T E · VA L I DAC I Ó N A                                                                                                      12 / 30
+
+Validación docente A · cuatro tareas                                                                                                                   RVH · Reto ambulancias · docente
+
+
+Qué debe verse en cada tarea y qué suele fallar
+
+F I N D E L A S E S I Ó N 1 · E N E L P U E STO, S I N C A PT U R A S · 5 P U N TO S P O R TA R E A
+
+  #                Tarea                         Evidencia que debe verse                                                Fallos frecuentes
+
+ A1 · F0           Red de la ciudad              cuenca_ciudad.net.xml derivada con un solo netconvert,                 Usar la red completa · sin --junctions.join-dist
+                                                 tabla red completa / avenidas y 3 hospitales señalados; explica        25 (gridlock) · bbox con lat y lon cambiadas
+                                                 --junctions.join-dist
+ A2 · F1           3 h sin teleporting           Resumen con Teleports: 0, ≥ 4 500 insertados de 3 tipos;               Teleports > 0 (dejaron el defecto) · un solo tipo ·
+                                                 .sumocfg con -1 y warn; tabla k, q, v por intervalo                    vType duplicado
+ A3 · F2           Hospitales mapeados           Tabla hospital → arista/calle impresa; 7 POIs sobre las avenidas       POIs en el campo (bbox corto) · convertRoad sin
+                                                                                                                        isGeo (usa lon/lat como x/y)
+ A4 · F2           Flota aleatoria               Stock aleatorio en el log (alguno en 0) y la misma flota al            Flota fija «3 por hospital» · sin semilla · sin negativa
+                                                 repetir con la misma semilla                                           p_sin
+
+
+
+
+      Gestión del tiempo                                                                              Pregunta de control
+      A1 y A2 se pueden validar a mitad de sesión (detectan la red y el                               «¿Qué pasaría con las colas detrás del accidente si dejara time-to-
+      tráfico mal hechos a tiempo); A3 y A4 al final. Un fallo no bloquea la                          teleport por defecto?» — a los 300 s el vehículo bloqueado se
+      sesión 2, pero queda en la rúbrica.                                                             teleporta, la cola se evapora y el tiempo de respuesta medido sería
+                                                                                                      optimista.
+                                                                                                                                                         13 / 30
+                                                                                                                          Redes Vehiculares y Heterogéneas · Reto
+
+
+
+
+B
+BLOQUE B
+
+
+Accidentes bus–moto, cinco por hora
+Fase 3 · todo por TraCI
+
+
+  Agenda: 5 instantes por hora            Moto imprudente:                getCollisions() y parar()                    Trampas que aparecieron
+                                          speedMode(0)
+
+
+
+
+                           B · A CC I D E N T E S                                                     D · E STA D Í ST I C A S
+
+
+
+A · ESCENARIO                                                C · D E S PA C H O                                                                         CIERRE
+R E T O A M B U L A N C I A S · G U Í A D O C E N T E · FA S E 3                                                                                         14 / 30
+
+F3 · Agenda de accidentes: cinco por hora                                                                                        RVH · Reto ambulancias · docente
+
+
+Tarea 3.1: cinco instantes fijos por hora, reproducibles con la semilla
+
+TA R E A 3 .1 · A G E N D A _ A CC I D E N T E S ( ) — 5 I N STA N T E S U N I F O R M E S P O R H O R A
+                                                                                                           Y Poisson?
+Programa la agenda de accidentes: cinco por hora durante las tres horas,                                   Un proceso de Poisson de tasa 5/h es más
+reproducible, y con un plan B si en ese instante no hay bus apto.                                          realista pero el conteo por hora sale aleatorio:
+                                                                                                           queda como extensión opcional del capítulo.
+ 1     Agenda fija. Por cada hora, cinco instantes uniformes entre el minuto 5 y el minuto 58
+       (rng.uniform); ordena la lista.
+ 2     En el bucle principal. Cuando t alcanza el primer instante, intenta provocar el accidente           Ayuda
+       (3.2); si no hay bus apto, pospón ese instante 20 s.                                                Nunca antes de 300 s (la red está vacía y no
+ 3     Imprime la agenda al arrancar: número previsto y primer instante.                                   hay buses en marcha) ni en los últimos 120 s
+                                                                                                           de cada hora (que la ambulancia salga dentro
+     Entregable · agenda_accidentes() y la línea AGENDA de accidentes (…) en el log.                       de la hora).
+     Comprobación · 15 instantes previstos, ninguno antes de 300 s ni en los últimos 120 s de cada
+     hora; la validación B1 pide 15 ± 2 accidentes.
+                                                                                                           Trampa
+                                                                                                           Un intento puede fallar (la moto no alcanza al
+                                                                                                           bus): reprograma y cuenta los intentos, o
+                                                                                                           acabarás con menos de 15 y sin saber por qué.
+R E T O A M B U L A N C I A S · G U Í A D O C E N T E · FA S E 3                                                                                                                 15 / 30
+
+F3 · La moto imprudente                                                                                                                                  RVH · Reto ambulancias · docente
+
+
+Tarea 3.2: elegir un bus, poner (o encontrar) una moto detrás y sacarla del modelo
+
+TA R E A 3 . 2 · P R O G R A M A R _ A CC I D E N T E ( T ) — U N B U S E N M A R C H A Y U N A M OTO Q U E D E J A D E S E G U I R
+E L M O D E LO                                                                                                                        Qué se modifica
+                                                                                                                                      El submodelo longitudinal: con speedMode
+Provoca el choque: elige un bus en marcha, pon (o encuentra) una moto detrás y                                                        0 la moto deja de calcular vsafe e ignora
+sácala del modelo de Krauss para que lo alcance.                                                                                      aceleración máxima, prioridad y rojos. La
+ 1     Bus apto. Entre los buses activos, uno que no esté en un cruce (getRoadID no empieza por :),                                   palanca de la lámina «colisión imposible»
+       con velocidad ≥ 4 m/s y a más de 60 m del inicio de la arista.                                                                 de C04, ahora a propósito.
+
+ 2     Moto. Si getFollower(bus, 80) ya es una moto, úsala; si no, inserta una 45 m detrás, en su
+       mismo carril, con el resto de la ruta del bus (getRoute desde getRouteIndex).                                                  Alternativas válidas
+ 3     Fuera del modelo. setSpeedMode(moto, 0), setLaneChangeMode(moto, 0) y setSpeed(moto,                                           Cruce: setParameter(moto,
+       22) (~80 km/h).                                                                                                                "junctionModel.ignoreFoeProb", "1") ·
+ 4     Registra la pareja (moto, bus, instante) como colisión pendiente y escribe IMPRUDENTE … en el                                  lateral: setLaneChangeMode(0) +
+       log.                                                                                                                           changeLane. Las tres cumplen «modificar
+                                                                                                                                      un modelo».
+     Entregable · programar_accidente(t), que devuelve True si encontró bus y moto.
+     Comprobación · En el log, IMPRUDENTE moto… persigue a bus… y, pocos segundos después, el
+     choque detectado en 3.3.                                                                                                         Trampa
+                                                                                                                                      Una moto en modo 0 que no alcanza a su
+                                                                                                                                      bus sigue sin ver a nadie: si sale de la
+                                                                                                                                      arista sin chocar, devuélvele el control
+                                                                                                                                      (lámina siguiente) o retírala.
+R E T O A M B U L A N C I A S · G U Í A D O C E N T E · FA S E 3 · E N L A C E C O N C 0 4                                                                              16 / 30
+
+F3 · Por qué choca: los bits de speedMode                                                                                                       RVH · Reto ambulancias · docente
+
+
+Pregunta de análisis 1: cuál es el bit que importa y cómo se justifica
+
+P R E G U N TA D E A N Á L I S I S 1 · Q U É R E S P E TA C A D A B I T D E S P E E D M O D E ( 31 = TO D O, 0 = N A D A )
+                                                                                                                             Lo que se evalúa en B1
+ Bit           Valor            Qué respeta el vehículo si el bit está a 1
+                                                                                                                             La conexión con C04: qué término de la
+ 0             1                Velocidad segura v_safe (regla del mínimo)
+                                                                                                                             regla del mínimo deja de aplicarse y por
+ 1             2                Aceleración máxima                                                                           qué eso basta para el alcance. El resto de
+ 2             4                Deceleración máxima                                                                          bits son matices.
+ 3             8                Prioridad en los cruces
+ 4             16               Semáforo en rojo
+                                                                                                                             Ayuda
+LO Q U E D E B E S R E S P O N D E R
+                                                                                                                             La documentación de setSpeedMode lista
+                                                                                                                             los bits; el valor que pasas es la suma de
+¿Qué bit basta apagar para que la moto alcance al bus? Experimenta y explícalo                                               los que quedan a 1. 30 = todo menos el bit
+con la regla del mínimo de C04.                                                                                              0; 23 = todo menos el bit 3.
+ 1      Repite 3.2 con speedMode 31, 30, 23 y 0: ¿cuáles chocan y de qué tipo es la colisión (collision
+        o junction)?
+                                                                                                                             Trampa
+ 2      Relaciónalo con v = min(vmax, v + a·Δt, vsafe): ¿por qué setSpeed(22) solo, con modo 31, nunca
+                                                                                                                             Una moto que no chocó y sigue en modo 0
+        choca?
+                                                                                                                             atropella lo que encuentre más adelante y
+ 3      Indica cómo devolver el control a SUMO a una moto que no chocó (modo de velocidad,                                   ensucia tu conteo: restaura siempre los tres
+        velocidad pedida y modo de cambio de carril).                                                                        modos.
+
+     Entregable · Un párrafo en el informe (B1) con el bit decisivo y su justificación.
+     Comprobación · La explicación nombra vsafe; «puse speedMode 0» sin más no basta.
+R E T O A M B U L A N C I A S · G U Í A D O C E N T E · FA S E 3                                                                                    17 / 30
+
+F3 · Detectar el choque e inmovilizar                                                                                       RVH · Reto ambulancias · docente
+
+
+Tarea 3.3: getCollisions(), registro, POI y parada en dos pasos
+
+TA R E A 3 . 3 · D E T E C TA R _CO L I S I O N E S ( T ) Y PA R A R ( V )
+                                                                                                         Por qué parar() en dos pasos
+Detecta el choque en cada paso, regístralo como accidente y deja a bus y moto                            Si dejas speedMode 0, SUMO cuenta una
+inmóviles en el sitio, visibles en el mapa.                                                              Emergency Stop por paso y el vehículo
+                                                                                                         sigue sin ver a nadie. Un paso en modo 0
+ 1      Leer colisiones. traci.simulation.getCollisions() da pares collider/victim con tipos,
+                                                                                                         frena en seco; luego modo 31 con velocidad
+        carril, posición y clase (collision | junction). Con warn la misma pareja se repite cada paso:
+                                                                                                         0 lo deja quieto y «civilizado».
+        memoriza los pares vistos.
+ 2      Filtrar. Solo cuentan los pares bus–moto; una colisión de fondo (auto–auto, moto–moto) se
+        retira y se anota (lámina de trampas).                                                           Accidente en el cruce
+ 3      Registrar. Crea un Accidente (id, instante, bus, moto, arista, posición), escribe ACCIDENTE …    Si el carril empieza por : (interno), el
+        en el log y pon un POI amarillo en el punto.                                                     destino de la ambulancia será la siguiente
+                                                                                                         arista de la ruta del bus; toma las
+ 4      Inmovilizar. parar(v): un paso con speedMode 0 y velocidad 0 (frenada en seco) y, al
+                                                                                                         coordenadas de
+        siguiente, speedMode 31 manteniendo velocidad 0. Pinta ambos de rojo.
+                                                                                                         vehicle.getPosition(bus), que siempre
+                                                                                                         existe.
+     Entregable · detectar_colisiones(t) y parar(v).
+     Comprobación · En sumo-gui, bus y moto rojos e inmóviles con un POI amarillo y una cola
+     creciendo detrás; la misma pareja aparece en el collision-output.                                   Ayuda
+                                                                                                         collider y victim no tienen orden fijo:
+                                                                                                         decide quién es el bus por colliderType /
+                                                                                                         victimType, no por posición.
+R E T O A M B U L A N C I A S · G U Í A D O C E N T E · FA S E 3 · AY U D A S                                                                                                       18 / 30
+
+F3 · Trampas del generador de accidentes                                                                                                                    RVH · Reto ambulancias · docente
+
+
+Síntoma → causa → qué debe hacer el estudiante
+
+S E I S M E N S A J E S Q U E V E R Á E L E ST U D I A N T E · TO D O S A PA R E C I E R O N A L CO N ST R U I R L A S O LU C I Ó N
+
+  Síntoma                                                                              Causa y respuesta
+
+ AttributeError: 'Collision' object has no attribute                                   El campo se llama type (collision / junction); los demás: collider, victim,
+ 'collisionType'                                                                       colliderType, victimType, lane, pos.
+
+ Position on lane invalid en convert2D                                                 c.pos puede ser negativa o > longitud (se detecta con solape). Recortar a [0, L] o usar
+                                                                                       vehicle.getPosition(bus).
+
+ La moto «sale de la red sin chocar»                                                   El bus giró o la moto chocó antes con un auto. Restaurar modo 31 a los 90 s y reprogramar el
+                                                                                       accidente 60 s después: así se mantienen 5/h.
+
+ Vehicle 'moto_imprudente_…' is not known justo tras add                               La inserción ocurre en el paso siguiente; no tocar el vehículo hasta que aparezca en
+                                                                                       getIDList() (o tolerar la excepción 5 s).
+
+ Colisiones de fondo (auto–auto, bus–auto) con warn                                    Quedan solapados (gap 0) y bloquean la vía para siempre. El script los retira con
+                                                                                       vehicle.remove salvo ambulancias y accidentados (14 casos en la corrida).
+
+ 12 926 Emergency Stops en el resumen                                                  Vehículos dejados en speedMode 0 con velocidad 0: parar() en dos pasos (lámina anterior)
+                                                                                       los baja a 1–2.
+                                                                                                                                                             19 / 30
+                                                                                                                              Redes Vehiculares y Heterogéneas · Reto
+
+
+
+
+C
+BLOQUE C
+
+
+Despacho, llegada, atención y retorno
+Fase 4 · la máquina de estados de una misión
+
+
+  findRoute con disponibilidad            Tres criterios de llegada                Retorno al más cercano al               Un accidente, todo su log
+  aleatoria                                                                        accidente
+
+
+
+
+                           B · A CC I D E N T E S                                                         D · E STA D Í ST I C A S
+
+
+
+A · ESCENARIO                                                         C · D E S PA C H O                                                                    CIERRE
+R E T O A M B U L A N C I A S · G U Í A D O C E N T E · FA S E 4                                                                                                                  20 / 30
+
+F4 · Despacho desde el hospital con unidad                                                                                                                 RVH · Reto ambulancias · docente
+
+
+Tarea 4.1: findRoute por tiempo, cola aleatoria y cola de espera
+
+TA R E A 4 .1 · H O S P I TA L M Á S C E R C A N O E N T I E M P O E N T R E LO S Q U E T I E N E N ( Y CO N C E D E N ) U N I D A D
+                                                                                                                                       Tiempo, no metros
+Despacha desde el hospital más cercano en tiempo entre los que tienen unidad y                                                         findRoute usa los tiempos de viaje
+la conceden; si ninguno puede, el accidente espera.                                                                                    actuales: el hospital elegido cambia con la
+                                                                                                                                       hora y con las colas de otros accidentes
+ 1     hospital_mas_cercano(desde, hacia_hospital, requiere_unidad). Para cada hospital: si se
+                                                                                                                                       (pregunta de análisis 3).
+       exige unidad, salta los que tienen la cola vacía o niegan (psin); calcula findRoute y quédate
+       con el menor travelTime.
+ 2     Sentido de la ruta. Para despachar, del hospital al accidente; para retornar (4.3), del accidente                               Ayuda
+       al hospital: misma función, dos sentidos.                                                                                       findRoute con vType="ambulance" respeta
+                                                                                                                                       los permisos de la clase; si r.edges está
+ 3     despachar(t, acc). Si hay candidato: popleft() de su cola, route.add + vehicle.add desde la
+                                                                                                                                       vacío no hay camino: descarta ese hospital.
+       posición del hospital y DESPACHO … en el log.
+ 4     Cola de espera. Si nadie puede, anota el intento fallido y reintenta a los 30 s (SIN AMBULANCIA
+       … queda en cola).                                                                                                               Qué se valida en B2
+                                                                                                                                       Que el criterio sea el tiempo de viaje y que
+     Entregable · Las dos funciones y las líneas DESPACHO / SIN AMBULANCIA en el log.
+                                                                                                                                       la negativa aleatoria se vea en el log: un
+     Comprobación · Cada despacho indica hospital, unidad, espera, aristas, metros y ETA; el hospital                                  hospital con stock que no despacha es
+     elegido no siempre es el más cercano en línea recta.
+                                                                                                                                       correcto si lo justifica un rechazo.
+R E T O A M B U L A N C I A S · G U Í A D O C E N T E · FA S E 4                                                                                       21 / 30
+
+F4 · Llegada al accidente                                                                                                      RVH · Reto ambulancias · docente
+
+
+Tarea 4.2: distancia de conducción ≤ 50 m, o detrás de la cola, o a pie
+
+TA R E A 4 . 2 · T R E S C R I T E R I O S D E L L E G A D A Y R E- E N R U TA M I E N TO E N C A M I N O
+                                                                                                            Por qué tres criterios
+Decide en cada paso si la ambulancia ha llegado: sin teleporting llegará por detrás                         Sin teleporting, la ambulancia llega por
+de la cola, así que un solo criterio de distancia no basta.                                                 detrás de la cola del propio accidente; en
+                                                                                                            una vía de un carril nunca estaría a 50 m.
+ 1      Distancia por carretera. getDistanceRoad(e, p, acc.edge, acc.pos, isDriving=True)
+                                                                                                            Sin el criterio «a pie» algunas misiones no
+        desde la arista y posición actuales; si está en un cruce (:), espera al paso siguiente.
+                                                                                                            cierran.
+ 2      Tres criterios. (a) d ≤ 50 m; (b) detenida en la misma arista del accidente, tras la cola; (c)
+        detenida ≥ 30 s a ≤ 300 m: el equipo sigue a pie.
+        Re-enrutar en camino. Cada 60 s, si d > 300 m, rerouteTraveltime: esquiva los atascos de
+                                                                                                            Ayuda
+ 3
+        otros accidentes.                                                                                   getDistanceRoad devuelve −1 073 741 824 si
+                                                                                                            no hay camino: comprueba 0 <= d.
+ 4      El caso raro. Si la ambulancia llega al final de su ruta sin cumplir ninguno, cuenta la llegada
+                                                                                                            rerouteTraveltime cada 60 s imita al
+        igualmente (se reinsertará al retornar).
+                                                                                                            conductor que escucha el tráfico.
+ 5      Al llegar: estado «atendiendo», parar(amb) y LLEGADA … | respuesta N s en el log.
+
+     Entregable · El bloque de llegada del bucle principal.                                                 Tiempo de respuesta
+     Comprobación · Todas las misiones cierran la llegada (ninguna queda en_camino) y el tiempo             Se mide desde el instante del accidente, no
+     medido es parecido a la ETA del despacho.                                                              del despacho: si hubo espera por falta de
+                                                                                                            unidad, también cuenta. Es la cifra central
+                                                                                                            de F5.
+R E T O A M B U L A N C I A S · G U Í A D O C E N T E · FA S E 4                                                                                                                     22 / 30
+
+F4 · Atención y retorno al más cercano al accidente                                                                                                          RVH · Reto ambulancias · docente
+
+
+Tarea 4.3: retirar, cambiar de destino y cerrar la misión en otra base
+
+TA R E A 4 . 3 · T R A S 1 2 0 S : R E T I R A R , E L E G I R E L H O S P I TA L M Á S C E R C A N O A L A CC I D E N T E Y V O LV E R
+                                                                                                                                          La trampa que vale la lámina
+Tras 120 s de atención, retira a los accidentados y devuelve la ambulancia al                                                             Si parar() dejó laneChangeMode 0 y al
+hospital más cercano al accidente, donde queda disponible.                                                                                reanudar solo restauras speedMode, la
+                                                                                                                                          ambulancia llega al final de la arista sin
+ 1     Retirar. vehicle.remove(v, REMOVE_VAPORIZED) para bus y moto si siguen activos, y
+                                                                                                                                          poder cambiar de carril y, sin teleporting,
+       poi.remove del marcador.
+                                                                                                                                          bloquea media ciudad detrás. Restaura los
+ 2     Elegir base. hospital_mas_cercano(acc.edge, hacia_hospital=True) sin exigir unidad:                                                tres modos.
+       cualquier hospital recibe.
+ 3     Reanudar. Devuelve el control a SUMO (setSpeedMode 31, setLaneChangeMode 1621, setSpeed
+       −1) y changeTarget(amb, h.edge). Si ya salió de la red, reinsértala con una ruta nueva desde                                       Por qué «más cercano al accidente»
+       el accidente.                                                                                                                      La flota migra hacia donde ocurren los
+                                                                                                                                          accidentes: un privado que empezó en 0
+ 4     Cerrar. Cuando aparezca en getArrivedIDList(): append de la unidad en la cola del hospital
+                                                                                                                                          puede acabar con una unidad y el hospital
+       de llegada, estado «cerrado» y suma el tiempo ocupado al hospital de origen.
+                                                                                                                                          de origen quedarse sin ninguna (lo verás en
+                                                                                                                                          F5 · stock).
+     Entregable · Estados «retorno» y «cerrado» del bucle, y RETORNO / DISPONIBLE en el log.
+     Comprobación · En hospitales.csv algún hospital termina con más unidades de las que tenía;
+     ninguna ambulancia queda parada al final de una arista.                                                                              Ayuda
+                                                                                                                                          changeTarget recalcula la ruta desde la
+                                                                                                                                          arista actual; si la ambulancia está en un
+                                                                                                                                          cruce, espera un paso. Guarda h_retorno
+                                                                                                                                          para saber a qué cola devolver la unidad.
+R E T O A M B U L A N C I A S · G U Í A D O C E N T E · FA S E 4 · E V I D E N C I A                                                                                                     23 / 30
+
+F4 · Una misión completa en el log                                                                                                                               RVH · Reto ambulancias · docente
+
+
+Lo que debe imprimir el script del estudiante: cada evento con su instante
+
+E V E N TO S . LO G D E L A CO R R I D A D E R E F E R E N C I A · P R I M E R O S 1 0 5 0 S · D O S A CC I D E N T E S , U N I N T E N TO
+FA L L I D O                                                                                                                                 Cómo leerlo con el estudiante
+                                                                                                                                             La moto 626 chocó con un auto antes de
+   [ 626 s] IMPRUDENTE moto_imprudente_626 (moto insertada) persigue a bus2
+                                                                                                                                             alcanzar al bus: colisión de fondo, se retira,
+   [ 629 s] colisión de fondo moto_imprudente_626 x car134 -> se retira …_626
+                                                                                                                                             se reprograma (+60 s) y a los 692 s sale
+   [ 632 s] la moto moto_imprudente_626 salió sin chocar; se reprograma
+                                                                                                                                             ACC01. ACC02 llega 52 s después en otro
+   [ 692 s] IMPRUDENTE moto_imprudente_692 (moto insertada) persigue a bus8
+   [ 698 s] ACCIDENTE ACC01 collision bus8 x moto_imprudente_692 en 552619451                                                                punto: dos misiones simultáneas desde
+   [ 698 s] DESPACHO ACC01 <- VCM U01 | espera 0 s | 14 aristas, 2254 m, ETA 145                                                             VCM (stock 3 → 1).
+   [ 744 s] IMPRUDENTE moto_imprudente_744 (moto insertada) persigue a bus2
+   [ 750 s] ACCIDENTE ACC02 collision bus2 x moto_imprudente_744 en 47861233
+   [ 750 s] DESPACHO ACC02 <- VCM U02 | espera 0 s | 12 aristas, 1810 m, ETA 124                                                             Retorno al más cercano
+   [ 849 s] LLEGADA ACC01 amb_U01_ACC01 | respuesta 151 s | desde accidente 151                                                              Las dos ambulancias de VCM terminan en
+   [ 882 s] LLEGADA ACC02 amb_U02_ACC02 | respuesta 132 s | desde accidente 132                                                              Monte Sinaí y en el Militar: la flota migra
+   [ 969 s] RETORNO ACC01 amb_U01_ACC01 -> MONTE_SINAI (distinto al de origen)                                                               hacia el centro, donde ocurren los
+   [ 1002 s] RETORNO ACC02 amb_U02_ACC02 -> MILITAR (distinto al de origen)                                                                  accidentes. A las 2 h VCM está en 0 (ver F5 ·
+   [ 1044 s] DISPONIBLE U01 en MONTE_SINAI | misión 346 s | stock = 1                                                                        stock).
+
+
+                                                                                                                                             Lo que exige la rúbrica
+                                                                                                                                             Un log así (con los seis tipos de evento) es
+                                                                                                                                             la evidencia de B1–B3: el docente puede
+                                                                                                                                             seguir una misión completa sin abrir el
+                                                                                                                                             código.
+                                                                                                                                                             24 / 30
+                                                                                                                               Redes Vehiculares y Heterogéneas · Reto
+
+
+
+
+D
+BLOQUE D
+
+
+Estadísticas, validación B y cierre
+Fase 5 · lo que se mide y lo que se califica
+
+
+  Cifras de la corrida de                  Respuesta y uso por hospital          Validación B · 4 tareas                    Rúbrica y extensiones
+  referencia
+
+
+
+
+                            B · A CC I D E N T E S                                                         D · E STA D Í ST I C A S
+
+
+
+A · ESCENARIO                                                       C · D E S PA C H O                                                                       CIERRE
+R E T O A M B U L A N C I A S · G U Í A D O C E N T E · FA S E 5 · S E M I L L A 4 2                                                                         25 / 30
+
+F5 · Cifras de la corrida de referencia                                                                                               RVH · Reto ambulancias · docente
+
+
+Respuesta a la tarea 5.2: los indicadores que debe calcular el estudiante y sus valores de referencia
+
+
+
+16                                            0                                        278 s                                75 %
+accidentes bus–moto en 3 h (5,3/h):           teleports en toda la corrida             mediana del tiempo de respuesta      de las ambulancias volvieron a un
+15 de la agenda + 1 natural                   (Teleports: 0)                           (despacho → llegada)                 hospital distinto al de origen
+15 collision · 1 junction                     time-to-teleport -1                      media 328 · p90 580 · máx 748        12 de 16 misiones
+
+
+
+
+10                                            16                                       655 s                                42 s
+ambulancias: 10 en públicos (3·1·1·3·2),      veces un hospital con stock negó la      mediana de la misión (despacho →     de pared para 3 h simuladas (sumo
+0 en privados                                 unidad (p = 0,25)                        disponible otra vez)                 sin interfaz)
+flota final 9 + 1 en Monte Sinaí              rechazos_sin_unidad                      máx 1 451 s                          4 800 vehículos · 3 955 aristas
+
+
+
+
+   Respuesta a la tarea 5.2                                                              Lo que debe sorprender
+   resumen.txt de analisis.py trae exactamente estas cifras.                             Muni Patamarca, con 3 unidades, no salió nunca: está al norte y por la
+   Utilización por hospital público (ocupado / 3 h · stock inicial): VCM 6,6             red de arterias casi siempre pierde en tiempo. Y Monte Sinaí, que
+   % · IESS 20,1 % · Militar 20,7 % · Muni Patamarca 0 % · Muni El Valle 9,4             empezó en 0, despachó 3 veces con ambulancias que le llegaron de
+   %.                                                                                    otros hospitales.
+R E T O A M B U L A N C I A S · G U Í A D O C E N T E · FA S E 5 · G R Á F I C O ( A )                                                26 / 30
+
+F5 · Tiempo de respuesta por accidente                                                                         RVH · Reto ambulancias · docente
+
+
+16 misiones: barras ordenadas por instante del accidente, con el hospital de salida y las líneas de mediana y p90
+
+
+                                                                                         Cómo leerla
+                                                                                         El rótulo blanco de cada barra es el hospital
+                                                                                         que salió; el eje, el número del accidente y
+                                                                                         el minuto. Una espera por falta de
+                                                                                         ambulancia se apilaría en rojo sobre la
+                                                                                         barra.
+
+
+                                                                                         Dos picos
+                                                                                         ACC08 (748 s): en el este, junto a IESS (3
+                                                                                         unidades), atendido desde el Militar a 8,1
+                                                                                         km: IESS negó la unidad (p = 0,25). ACC10
+                                                                                         (703 s): extremo NO, desde IESS a 13,6 km
+                                                                                         porque por las arterias nadie está cerca. Dos
+                                                                                         causas de un pico.
+
+
+                                                                                         Qué valida B4
+                                                                                         Que el estudiante lea mediana y p90 de su
+Figura generada con solucion/analisis.py a partir de accidentes.csv (2200×1360 px).
+                                                                                         gráfico y los relacione con la posición de los
+                                                                                         hospitales (siguiente mapa).
+R E T O A M B U L A N C I A S · G U Í A D O C E N T E · FA S E 5 · G R Á F I C O ( B )                                                               27 / 30
+
+F5 · Uso de ambulancias por hospital                                                                                         RVH · Reto ambulancias · docente
+
+
+Stock inicial, despachos y retornos de cada hospital; la utilización solo tiene sentido en los públicos con stock
+
+
+                                                                                                       Lectura
+                                                                                                       IESS: 1 unidad inicial, 2 despachos, 5
+                                                                                                       retornos → termina con 4. VCM: 3 iniciales, 4
+                                                                                                       despachos, 1 retorno → termina en 0.
+                                                                                                       «Volver al más cercano al accidente» mueve
+                                                                                                       la flota hacia los accidentes y los hospitales
+                                                                                                       bien conectados.
+
+
+                                                                                                       Utilización baja a propósito
+                                                                                                       Con 5 accidentes/h y 10 ambulancias nadie
+                                                                                                       supera el 21 %. La pregunta de análisis 6
+                                                                                                       (15/h) espera: aparecen esperas y la
+                                                                                                       utilización de IESS y Militar se triplica.
+
+
+                                                                                                       Privados
+                                                                                                       Monte Sinaí despachó 3 veces sin stock
+                                                                                                       inicial, solo con unidades que le llegaron.
+Figura de analisis.py sobre hospitales.csv. Utilización = segundos ocupados / (3 h · stock inicial).
+                                                                                                       Del Río ni recibió ni despachó.
+R E TO A M B U L A N C I A S · G U Í A D O C E N T E · VA L I DAC I Ó N B                                                                                                               28 / 30
+
+Validación docente B · cuatro tareas                                                                                                                           RVH · Reto ambulancias · docente
+
+
+Qué debe verse en cada tarea y qué suele fallar
+
+F I N D E L A S E S I Ó N 2 · E N E L P U E STO, CO N L A CO R R I D A CO M P L E TA YA E J E C U TA D A · 5 P U N TO S P O R TA R E A
+
+  #                Tarea                        Evidencia que debe verse                                                        Fallos frecuentes
+
+ B1 · F3          5 accidentes/h                accidentes.csv con 15 ± 2 filas en lugares distintos, Teleports:                Choques que desaparecen (collision.action por
+                                                0, un accidente inmovilizado con cola en sumo-gui; explica el bit 0             defecto) · motos que nunca alcanzan al bus (sin
+                                                de speedMode                                                                    reprogramar) · «speedMode 0» sin saber por qué
+
+ B2 · F4          Disponibilidad                Un despacho desde un hospital que no es el más cercano (rechazo                 Siempre sale el mismo hospital (sin cola ni p_sin) ·
+                  aleatoria                     o stock 0) explicado con el log; esperas medidas si las hubo                    elección por distancia en metros en vez de travelTime
+
+ B3 · F4          Retorno al más                Un RETORNO … (hospital distinto al de origen) y ese                             Ambulancia que no vuelve (laneChangeMode 0) · vuelve
+                  cercano al accidente          hospital con más unidades al final en hospitales.csv; muestra                   siempre al origen · la unidad no entra en la cola destino
+                                                las tres líneas de restauración
+
+ B4 · F5          Estadísticas                  Dos CSV y dos gráficos; lee mediana y p90 y la utilización del                  Mediana calculada con misiones sin cerrar · utilización
+                                                público más usado                                                               sobre la flota total en vez de por hospital · gráficos sin
+                                                                                                                                unidades
+
+
+
+
+      Gestión del tiempo                                                                               Pregunta de control
+      La corrida completa tarda 1–3 min: pedir que la lancen al empezar la                             «Si todos los hospitales niegan la unidad, ¿qué mide el reto?» — la
+      validación y revisar B1–B3 sobre el log mientras termina; B4 sobre los                           espera de despacho (reintento cada 30 s), que debe aparecer en
+      gráficos ya generados.                                                                           accidentes.csv y apilada en rojo en el gráfico (a).
+R E TO A M B U L A N C I A S · G U Í A D O C E N T E · E VA LUAC I Ó N                                                                                   29 / 30
+
+Rúbrica y extensiones                                                                                                            RVH · Reto ambulancias · docente
+
+
+Cómo se reparten los 100 puntos y qué extensiones vale la pena proponer
+
+R Ú B R I C A (1 0 0 P U N TO S )
+                                                                                                Ext. 1 · política de retorno
+  Criterio                                  Peso      Descripción
+                                                                                                Volver al hospital de origen: con la misma semilla,
+ Validación A (A1–A4)                       20 %      5 puntos por tarea en vivo                comparar mediana/p90 y el stock final. Esperado: VCM
+                                                                                                no se vacía, pero los accidentes del norte y del este
+ Validación B (B1–B4)                       20 %      5 puntos por tarea en vivo
+                                                                                                esperan más.
+ Escenario y tráfico sin teleporting        10 %      Red con hospitales, 3 clases,
+                                                      Teleports: 0
+                                                                                                Ext. 2 · ambulancia prioritaria
+ Accidentes por TraCI (5/h)                 15 %      Modelo modificado y restaurado, 15 ± 2
+                                                      accidentes                                setSpeedMode(amb, 7) + bluelight: pedir la diferencia de
+                                                                                                mediana y p90 con la misma semilla. En nuestras
+ Despacho, atención y retorno               15 %      Tiempo + disponibilidad aleatoria,        pruebas el modo 7 produjo choques junction con la
+                                                      llegada robusta, retorno al más cercano
+                                                                                                ambulancia y bluelight + changeTarget cerró SUMO 1.28:
+ Estadísticas y análisis                    15 %      CSV, indicadores, gráficos y respuestas   que lo documenten.
+                                                      con rigor
+
+ Extensión y discusión                      5%        Una extensión ejecutada y comparada
+                                                                                                Ext. 3 y 4
+                                                                                                Accidentes en el cruce con
+                                                                                                junctionModel.ignoreFoeProb (tipo junction en el CSV)
+                                                                                                · Poisson frente a agenda fija con 5 semillas (media y
+                                                                                                desviación del conteo por hora).
+R E TO A M B U L A N C I A S · G U Í A D O C E N T E · C I E R R E                                                                                                    30 / 30
+
+Cierre: qué se construyó y dónde está                                                                                                          RVH · Reto ambulancias · docente
+
+
+Resumen del reto y la cadena de tres pasos que debe reproducir cada equipo
+
+
+   Qué entrega este reto                                                                       Material del reto
+   Un gemelo de emergencias de Cuenca gobernado por TraCI: tráfico de                          chapters/taller_reto_ambulancias.tex (capítulo del estudiante) ·
+   3 h sin teleporting, accidentes bus–moto provocados con la palanca                          Reto_Ambulancias_SUMO/escenario/ (red, vtypes, scripts, sumocfg) ·
+   de C04, despacho por tiempo con disponibilidad aleatoria, retorno al                        este deck. Lo que no está ahí (el script TraCI y el análisis) es lo que se
+   hospital más cercano al accidente y estadísticas de respuesta y uso.                        construye en las fases F2–F5.
+
+
+
+   Tres ideas que deben quedar                                                                 Enlace con lo que sigue
+   (1) Krauss no choca: para que choque hay que apagar v_safe. (2) Sin                         El mismo puerto TraCI lo compartirán ns-3/VaN3Twin (Clases 8–10): la
+   teleporting todo bloqueo es real: la cola es parte de la medida. (3)                        alerta del accidente y el corredor de emergencia que aquí decide
+   «Más cercano» se decide en tiempo, con los tiempos actuales, y la                           Python los decidirán mensajes DENM entre vehículos.
+   flota se mueve con la política de retorno.
+
+
+
+     1   Demanda                                                      2   Simulación                                       3   Análisis
+   gen_fondo.sh genera las 3 h de tráfico de                         Tu script TraCI arranca reto.sumocfg, provoca        Tu analisis.py convierte los CSV en el
+   fondo (F1): tres .rou.xml reproducibles con la                    y atiende los accidentes (F2–F4) y escribe           resumen y los dos gráficos de F5 que
+   semilla.                                                          eventos.log y los CSV en salida/.                    acompañan al informe.
+

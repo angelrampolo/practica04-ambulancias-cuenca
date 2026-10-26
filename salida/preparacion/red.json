@@ -1,0 +1,48 @@
+{
+  "source": "/work/datos/cuenca_net.xml",
+  "source_sha256": "feae31bc9534bc7d8a35fef2a592dd579b8447e8e428eb2271b66313c4b8cbbf",
+  "derived_sha256": "e8e1282fd69a6fd4f7824e6f66f9eed170b3c5629dd7ca85dfe518c391271d5e",
+  "command": [
+    "netconvert",
+    "-s",
+    "/work/datos/cuenca_net.xml",
+    "-o",
+    "/work/escenario/cuenca_ciudad.net.xml",
+    "--keep-edges.by-type",
+    "highway.motorway,highway.motorway_link,highway.trunk,highway.trunk_link,highway.primary,highway.primary_link,highway.secondary,highway.secondary_link,highway.tertiary,highway.tertiary_link",
+    "--keep-edges.in-geo-boundary",
+    "-79.030,-2.930,-78.950,-2.860",
+    "--keep-edges.components",
+    "1",
+    "--remove-edges.isolated",
+    "--geometry.remove",
+    "--junctions.join",
+    "--junctions.join-dist",
+    "25",
+    "--no-turnarounds.except-deadend"
+  ],
+  "networks": [
+    {
+      "red": "cuenca_net.xml",
+      "aristas": 34256,
+      "nodos": 15405,
+      "semaforos": 337,
+      "km_arista": 3984.2801100000397,
+      "km_carril": 4331.324769999977,
+      "componentes_debiles": 17,
+      "fraccion_aristas": 1.0,
+      "fraccion_km": 1.0
+    },
+    {
+      "red": "cuenca_ciudad.net.xml",
+      "aristas": 1745,
+      "nodos": 1009,
+      "semaforos": 176,
+      "km_arista": 355.56300000000226,
+      "km_carril": 538.2072800000012,
+      "componentes_debiles": 1,
+      "fraccion_aristas": 0.050939981317141524,
+      "fraccion_km": 0.08924146650924067
+    }
+  ]
+}

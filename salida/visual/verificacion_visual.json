@@ -1,0 +1,68 @@
+{
+  "sumo": [
+    20,
+    "SUMO 1.12.0"
+  ],
+  "seed": 42,
+  "capturas": {
+    "01_hospitales": {
+      "t_s": 10.0,
+      "pois": [
+        "H_DEL_RIO",
+        "H_IESS",
+        "H_MILITAR",
+        "H_MONTE_SINAI",
+        "H_MUNI_PATAMARCA",
+        "H_MUNI_VALLE",
+        "H_VCM"
+      ],
+      "hospitales": 7,
+      "stock": {
+        "VCM": 3,
+        "IESS": 1,
+        "MILITAR": 1,
+        "MUNI_PATAMARCA": 3,
+        "MUNI_VALLE": 2,
+        "MONTE_SINAI": 0,
+        "DEL_RIO": 0
+      },
+      "archivo": "salida/visual/01_hospitales.png",
+      "sha256": "e0c462af8f0dcb38b624b3b44083d12aac866d45e30220d9cbe29f65ed97b2d8"
+    },
+    "02_accidente_cola": {
+      "t_s": 2611.0,
+      "accidente": "ACC05",
+      "edge": "815723563",
+      "bus": "bus64",
+      "moto": "imprudente_5_7",
+      "vel_bus": 0.0,
+      "vel_moto": 0.0,
+      "cola": [
+        "car830"
+      ],
+      "estado": "en_camino",
+      "archivo": "salida/visual/02_accidente_cola.png",
+      "sha256": "7b7957f628a583775aa6677cc2e6b56b929131eff2b22efa70cc12bc1e63cc29"
+    },
+    "03_retorno": {
+      "t_s": 2776.0,
+      "accidente": "ACC03",
+      "unidad": "U02",
+      "origen": "VCM",
+      "destino": "MUNI_PATAMARCA",
+      "stock_destino": 4,
+      "unidad_en_cola": true,
+      "t_disponible": 2776.0,
+      "stock_antes": 3,
+      "stock_despues": 4,
+      "archivo": "salida/visual/03_retorno.png",
+      "sha256": "51c1d299cde17fe843ee4b52ca5f6afd7554b384a76c8f5cc0cff59d507c59a8"
+    }
+  },
+  "controles_visuales_observados": true,
+  "controlador_sha256": "00b2ff9d0ce167f75b6dfea9617b20bf68f47be07597d158ce6470b87188b7ea",
+  "demo_sha256": "482c6d5cc3ca839f5af78b544e13e7e3f5bdef76129a6fff0b9edcc39d2314f2",
+  "red_sha256": "e8e1282fd69a6fd4f7824e6f66f9eed170b3c5629dd7ca85dfe518c391271d5e",
+  "hospitales_sha256": "af6f546afe78356127db7c44be2400073194049ad87bd38c630f80fdd6807f98",
+  "demostracion_ante_docente": "Pendiente: debe realizarla el estudiante en su evaluación"
+}

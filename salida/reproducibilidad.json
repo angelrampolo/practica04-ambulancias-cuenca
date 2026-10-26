@@ -1,0 +1,44 @@
+[
+  {
+    "archivo": "accidentes.csv",
+    "principal_sha256": "b2a38cb1a44dd35ba04a9bae7d2275e6314738a970f1b160d74c1be124e4d6d5",
+    "repeticion_sha256": "b2a38cb1a44dd35ba04a9bae7d2275e6314738a970f1b160d74c1be124e4d6d5",
+    "identico": true
+  },
+  {
+    "archivo": "hospitales.csv",
+    "principal_sha256": "470195f953741814d3eac75882671b4024ce946444b4b34a98739daa97c3b984",
+    "repeticion_sha256": "470195f953741814d3eac75882671b4024ce946444b4b34a98739daa97c3b984",
+    "identico": true
+  },
+  {
+    "archivo": "decisiones.csv",
+    "principal_sha256": "05eb88a65a98c0bb2d4f685d06465f1d202f7ab691b8a99fb84e29f220d5768a",
+    "repeticion_sha256": "05eb88a65a98c0bb2d4f685d06465f1d202f7ab691b8a99fb84e29f220d5768a",
+    "identico": true
+  },
+  {
+    "archivo": "stock_tiempo.csv",
+    "principal_sha256": "ebb163f5338635c7a01b8d41142360ede4661dc9763968a1ad497a80abcb6b0a",
+    "repeticion_sha256": "ebb163f5338635c7a01b8d41142360ede4661dc9763968a1ad497a80abcb6b0a",
+    "identico": true
+  },
+  {
+    "archivo": "hospitales_ubicados.csv",
+    "principal_sha256": "fbec7a62c41efcae89d21e874c55c514f5e2dcf1e733e63a97b9428ad8f0973d",
+    "repeticion_sha256": "fbec7a62c41efcae89d21e874c55c514f5e2dcf1e733e63a97b9428ad8f0973d",
+    "identico": true
+  },
+  {
+    "archivo": "eventos.jsonl",
+    "principal_sha256": "0e0bd068f99dfbcee60fd3773614a3d82182dd2c541de23ea7265c7526dd5fdf",
+    "repeticion_sha256": "0e0bd068f99dfbcee60fd3773614a3d82182dd2c541de23ea7265c7526dd5fdf",
+    "identico": true
+  },
+  {
+    "archivo": "conectividad_hospitales.csv",
+    "principal_sha256": "7bd9abbbeee54d8b1f1eb3d2b6940caa2d3b890e52593d7b995af6e35151fbd2",
+    "repeticion_sha256": "7bd9abbbeee54d8b1f1eb3d2b6940caa2d3b890e52593d7b995af6e35151fbd2",
+    "identico": true
+  }
+]

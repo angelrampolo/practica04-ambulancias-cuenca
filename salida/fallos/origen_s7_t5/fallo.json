@@ -1,0 +1,9 @@
+{
+  "estado": "simulador_interrumpido_sin_resultados_validos",
+  "semilla": 7,
+  "politica": "origen",
+  "version": "SUMO 1.12.0",
+  "tiempo_s": 7815,
+  "error": "MSVehicle::getBackPositionOnLane: Assertion false failed; bus217, lane 42456623#5_0",
+  "sustitucion": "Semilla 8 en ambas políticas, elegida antes de ver sus resultados. Semilla 7 cercano conservada como diagnóstico, fuera de la comparación pareada."
+}

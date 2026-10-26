@@ -1,0 +1,10 @@
+{
+  "tipo": "red_docente_aportada_por_usuario",
+  "archivo_zip": "datos/docente/cuenca_net.zip",
+  "nombre_original": "cuenca_net.xml",
+  "zip_sha256": "10b138fd86ed9b9f397bda80a33cded4c0c3ebfa5566b195a26c74a640d2b759",
+  "red_sha256": "feae31bc9534bc7d8a35fef2a592dd579b8447e8e428eb2271b66313c4b8cbbf",
+  "incorporado_utc": "2026-10-26T12:21:37.696218+00:00",
+  "hospitales": "Se mantienen coordenadas OSM porque el ZIP contiene únicamente la red.",
+  "respaldo_anterior": "historial/Entrega_OSM_20261021.zip (respaldo local, excluido de la entrega)"
+}

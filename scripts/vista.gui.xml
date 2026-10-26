@@ -1,0 +1,7 @@
+<viewsettings>
+  <scheme name="real world">
+    <pois poiName_show="1" poiName_size="80" poiName_color="20,40,65" poiSize_exaggeration="12"/>
+    <vehicles vehicleQuality="2" vehicleSize_exaggeration="2"/>
+  </scheme>
+  <delay value="0"/>
+</viewsettings>

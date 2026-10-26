@@ -1,0 +1,47 @@
+{
+  "carpeta": "cercano_s42_t15",
+  "semilla": 42,
+  "retorno": "cercano",
+  "tasa": 15,
+  "accidentes": 46,
+  "cerrados": 46,
+  "censurados": 0,
+  "respuesta_total": {
+    "n": 46,
+    "media": 404.89130434782606,
+    "mediana": 328.5,
+    "p90": 670.5,
+    "maximo": 1549.0
+  },
+  "desplazamiento": {
+    "n": 46,
+    "media": 404.89130434782606,
+    "mediana": 328.5,
+    "p90": 670.5,
+    "maximo": 1549.0
+  },
+  "espera": {
+    "n": 46,
+    "media": 0.0,
+    "mediana": 0.0,
+    "p90": 0.0,
+    "maximo": 0.0
+  },
+  "mision": {
+    "n": 46,
+    "media": 801.4565217391304,
+    "mediana": 697.5,
+    "p90": 1266.0,
+    "maximo": 2152.0
+  },
+  "migracion_pct": 69.56521739130434,
+  "rechazos": 16,
+  "flota": 10,
+  "teleports": 0,
+  "intentos": 48,
+  "planes_pendientes": 0,
+  "vehiculos_fondo_retirados": 22,
+  "running_final": 0,
+  "expected_final": 0,
+  "wall_seconds": 100.50667766399965
+}

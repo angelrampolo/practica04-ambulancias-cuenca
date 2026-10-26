@@ -1,0 +1,8 @@
+hospital,tipo,stock_inicial,stock_final,despachos,recibidas,rechazos,sin_stock,ocupado_s,ocupado_3h_s,utilizacion_ref_pct,utilizacion_3h_pct
+VCM,publico,1,1,5,5,0,2,4491.0,4419.0,41.583333333333336,40.916666666666664
+IESS,publico,2,2,5,5,1,0,4670.0,4670.0,21.62037037037037,21.62037037037037
+MILITAR,publico,1,1,4,4,0,4,2888.0,2888.0,26.74074074074074,26.74074074074074
+MUNI_PATAMARCA,publico,2,2,1,1,2,0,922.0,922.0,4.268518518518518,4.268518518518518
+MUNI_VALLE,publico,2,2,1,1,0,0,416.0,416.0,1.9259259259259258,1.9259259259259258
+MONTE_SINAI,privado,0,0,0,0,0,8,0,0,,
+DEL_RIO,privado,0,0,0,0,0,4,0,0,,

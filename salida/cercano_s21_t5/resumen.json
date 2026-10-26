@@ -1,0 +1,47 @@
+{
+  "carpeta": "cercano_s21_t5",
+  "semilla": 21,
+  "retorno": "cercano",
+  "tasa": 5,
+  "accidentes": 16,
+  "cerrados": 16,
+  "censurados": 0,
+  "respuesta_total": {
+    "n": 16,
+    "media": 228.1875,
+    "mediana": 195.0,
+    "p90": 391.5,
+    "maximo": 406.0
+  },
+  "desplazamiento": {
+    "n": 16,
+    "media": 228.1875,
+    "mediana": 195.0,
+    "p90": 391.5,
+    "maximo": 406.0
+  },
+  "espera": {
+    "n": 16,
+    "media": 0.0,
+    "mediana": 0.0,
+    "p90": 0.0,
+    "maximo": 0.0
+  },
+  "mision": {
+    "n": 16,
+    "media": 567.0625,
+    "mediana": 518.0,
+    "p90": 833.5,
+    "maximo": 863.0
+  },
+  "migracion_pct": 56.25,
+  "rechazos": 5,
+  "flota": 13,
+  "teleports": 0,
+  "intentos": 16,
+  "planes_pendientes": 0,
+  "vehiculos_fondo_retirados": 22,
+  "running_final": 0,
+  "expected_final": 0,
+  "wall_seconds": 49.74200603300005
+}

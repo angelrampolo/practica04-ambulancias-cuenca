@@ -1,0 +1,47 @@
+{
+  "carpeta": "origen_s123_t5",
+  "semilla": 123,
+  "retorno": "origen",
+  "tasa": 5,
+  "accidentes": 16,
+  "cerrados": 16,
+  "censurados": 0,
+  "respuesta_total": {
+    "n": 16,
+    "media": 329.5625,
+    "mediana": 332.5,
+    "p90": 434.5,
+    "maximo": 633.0
+  },
+  "desplazamiento": {
+    "n": 16,
+    "media": 329.5625,
+    "mediana": 332.5,
+    "p90": 434.5,
+    "maximo": 633.0
+  },
+  "espera": {
+    "n": 16,
+    "media": 0.0,
+    "mediana": 0.0,
+    "p90": 0.0,
+    "maximo": 0.0
+  },
+  "mision": {
+    "n": 16,
+    "media": 836.6875,
+    "mediana": 866.5,
+    "p90": 1207.5,
+    "maximo": 1329.0
+  },
+  "migracion_pct": 0.0,
+  "rechazos": 3,
+  "flota": 8,
+  "teleports": 0,
+  "intentos": 18,
+  "planes_pendientes": 0,
+  "vehiculos_fondo_retirados": 12,
+  "running_final": 0,
+  "expected_final": 0,
+  "wall_seconds": 55.63214281299997
+}

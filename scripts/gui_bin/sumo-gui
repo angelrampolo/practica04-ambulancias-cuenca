@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Adaptador exclusivo de la demo: tamaño de ventana, sin cambiar la simulación.
+exec /usr/bin/sumo-gui --window-size 1600,1000 --window-pos 0,0 "$@"

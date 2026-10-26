@@ -1,0 +1,10 @@
+{
+  "url": "https://overpass-api.de/api/interpreter",
+  "query": "[out:xml][timeout:180];\n    (way[\"highway\"](-2.97,-79.07,-2.83,-78.92);\n     nwr[\"amenity\"=\"hospital\"](-2.97,-79.07,-2.83,-78.92););\n    (._;>;);out body;",
+  "retrieved_utc": "2026-10-21T14:36:53.033756+00:00",
+  "sha256": "4a9943adba2347093c724053d71785d4d89f1a8bf3dd92ba2095d795453a946f",
+  "bytes": 15961511,
+  "licencia": "Open Database License (ODbL)",
+  "attribution": "© OpenStreetMap contributors",
+  "source_original_docente": false
+}

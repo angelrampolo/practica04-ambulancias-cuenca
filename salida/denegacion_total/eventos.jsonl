@@ -1,0 +1,306 @@
+{"t": 0, "evento": "HOSPITAL", "detalle": "VCM publico -> 208782596#1 | Avenida Del Paraíso | 102.2 m | stock 3"}
+{"t": 0, "evento": "HOSPITAL", "detalle": "IESS publico -> 357285817#5 | Circunvalación Sur | 117.8 m | stock 1"}
+{"t": 0, "evento": "HOSPITAL", "detalle": "MILITAR publico -> 334948974#1 | Avenida 12 de Abril | 26.7 m | stock 1"}
+{"t": 0, "evento": "HOSPITAL", "detalle": "MUNI_PATAMARCA publico -> 378364650#0 | Via Checa Chiquintad | 158.1 m | stock 3"}
+{"t": 0, "evento": "HOSPITAL", "detalle": "MUNI_VALLE publico -> 171302162#22 |  | 54.8 m | stock 2"}
+{"t": 0, "evento": "HOSPITAL", "detalle": "MONTE_SINAI privado -> 269103111#3 | Avenida Fray Vicente Solano | 29.0 m | stock 0"}
+{"t": 0, "evento": "HOSPITAL", "detalle": "DEL_RIO privado -> 40972441#0 | Avenida de las Américas | 88.7 m | stock 0"}
+{"t": 0, "evento": "AGENDA", "detalle": "15 instantes: [423, 758, 1771, 2436, 2514, 3961, 5275, 5342, 5485, 6422, 8685, 8881, 9240, 9902, 10211]; flota=10"}
+{"t": 421.0, "evento": "COLISION_FONDO", "detalle": "junction ('car70', 'moto13'); retirados=['car70', 'moto13']; protegidos=[]"}
+{"t": 423.0, "evento": "IMPRUDENTE", "detalle": "imprudente_1_1 persigue a bus6; plan 1"}
+{"t": 437.0, "evento": "REPROGRAMAR", "detalle": "imprudente_1_1: intento expirado, vehículo ausente o pareja salió de la arista; +60 s"}
+{"t": 497.0, "evento": "IMPRUDENTE", "detalle": "imprudente_1_2 persigue a bus9; plan 1"}
+{"t": 513.0, "evento": "ACCIDENTE", "detalle": "ACC01 collision bus9 x imprudente_1_2 en -144175337#11", "accidente": "ACC01"}
+{"t": 513.0, "evento": "CANDIDATO", "detalle": "ACC01 IESS rango=1 ETA=236.4 stock=1 negativa_aleatoria"}
+{"t": 513.0, "evento": "CANDIDATO", "detalle": "ACC01 MUNI_VALLE rango=2 ETA=251.9 stock=2 negativa_aleatoria"}
+{"t": 513.0, "evento": "CANDIDATO", "detalle": "ACC01 VCM rango=3 ETA=335.4 stock=3 negativa_aleatoria"}
+{"t": 513.0, "evento": "CANDIDATO", "detalle": "ACC01 DEL_RIO rango=4 ETA=404.2 stock=0 sin_stock"}
+{"t": 513.0, "evento": "CANDIDATO", "detalle": "ACC01 MONTE_SINAI rango=5 ETA=442.2 stock=0 sin_stock"}
+{"t": 513.0, "evento": "CANDIDATO", "detalle": "ACC01 MILITAR rango=6 ETA=519.0 stock=1 negativa_aleatoria"}
+{"t": 513.0, "evento": "CANDIDATO", "detalle": "ACC01 MUNI_PATAMARCA rango=7 ETA=657.5 stock=3 negativa_aleatoria"}
+{"t": 513.0, "evento": "SIN_AMBULANCIA", "detalle": "ACC01 queda en cola; reintento a 543"}
+{"t": 543.0, "evento": "CANDIDATO", "detalle": "ACC01 IESS rango=1 ETA=253.7 stock=1 negativa_aleatoria"}
+{"t": 543.0, "evento": "CANDIDATO", "detalle": "ACC01 MUNI_VALLE rango=2 ETA=267.6 stock=2 negativa_aleatoria"}
+{"t": 543.0, "evento": "CANDIDATO", "detalle": "ACC01 VCM rango=3 ETA=352.5 stock=3 negativa_aleatoria"}
+{"t": 543.0, "evento": "CANDIDATO", "detalle": "ACC01 DEL_RIO rango=4 ETA=420.8 stock=0 sin_stock"}
+{"t": 543.0, "evento": "CANDIDATO", "detalle": "ACC01 MONTE_SINAI rango=5 ETA=459.4 stock=0 sin_stock"}
+{"t": 543.0, "evento": "CANDIDATO", "detalle": "ACC01 MILITAR rango=6 ETA=534.7 stock=1 negativa_aleatoria"}
+{"t": 543.0, "evento": "CANDIDATO", "detalle": "ACC01 MUNI_PATAMARCA rango=7 ETA=673.4 stock=3 negativa_aleatoria"}
+{"t": 543.0, "evento": "SIN_AMBULANCIA", "detalle": "ACC01 queda en cola; reintento a 573"}
+{"t": 573.0, "evento": "CANDIDATO", "detalle": "ACC01 IESS rango=1 ETA=279.6 stock=1 negativa_aleatoria"}
+{"t": 573.0, "evento": "CANDIDATO", "detalle": "ACC01 MUNI_VALLE rango=2 ETA=294.7 stock=2 negativa_aleatoria"}
+{"t": 573.0, "evento": "CANDIDATO", "detalle": "ACC01 VCM rango=3 ETA=378.3 stock=3 negativa_aleatoria"}
+{"t": 573.0, "evento": "CANDIDATO", "detalle": "ACC01 DEL_RIO rango=4 ETA=446.8 stock=0 sin_stock"}
+{"t": 573.0, "evento": "CANDIDATO", "detalle": "ACC01 MONTE_SINAI rango=5 ETA=485.5 stock=0 sin_stock"}
+{"t": 573.0, "evento": "CANDIDATO", "detalle": "ACC01 MILITAR rango=6 ETA=561.5 stock=1 negativa_aleatoria"}
+{"t": 573.0, "evento": "CANDIDATO", "detalle": "ACC01 MUNI_PATAMARCA rango=7 ETA=685.3 stock=3 negativa_aleatoria"}
+{"t": 573.0, "evento": "SIN_AMBULANCIA", "detalle": "ACC01 queda en cola; reintento a 603"}
+{"t": 603.0, "evento": "CANDIDATO", "detalle": "ACC01 IESS rango=1 ETA=320.5 stock=1 negativa_aleatoria"}
+{"t": 603.0, "evento": "CANDIDATO", "detalle": "ACC01 MUNI_VALLE rango=2 ETA=339.3 stock=2 negativa_aleatoria"}
+{"t": 603.0, "evento": "CANDIDATO", "detalle": "ACC01 VCM rango=3 ETA=418.9 stock=3 negativa_aleatoria"}
+{"t": 603.0, "evento": "CANDIDATO", "detalle": "ACC01 DEL_RIO rango=4 ETA=488.1 stock=0 sin_stock"}
+{"t": 603.0, "evento": "CANDIDATO", "detalle": "ACC01 MONTE_SINAI rango=5 ETA=525.0 stock=0 sin_stock"}
+{"t": 603.0, "evento": "CANDIDATO", "detalle": "ACC01 MILITAR rango=6 ETA=603.3 stock=1 negativa_aleatoria"}
+{"t": 603.0, "evento": "CANDIDATO", "detalle": "ACC01 MUNI_PATAMARCA rango=7 ETA=723.5 stock=3 negativa_aleatoria"}
+{"t": 603.0, "evento": "SIN_AMBULANCIA", "detalle": "ACC01 queda en cola; reintento a 633"}
+{"t": 633.0, "evento": "CANDIDATO", "detalle": "ACC01 IESS rango=1 ETA=408.7 stock=1 negativa_aleatoria"}
+{"t": 633.0, "evento": "CANDIDATO", "detalle": "ACC01 MUNI_VALLE rango=2 ETA=429.8 stock=2 negativa_aleatoria"}
+{"t": 633.0, "evento": "CANDIDATO", "detalle": "ACC01 VCM rango=3 ETA=508.0 stock=3 negativa_aleatoria"}
+{"t": 633.0, "evento": "CANDIDATO", "detalle": "ACC01 DEL_RIO rango=4 ETA=577.6 stock=0 sin_stock"}
+{"t": 633.0, "evento": "CANDIDATO", "detalle": "ACC01 MONTE_SINAI rango=5 ETA=614.0 stock=0 sin_stock"}
+{"t": 633.0, "evento": "CANDIDATO", "detalle": "ACC01 MILITAR rango=6 ETA=691.7 stock=1 negativa_aleatoria"}
+{"t": 633.0, "evento": "CANDIDATO", "detalle": "ACC01 MUNI_PATAMARCA rango=7 ETA=820.0 stock=3 negativa_aleatoria"}
+{"t": 633.0, "evento": "SIN_AMBULANCIA", "detalle": "ACC01 queda en cola; reintento a 663"}
+{"t": 663.0, "evento": "CANDIDATO", "detalle": "ACC01 IESS rango=1 ETA=748.8 stock=1 negativa_aleatoria"}
+{"t": 663.0, "evento": "CANDIDATO", "detalle": "ACC01 MUNI_VALLE rango=2 ETA=772.2 stock=2 negativa_aleatoria"}
+{"t": 663.0, "evento": "CANDIDATO", "detalle": "ACC01 VCM rango=3 ETA=849.7 stock=3 negativa_aleatoria"}
+{"t": 663.0, "evento": "CANDIDATO", "detalle": "ACC01 DEL_RIO rango=4 ETA=918.9 stock=0 sin_stock"}
+{"t": 663.0, "evento": "CANDIDATO", "detalle": "ACC01 MONTE_SINAI rango=5 ETA=955.6 stock=0 sin_stock"}
+{"t": 663.0, "evento": "CANDIDATO", "detalle": "ACC01 MILITAR rango=6 ETA=1032.8 stock=1 negativa_aleatoria"}
+{"t": 663.0, "evento": "CANDIDATO", "detalle": "ACC01 MUNI_PATAMARCA rango=7 ETA=1154.3 stock=3 negativa_aleatoria"}
+{"t": 663.0, "evento": "SIN_AMBULANCIA", "detalle": "ACC01 queda en cola; reintento a 693"}
+{"t": 693.0, "evento": "CANDIDATO", "detalle": "ACC01 IESS rango=1 ETA=1490314.6 stock=1 negativa_aleatoria"}
+{"t": 693.0, "evento": "CANDIDATO", "detalle": "ACC01 MUNI_VALLE rango=2 ETA=1490338.2 stock=2 negativa_aleatoria"}
+{"t": 693.0, "evento": "CANDIDATO", "detalle": "ACC01 VCM rango=3 ETA=1490416.2 stock=3 negativa_aleatoria"}
+{"t": 693.0, "evento": "CANDIDATO", "detalle": "ACC01 DEL_RIO rango=4 ETA=1490486.2 stock=0 sin_stock"}
+{"t": 693.0, "evento": "CANDIDATO", "detalle": "ACC01 MONTE_SINAI rango=5 ETA=1490522.4 stock=0 sin_stock"}
+{"t": 693.0, "evento": "CANDIDATO", "detalle": "ACC01 MILITAR rango=6 ETA=1490600.1 stock=1 negativa_aleatoria"}
+{"t": 693.0, "evento": "CANDIDATO", "detalle": "ACC01 MUNI_PATAMARCA rango=7 ETA=1490710.8 stock=3 negativa_aleatoria"}
+{"t": 693.0, "evento": "SIN_AMBULANCIA", "detalle": "ACC01 queda en cola; reintento a 723"}
+{"t": 723.0, "evento": "CANDIDATO", "detalle": "ACC01 IESS rango=1 ETA=1490314.2 stock=1 negativa_aleatoria"}
+{"t": 723.0, "evento": "CANDIDATO", "detalle": "ACC01 MUNI_VALLE rango=2 ETA=1490338.1 stock=2 negativa_aleatoria"}
+{"t": 723.0, "evento": "CANDIDATO", "detalle": "ACC01 VCM rango=3 ETA=1490416.3 stock=3 negativa_aleatoria"}
+{"t": 723.0, "evento": "CANDIDATO", "detalle": "ACC01 DEL_RIO rango=4 ETA=1490487.8 stock=0 sin_stock"}
+{"t": 723.0, "evento": "CANDIDATO", "detalle": "ACC01 MONTE_SINAI rango=5 ETA=1490523.1 stock=0 sin_stock"}
+{"t": 723.0, "evento": "CANDIDATO", "detalle": "ACC01 MILITAR rango=6 ETA=1490601.9 stock=1 negativa_aleatoria"}
+{"t": 723.0, "evento": "CANDIDATO", "detalle": "ACC01 MUNI_PATAMARCA rango=7 ETA=1490710.2 stock=3 negativa_aleatoria"}
+{"t": 723.0, "evento": "SIN_AMBULANCIA", "detalle": "ACC01 queda en cola; reintento a 753"}
+{"t": 753.0, "evento": "CANDIDATO", "detalle": "ACC01 IESS rango=1 ETA=1490314.5 stock=1 negativa_aleatoria"}
+{"t": 753.0, "evento": "CANDIDATO", "detalle": "ACC01 MUNI_VALLE rango=2 ETA=1490336.9 stock=2 negativa_aleatoria"}
+{"t": 753.0, "evento": "CANDIDATO", "detalle": "ACC01 VCM rango=3 ETA=1490416.4 stock=3 negativa_aleatoria"}
+{"t": 753.0, "evento": "CANDIDATO", "detalle": "ACC01 DEL_RIO rango=4 ETA=1490488.6 stock=0 sin_stock"}
+{"t": 753.0, "evento": "CANDIDATO", "detalle": "ACC01 MONTE_SINAI rango=5 ETA=1490524.4 stock=0 sin_stock"}
+{"t": 753.0, "evento": "CANDIDATO", "detalle": "ACC01 MILITAR rango=6 ETA=1490603.4 stock=1 negativa_aleatoria"}
+{"t": 753.0, "evento": "CANDIDATO", "detalle": "ACC01 MUNI_PATAMARCA rango=7 ETA=1490713.9 stock=3 negativa_aleatoria"}
+{"t": 753.0, "evento": "SIN_AMBULANCIA", "detalle": "ACC01 queda en cola; reintento a 783"}
+{"t": 758.0, "evento": "IMPRUDENTE", "detalle": "imprudente_2_3 persigue a bus12; plan 2"}
+{"t": 774.0, "evento": "COLISION_FONDO", "detalle": "collision ('imprudente_2_3', 'moto11'); retirados=['imprudente_2_3', 'moto11']; protegidos=[]"}
+{"t": 774.0, "evento": "REPROGRAMAR", "detalle": "imprudente_2_3: intento expirado, vehículo ausente o pareja salió de la arista; +60 s"}
+{"t": 783.0, "evento": "CANDIDATO", "detalle": "ACC01 IESS rango=1 ETA=1490314.6 stock=1 negativa_aleatoria"}
+{"t": 783.0, "evento": "CANDIDATO", "detalle": "ACC01 MUNI_VALLE rango=2 ETA=1490334.8 stock=2 negativa_aleatoria"}
+{"t": 783.0, "evento": "CANDIDATO", "detalle": "ACC01 VCM rango=3 ETA=1490416.5 stock=3 negativa_aleatoria"}
+{"t": 783.0, "evento": "CANDIDATO", "detalle": "ACC01 DEL_RIO rango=4 ETA=1490490.7 stock=0 sin_stock"}
+{"t": 783.0, "evento": "CANDIDATO", "detalle": "ACC01 MONTE_SINAI rango=5 ETA=1490525.6 stock=0 sin_stock"}
+{"t": 783.0, "evento": "CANDIDATO", "detalle": "ACC01 MILITAR rango=6 ETA=1490602.9 stock=1 negativa_aleatoria"}
+{"t": 783.0, "evento": "CANDIDATO", "detalle": "ACC01 MUNI_PATAMARCA rango=7 ETA=1490715.5 stock=3 negativa_aleatoria"}
+{"t": 783.0, "evento": "SIN_AMBULANCIA", "detalle": "ACC01 queda en cola; reintento a 813"}
+{"t": 813.0, "evento": "CANDIDATO", "detalle": "ACC01 IESS rango=1 ETA=1490314.7 stock=1 negativa_aleatoria"}
+{"t": 813.0, "evento": "CANDIDATO", "detalle": "ACC01 MUNI_VALLE rango=2 ETA=1490333.5 stock=2 negativa_aleatoria"}
+{"t": 813.0, "evento": "CANDIDATO", "detalle": "ACC01 VCM rango=3 ETA=1490417.2 stock=3 negativa_aleatoria"}
+{"t": 813.0, "evento": "CANDIDATO", "detalle": "ACC01 DEL_RIO rango=4 ETA=1490489.8 stock=0 sin_stock"}
+{"t": 813.0, "evento": "CANDIDATO", "detalle": "ACC01 MONTE_SINAI rango=5 ETA=1490528.7 stock=0 sin_stock"}
+{"t": 813.0, "evento": "CANDIDATO", "detalle": "ACC01 MILITAR rango=6 ETA=1490603.6 stock=1 negativa_aleatoria"}
+{"t": 813.0, "evento": "CANDIDATO", "detalle": "ACC01 MUNI_PATAMARCA rango=7 ETA=1490713.4 stock=3 negativa_aleatoria"}
+{"t": 813.0, "evento": "SIN_AMBULANCIA", "detalle": "ACC01 queda en cola; reintento a 843"}
+{"t": 834.0, "evento": "IMPRUDENTE", "detalle": "imprudente_2_4 persigue a bus14; plan 2"}
+{"t": 840.0, "evento": "ACCIDENTE", "detalle": "ACC02 collision bus14 x imprudente_2_4 en -389741418", "accidente": "ACC02"}
+{"t": 840.0, "evento": "CANDIDATO", "detalle": "ACC02 VCM rango=1 ETA=105.4 stock=3 negativa_aleatoria"}
+{"t": 840.0, "evento": "CANDIDATO", "detalle": "ACC02 MONTE_SINAI rango=2 ETA=198.4 stock=0 sin_stock"}
+{"t": 840.0, "evento": "CANDIDATO", "detalle": "ACC02 MILITAR rango=3 ETA=239.3 stock=1 negativa_aleatoria"}
+{"t": 840.0, "evento": "CANDIDATO", "detalle": "ACC02 IESS rango=4 ETA=299.1 stock=1 negativa_aleatoria"}
+{"t": 840.0, "evento": "CANDIDATO", "detalle": "ACC02 MUNI_VALLE rango=5 ETA=433.5 stock=2 negativa_aleatoria"}
+{"t": 840.0, "evento": "CANDIDATO", "detalle": "ACC02 DEL_RIO rango=6 ETA=472.1 stock=0 sin_stock"}
+{"t": 840.0, "evento": "CANDIDATO", "detalle": "ACC02 MUNI_PATAMARCA rango=7 ETA=567.7 stock=3 negativa_aleatoria"}
+{"t": 840.0, "evento": "SIN_AMBULANCIA", "detalle": "ACC02 queda en cola; reintento a 870"}
+{"t": 843.0, "evento": "CANDIDATO", "detalle": "ACC01 IESS rango=1 ETA=1490314.7 stock=1 negativa_aleatoria"}
+{"t": 843.0, "evento": "CANDIDATO", "detalle": "ACC01 MUNI_VALLE rango=2 ETA=1490332.7 stock=2 negativa_aleatoria"}
+{"t": 843.0, "evento": "CANDIDATO", "detalle": "ACC01 VCM rango=3 ETA=1490418.2 stock=3 negativa_aleatoria"}
+{"t": 843.0, "evento": "CANDIDATO", "detalle": "ACC01 DEL_RIO rango=4 ETA=1490487.5 stock=0 sin_stock"}
+{"t": 843.0, "evento": "CANDIDATO", "detalle": "ACC01 MONTE_SINAI rango=5 ETA=1490531.2 stock=0 sin_stock"}
+{"t": 843.0, "evento": "CANDIDATO", "detalle": "ACC01 MILITAR rango=6 ETA=1490605.7 stock=1 negativa_aleatoria"}
+{"t": 843.0, "evento": "CANDIDATO", "detalle": "ACC01 MUNI_PATAMARCA rango=7 ETA=1490713.2 stock=3 negativa_aleatoria"}
+{"t": 843.0, "evento": "SIN_AMBULANCIA", "detalle": "ACC01 queda en cola; reintento a 873"}
+{"t": 870.0, "evento": "CANDIDATO", "detalle": "ACC02 VCM rango=1 ETA=106.3 stock=3 negativa_aleatoria"}
+{"t": 870.0, "evento": "CANDIDATO", "detalle": "ACC02 MONTE_SINAI rango=2 ETA=200.2 stock=0 sin_stock"}
+{"t": 870.0, "evento": "CANDIDATO", "detalle": "ACC02 MILITAR rango=3 ETA=240.7 stock=1 negativa_aleatoria"}
+{"t": 870.0, "evento": "CANDIDATO", "detalle": "ACC02 IESS rango=4 ETA=300.1 stock=1 negativa_aleatoria"}
+{"t": 870.0, "evento": "CANDIDATO", "detalle": "ACC02 MUNI_VALLE rango=5 ETA=433.9 stock=2 negativa_aleatoria"}
+{"t": 870.0, "evento": "CANDIDATO", "detalle": "ACC02 DEL_RIO rango=6 ETA=470.9 stock=0 sin_stock"}
+{"t": 870.0, "evento": "CANDIDATO", "detalle": "ACC02 MUNI_PATAMARCA rango=7 ETA=567.0 stock=3 negativa_aleatoria"}
+{"t": 870.0, "evento": "SIN_AMBULANCIA", "detalle": "ACC02 queda en cola; reintento a 900"}
+{"t": 873.0, "evento": "CANDIDATO", "detalle": "ACC01 IESS rango=1 ETA=1490314.6 stock=1 negativa_aleatoria"}
+{"t": 873.0, "evento": "CANDIDATO", "detalle": "ACC01 MUNI_VALLE rango=2 ETA=1490333.0 stock=2 negativa_aleatoria"}
+{"t": 873.0, "evento": "CANDIDATO", "detalle": "ACC01 VCM rango=3 ETA=1490419.3 stock=3 negativa_aleatoria"}
+{"t": 873.0, "evento": "CANDIDATO", "detalle": "ACC01 DEL_RIO rango=4 ETA=1490484.9 stock=0 sin_stock"}
+{"t": 873.0, "evento": "CANDIDATO", "detalle": "ACC01 MONTE_SINAI rango=5 ETA=1490532.9 stock=0 sin_stock"}
+{"t": 873.0, "evento": "CANDIDATO", "detalle": "ACC01 MILITAR rango=6 ETA=1490607.2 stock=1 negativa_aleatoria"}
+{"t": 873.0, "evento": "CANDIDATO", "detalle": "ACC01 MUNI_PATAMARCA rango=7 ETA=1490714.3 stock=3 negativa_aleatoria"}
+{"t": 873.0, "evento": "SIN_AMBULANCIA", "detalle": "ACC01 queda en cola; reintento a 903"}
+{"t": 900.0, "evento": "CANDIDATO", "detalle": "ACC02 VCM rango=1 ETA=110.4 stock=3 negativa_aleatoria"}
+{"t": 900.0, "evento": "CANDIDATO", "detalle": "ACC02 MONTE_SINAI rango=2 ETA=204.0 stock=0 sin_stock"}
+{"t": 900.0, "evento": "CANDIDATO", "detalle": "ACC02 MILITAR rango=3 ETA=246.9 stock=1 negativa_aleatoria"}
+{"t": 900.0, "evento": "CANDIDATO", "detalle": "ACC02 IESS rango=4 ETA=305.1 stock=1 negativa_aleatoria"}
+{"t": 900.0, "evento": "CANDIDATO", "detalle": "ACC02 MUNI_VALLE rango=5 ETA=439.2 stock=2 negativa_aleatoria"}
+{"t": 900.0, "evento": "CANDIDATO", "detalle": "ACC02 DEL_RIO rango=6 ETA=474.0 stock=0 sin_stock"}
+{"t": 900.0, "evento": "CANDIDATO", "detalle": "ACC02 MUNI_PATAMARCA rango=7 ETA=570.2 stock=3 negativa_aleatoria"}
+{"t": 900.0, "evento": "SIN_AMBULANCIA", "detalle": "ACC02 queda en cola; reintento a 930"}
+{"t": 903.0, "evento": "CANDIDATO", "detalle": "ACC01 IESS rango=1 ETA=1490314.2 stock=1 negativa_aleatoria"}
+{"t": 903.0, "evento": "CANDIDATO", "detalle": "ACC01 MUNI_VALLE rango=2 ETA=1490335.2 stock=2 negativa_aleatoria"}
+{"t": 903.0, "evento": "CANDIDATO", "detalle": "ACC01 VCM rango=3 ETA=1490419.8 stock=3 negativa_aleatoria"}
+{"t": 903.0, "evento": "CANDIDATO", "detalle": "ACC01 DEL_RIO rango=4 ETA=1490483.1 stock=0 sin_stock"}
+{"t": 903.0, "evento": "CANDIDATO", "detalle": "ACC01 MONTE_SINAI rango=5 ETA=1490538.3 stock=0 sin_stock"}
+{"t": 903.0, "evento": "CANDIDATO", "detalle": "ACC01 MILITAR rango=6 ETA=1490608.5 stock=1 negativa_aleatoria"}
+{"t": 903.0, "evento": "CANDIDATO", "detalle": "ACC01 MUNI_PATAMARCA rango=7 ETA=1490719.2 stock=3 negativa_aleatoria"}
+{"t": 903.0, "evento": "SIN_AMBULANCIA", "detalle": "ACC01 queda en cola; reintento a 933"}
+{"t": 930.0, "evento": "CANDIDATO", "detalle": "ACC02 VCM rango=1 ETA=115.8 stock=3 negativa_aleatoria"}
+{"t": 930.0, "evento": "CANDIDATO", "detalle": "ACC02 MONTE_SINAI rango=2 ETA=208.2 stock=0 sin_stock"}
+{"t": 930.0, "evento": "CANDIDATO", "detalle": "ACC02 MILITAR rango=3 ETA=250.9 stock=1 negativa_aleatoria"}
+{"t": 930.0, "evento": "CANDIDATO", "detalle": "ACC02 IESS rango=4 ETA=309.7 stock=1 negativa_aleatoria"}
+{"t": 930.0, "evento": "CANDIDATO", "detalle": "ACC02 MUNI_VALLE rango=5 ETA=444.2 stock=2 negativa_aleatoria"}
+{"t": 930.0, "evento": "CANDIDATO", "detalle": "ACC02 DEL_RIO rango=6 ETA=478.5 stock=0 sin_stock"}
+{"t": 930.0, "evento": "CANDIDATO", "detalle": "ACC02 MUNI_PATAMARCA rango=7 ETA=575.5 stock=3 negativa_aleatoria"}
+{"t": 930.0, "evento": "SIN_AMBULANCIA", "detalle": "ACC02 queda en cola; reintento a 960"}
+{"t": 933.0, "evento": "CANDIDATO", "detalle": "ACC01 IESS rango=1 ETA=2392.4 stock=1 negativa_aleatoria"}
+{"t": 933.0, "evento": "CANDIDATO", "detalle": "ACC01 MUNI_VALLE rango=2 ETA=2414.9 stock=2 negativa_aleatoria"}
+{"t": 933.0, "evento": "CANDIDATO", "detalle": "ACC01 VCM rango=3 ETA=2498.3 stock=3 negativa_aleatoria"}
+{"t": 933.0, "evento": "CANDIDATO", "detalle": "ACC01 DEL_RIO rango=4 ETA=2561.3 stock=0 sin_stock"}
+{"t": 933.0, "evento": "CANDIDATO", "detalle": "ACC01 MONTE_SINAI rango=5 ETA=2617.0 stock=0 sin_stock"}
+{"t": 933.0, "evento": "CANDIDATO", "detalle": "ACC01 MILITAR rango=6 ETA=2686.0 stock=1 negativa_aleatoria"}
+{"t": 933.0, "evento": "CANDIDATO", "detalle": "ACC01 MUNI_PATAMARCA rango=7 ETA=2795.6 stock=3 negativa_aleatoria"}
+{"t": 933.0, "evento": "SIN_AMBULANCIA", "detalle": "ACC01 queda en cola; reintento a 963"}
+{"t": 960.0, "evento": "CANDIDATO", "detalle": "ACC02 VCM rango=1 ETA=120.6 stock=3 negativa_aleatoria"}
+{"t": 960.0, "evento": "CANDIDATO", "detalle": "ACC02 MONTE_SINAI rango=2 ETA=213.4 stock=0 sin_stock"}
+{"t": 960.0, "evento": "CANDIDATO", "detalle": "ACC02 MILITAR rango=3 ETA=257.3 stock=1 negativa_aleatoria"}
+{"t": 960.0, "evento": "CANDIDATO", "detalle": "ACC02 IESS rango=4 ETA=313.3 stock=1 negativa_aleatoria"}
+{"t": 960.0, "evento": "CANDIDATO", "detalle": "ACC02 MUNI_VALLE rango=5 ETA=447.9 stock=2 negativa_aleatoria"}
+{"t": 960.0, "evento": "CANDIDATO", "detalle": "ACC02 DEL_RIO rango=6 ETA=481.0 stock=0 sin_stock"}
+{"t": 960.0, "evento": "CANDIDATO", "detalle": "ACC02 MUNI_PATAMARCA rango=7 ETA=580.1 stock=3 negativa_aleatoria"}
+{"t": 960.0, "evento": "SIN_AMBULANCIA", "detalle": "ACC02 queda en cola; reintento a 990"}
+{"t": 963.0, "evento": "CANDIDATO", "detalle": "ACC01 IESS rango=1 ETA=1644.0 stock=1 negativa_aleatoria"}
+{"t": 963.0, "evento": "CANDIDATO", "detalle": "ACC01 MUNI_VALLE rango=2 ETA=1667.4 stock=2 negativa_aleatoria"}
+{"t": 963.0, "evento": "CANDIDATO", "detalle": "ACC01 VCM rango=3 ETA=1749.9 stock=3 negativa_aleatoria"}
+{"t": 963.0, "evento": "CANDIDATO", "detalle": "ACC01 DEL_RIO rango=4 ETA=1811.7 stock=0 sin_stock"}
+{"t": 963.0, "evento": "CANDIDATO", "detalle": "ACC01 MONTE_SINAI rango=5 ETA=1867.4 stock=0 sin_stock"}
+{"t": 963.0, "evento": "CANDIDATO", "detalle": "ACC01 MILITAR rango=6 ETA=1939.3 stock=1 negativa_aleatoria"}
+{"t": 963.0, "evento": "CANDIDATO", "detalle": "ACC01 MUNI_PATAMARCA rango=7 ETA=2046.1 stock=3 negativa_aleatoria"}
+{"t": 963.0, "evento": "SIN_AMBULANCIA", "detalle": "ACC01 queda en cola; reintento a 993"}
+{"t": 990.0, "evento": "CANDIDATO", "detalle": "ACC02 VCM rango=1 ETA=137.4 stock=3 negativa_aleatoria"}
+{"t": 990.0, "evento": "CANDIDATO", "detalle": "ACC02 MONTE_SINAI rango=2 ETA=231.0 stock=0 sin_stock"}
+{"t": 990.0, "evento": "CANDIDATO", "detalle": "ACC02 MILITAR rango=3 ETA=275.3 stock=1 negativa_aleatoria"}
+{"t": 990.0, "evento": "CANDIDATO", "detalle": "ACC02 IESS rango=4 ETA=328.3 stock=1 negativa_aleatoria"}
+{"t": 990.0, "evento": "CANDIDATO", "detalle": "ACC02 MUNI_VALLE rango=5 ETA=462.9 stock=2 negativa_aleatoria"}
+{"t": 990.0, "evento": "CANDIDATO", "detalle": "ACC02 DEL_RIO rango=6 ETA=495.4 stock=0 sin_stock"}
+{"t": 990.0, "evento": "CANDIDATO", "detalle": "ACC02 MUNI_PATAMARCA rango=7 ETA=589.3 stock=3 negativa_aleatoria"}
+{"t": 990.0, "evento": "SIN_AMBULANCIA", "detalle": "ACC02 queda en cola; reintento a 1020"}
+{"t": 993.0, "evento": "CANDIDATO", "detalle": "ACC01 IESS rango=1 ETA=1252.4 stock=1 negativa_aleatoria"}
+{"t": 993.0, "evento": "CANDIDATO", "detalle": "ACC01 MUNI_VALLE rango=2 ETA=1275.9 stock=2 negativa_aleatoria"}
+{"t": 993.0, "evento": "CANDIDATO", "detalle": "ACC01 VCM rango=3 ETA=1358.5 stock=3 negativa_aleatoria"}
+{"t": 993.0, "evento": "CANDIDATO", "detalle": "ACC01 DEL_RIO rango=4 ETA=1419.4 stock=0 sin_stock"}
+{"t": 993.0, "evento": "CANDIDATO", "detalle": "ACC01 MONTE_SINAI rango=5 ETA=1477.1 stock=0 sin_stock"}
+{"t": 993.0, "evento": "CANDIDATO", "detalle": "ACC01 MILITAR rango=6 ETA=1549.8 stock=1 negativa_aleatoria"}
+{"t": 993.0, "evento": "CANDIDATO", "detalle": "ACC01 MUNI_PATAMARCA rango=7 ETA=1646.7 stock=3 negativa_aleatoria"}
+{"t": 993.0, "evento": "SIN_AMBULANCIA", "detalle": "ACC01 queda en cola; reintento a 1023"}
+{"t": 1020.0, "evento": "CANDIDATO", "detalle": "ACC02 VCM rango=1 ETA=147.3 stock=3 negativa_aleatoria"}
+{"t": 1020.0, "evento": "CANDIDATO", "detalle": "ACC02 MONTE_SINAI rango=2 ETA=242.7 stock=0 sin_stock"}
+{"t": 1020.0, "evento": "CANDIDATO", "detalle": "ACC02 MILITAR rango=3 ETA=283.7 stock=1 negativa_aleatoria"}
+{"t": 1020.0, "evento": "CANDIDATO", "detalle": "ACC02 IESS rango=4 ETA=337.4 stock=1 negativa_aleatoria"}
+{"t": 1020.0, "evento": "CANDIDATO", "detalle": "ACC02 MUNI_VALLE rango=5 ETA=472.0 stock=2 negativa_aleatoria"}
+{"t": 1020.0, "evento": "CANDIDATO", "detalle": "ACC02 DEL_RIO rango=6 ETA=505.0 stock=0 sin_stock"}
+{"t": 1020.0, "evento": "CANDIDATO", "detalle": "ACC02 MUNI_PATAMARCA rango=7 ETA=597.6 stock=3 negativa_aleatoria"}
+{"t": 1020.0, "evento": "SIN_AMBULANCIA", "detalle": "ACC02 queda en cola; reintento a 1050"}
+{"t": 1023.0, "evento": "CANDIDATO", "detalle": "ACC01 IESS rango=1 ETA=1252.4 stock=1 negativa_aleatoria"}
+{"t": 1023.0, "evento": "CANDIDATO", "detalle": "ACC01 MUNI_VALLE rango=2 ETA=1275.9 stock=2 negativa_aleatoria"}
+{"t": 1023.0, "evento": "CANDIDATO", "detalle": "ACC01 VCM rango=3 ETA=1358.4 stock=3 negativa_aleatoria"}
+{"t": 1023.0, "evento": "CANDIDATO", "detalle": "ACC01 DEL_RIO rango=4 ETA=1420.1 stock=0 sin_stock"}
+{"t": 1023.0, "evento": "CANDIDATO", "detalle": "ACC01 MONTE_SINAI rango=5 ETA=1478.5 stock=0 sin_stock"}
+{"t": 1023.0, "evento": "CANDIDATO", "detalle": "ACC01 MILITAR rango=6 ETA=1547.9 stock=1 negativa_aleatoria"}
+{"t": 1023.0, "evento": "CANDIDATO", "detalle": "ACC01 MUNI_PATAMARCA rango=7 ETA=1650.8 stock=3 negativa_aleatoria"}
+{"t": 1023.0, "evento": "SIN_AMBULANCIA", "detalle": "ACC01 queda en cola; reintento a 1053"}
+{"t": 1050.0, "evento": "CANDIDATO", "detalle": "ACC02 VCM rango=1 ETA=158.5 stock=3 negativa_aleatoria"}
+{"t": 1050.0, "evento": "CANDIDATO", "detalle": "ACC02 MONTE_SINAI rango=2 ETA=251.6 stock=0 sin_stock"}
+{"t": 1050.0, "evento": "CANDIDATO", "detalle": "ACC02 MILITAR rango=3 ETA=293.2 stock=1 negativa_aleatoria"}
+{"t": 1050.0, "evento": "CANDIDATO", "detalle": "ACC02 IESS rango=4 ETA=346.9 stock=1 negativa_aleatoria"}
+{"t": 1050.0, "evento": "CANDIDATO", "detalle": "ACC02 MUNI_VALLE rango=5 ETA=481.5 stock=2 negativa_aleatoria"}
+{"t": 1050.0, "evento": "CANDIDATO", "detalle": "ACC02 DEL_RIO rango=6 ETA=514.4 stock=0 sin_stock"}
+{"t": 1050.0, "evento": "CANDIDATO", "detalle": "ACC02 MUNI_PATAMARCA rango=7 ETA=610.8 stock=3 negativa_aleatoria"}
+{"t": 1050.0, "evento": "SIN_AMBULANCIA", "detalle": "ACC02 queda en cola; reintento a 1080"}
+{"t": 1053.0, "evento": "CANDIDATO", "detalle": "ACC01 IESS rango=1 ETA=1252.4 stock=1 negativa_aleatoria"}
+{"t": 1053.0, "evento": "CANDIDATO", "detalle": "ACC01 MUNI_VALLE rango=2 ETA=1275.6 stock=2 negativa_aleatoria"}
+{"t": 1053.0, "evento": "CANDIDATO", "detalle": "ACC01 VCM rango=3 ETA=1358.2 stock=3 negativa_aleatoria"}
+{"t": 1053.0, "evento": "CANDIDATO", "detalle": "ACC01 DEL_RIO rango=4 ETA=1420.0 stock=0 sin_stock"}
+{"t": 1053.0, "evento": "CANDIDATO", "detalle": "ACC01 MONTE_SINAI rango=5 ETA=1483.5 stock=0 sin_stock"}
+{"t": 1053.0, "evento": "CANDIDATO", "detalle": "ACC01 MILITAR rango=6 ETA=1546.6 stock=1 negativa_aleatoria"}
+{"t": 1053.0, "evento": "CANDIDATO", "detalle": "ACC01 MUNI_PATAMARCA rango=7 ETA=1649.0 stock=3 negativa_aleatoria"}
+{"t": 1053.0, "evento": "SIN_AMBULANCIA", "detalle": "ACC01 queda en cola; reintento a 1083"}
+{"t": 1080.0, "evento": "CANDIDATO", "detalle": "ACC02 VCM rango=1 ETA=161.2 stock=3 negativa_aleatoria"}
+{"t": 1080.0, "evento": "CANDIDATO", "detalle": "ACC02 MONTE_SINAI rango=2 ETA=251.9 stock=0 sin_stock"}
+{"t": 1080.0, "evento": "CANDIDATO", "detalle": "ACC02 MILITAR rango=3 ETA=291.8 stock=1 negativa_aleatoria"}
+{"t": 1080.0, "evento": "CANDIDATO", "detalle": "ACC02 IESS rango=4 ETA=348.8 stock=1 negativa_aleatoria"}
+{"t": 1080.0, "evento": "CANDIDATO", "detalle": "ACC02 MUNI_VALLE rango=5 ETA=483.4 stock=2 negativa_aleatoria"}
+{"t": 1080.0, "evento": "CANDIDATO", "detalle": "ACC02 DEL_RIO rango=6 ETA=515.6 stock=0 sin_stock"}
+{"t": 1080.0, "evento": "CANDIDATO", "detalle": "ACC02 MUNI_PATAMARCA rango=7 ETA=621.4 stock=3 negativa_aleatoria"}
+{"t": 1080.0, "evento": "SIN_AMBULANCIA", "detalle": "ACC02 queda en cola; reintento a 1110"}
+{"t": 1083.0, "evento": "CANDIDATO", "detalle": "ACC01 IESS rango=1 ETA=1252.4 stock=1 negativa_aleatoria"}
+{"t": 1083.0, "evento": "CANDIDATO", "detalle": "ACC01 MUNI_VALLE rango=2 ETA=1273.3 stock=2 negativa_aleatoria"}
+{"t": 1083.0, "evento": "CANDIDATO", "detalle": "ACC01 VCM rango=3 ETA=1358.8 stock=3 negativa_aleatoria"}
+{"t": 1083.0, "evento": "CANDIDATO", "detalle": "ACC01 DEL_RIO rango=4 ETA=1419.1 stock=0 sin_stock"}
+{"t": 1083.0, "evento": "CANDIDATO", "detalle": "ACC01 MONTE_SINAI rango=5 ETA=1473.8 stock=0 sin_stock"}
+{"t": 1083.0, "evento": "CANDIDATO", "detalle": "ACC01 MILITAR rango=6 ETA=1544.5 stock=1 negativa_aleatoria"}
+{"t": 1083.0, "evento": "CANDIDATO", "detalle": "ACC01 MUNI_PATAMARCA rango=7 ETA=1646.0 stock=3 negativa_aleatoria"}
+{"t": 1083.0, "evento": "SIN_AMBULANCIA", "detalle": "ACC01 queda en cola; reintento a 1113"}
+{"t": 1110.0, "evento": "CANDIDATO", "detalle": "ACC02 VCM rango=1 ETA=168.1 stock=3 negativa_aleatoria"}
+{"t": 1110.0, "evento": "CANDIDATO", "detalle": "ACC02 MONTE_SINAI rango=2 ETA=258.7 stock=0 sin_stock"}
+{"t": 1110.0, "evento": "CANDIDATO", "detalle": "ACC02 MILITAR rango=3 ETA=298.8 stock=1 negativa_aleatoria"}
+{"t": 1110.0, "evento": "CANDIDATO", "detalle": "ACC02 IESS rango=4 ETA=355.2 stock=1 negativa_aleatoria"}
+{"t": 1110.0, "evento": "CANDIDATO", "detalle": "ACC02 MUNI_VALLE rango=5 ETA=489.8 stock=2 negativa_aleatoria"}
+{"t": 1110.0, "evento": "CANDIDATO", "detalle": "ACC02 DEL_RIO rango=6 ETA=522.1 stock=0 sin_stock"}
+{"t": 1110.0, "evento": "CANDIDATO", "detalle": "ACC02 MUNI_PATAMARCA rango=7 ETA=632.0 stock=3 negativa_aleatoria"}
+{"t": 1110.0, "evento": "SIN_AMBULANCIA", "detalle": "ACC02 queda en cola; reintento a 1140"}
+{"t": 1113.0, "evento": "CANDIDATO", "detalle": "ACC01 IESS rango=1 ETA=2311.9 stock=1 negativa_aleatoria"}
+{"t": 1113.0, "evento": "CANDIDATO", "detalle": "ACC01 MUNI_VALLE rango=2 ETA=2332.0 stock=2 negativa_aleatoria"}
+{"t": 1113.0, "evento": "CANDIDATO", "detalle": "ACC01 VCM rango=3 ETA=2419.5 stock=3 negativa_aleatoria"}
+{"t": 1113.0, "evento": "CANDIDATO", "detalle": "ACC01 DEL_RIO rango=4 ETA=2478.5 stock=0 sin_stock"}
+{"t": 1113.0, "evento": "CANDIDATO", "detalle": "ACC01 MONTE_SINAI rango=5 ETA=2536.8 stock=0 sin_stock"}
+{"t": 1113.0, "evento": "CANDIDATO", "detalle": "ACC01 MILITAR rango=6 ETA=2603.8 stock=1 negativa_aleatoria"}
+{"t": 1113.0, "evento": "CANDIDATO", "detalle": "ACC01 MUNI_PATAMARCA rango=7 ETA=2704.6 stock=3 negativa_aleatoria"}
+{"t": 1113.0, "evento": "SIN_AMBULANCIA", "detalle": "ACC01 queda en cola; reintento a 1143"}
+{"t": 1140.0, "evento": "CANDIDATO", "detalle": "ACC02 VCM rango=1 ETA=169.7 stock=3 negativa_aleatoria"}
+{"t": 1140.0, "evento": "CANDIDATO", "detalle": "ACC02 MONTE_SINAI rango=2 ETA=259.7 stock=0 sin_stock"}
+{"t": 1140.0, "evento": "CANDIDATO", "detalle": "ACC02 MILITAR rango=3 ETA=300.9 stock=1 negativa_aleatoria"}
+{"t": 1140.0, "evento": "CANDIDATO", "detalle": "ACC02 IESS rango=4 ETA=356.5 stock=1 negativa_aleatoria"}
+{"t": 1140.0, "evento": "CANDIDATO", "detalle": "ACC02 MUNI_VALLE rango=5 ETA=491.0 stock=2 negativa_aleatoria"}
+{"t": 1140.0, "evento": "CANDIDATO", "detalle": "ACC02 DEL_RIO rango=6 ETA=523.0 stock=0 sin_stock"}
+{"t": 1140.0, "evento": "CANDIDATO", "detalle": "ACC02 MUNI_PATAMARCA rango=7 ETA=634.4 stock=3 negativa_aleatoria"}
+{"t": 1140.0, "evento": "SIN_AMBULANCIA", "detalle": "ACC02 queda en cola; reintento a 1170"}
+{"t": 1143.0, "evento": "CANDIDATO", "detalle": "ACC01 IESS rango=1 ETA=4337.4 stock=1 negativa_aleatoria"}
+{"t": 1143.0, "evento": "CANDIDATO", "detalle": "ACC01 MUNI_VALLE rango=2 ETA=4356.7 stock=2 negativa_aleatoria"}
+{"t": 1143.0, "evento": "CANDIDATO", "detalle": "ACC01 VCM rango=3 ETA=4445.9 stock=3 negativa_aleatoria"}
+{"t": 1143.0, "evento": "CANDIDATO", "detalle": "ACC01 DEL_RIO rango=4 ETA=4504.0 stock=0 sin_stock"}
+{"t": 1143.0, "evento": "CANDIDATO", "detalle": "ACC01 MONTE_SINAI rango=5 ETA=4561.8 stock=0 sin_stock"}
+{"t": 1143.0, "evento": "CANDIDATO", "detalle": "ACC01 MILITAR rango=6 ETA=4629.4 stock=1 negativa_aleatoria"}
+{"t": 1143.0, "evento": "CANDIDATO", "detalle": "ACC01 MUNI_PATAMARCA rango=7 ETA=4732.1 stock=3 negativa_aleatoria"}
+{"t": 1143.0, "evento": "SIN_AMBULANCIA", "detalle": "ACC01 queda en cola; reintento a 1173"}
+{"t": 1170.0, "evento": "CANDIDATO", "detalle": "ACC02 VCM rango=1 ETA=157.3 stock=3 negativa_aleatoria"}
+{"t": 1170.0, "evento": "CANDIDATO", "detalle": "ACC02 MONTE_SINAI rango=2 ETA=246.7 stock=0 sin_stock"}
+{"t": 1170.0, "evento": "CANDIDATO", "detalle": "ACC02 MILITAR rango=3 ETA=288.3 stock=1 negativa_aleatoria"}
+{"t": 1170.0, "evento": "CANDIDATO", "detalle": "ACC02 IESS rango=4 ETA=344.3 stock=1 negativa_aleatoria"}
+{"t": 1170.0, "evento": "CANDIDATO", "detalle": "ACC02 MUNI_VALLE rango=5 ETA=478.5 stock=2 negativa_aleatoria"}
+{"t": 1170.0, "evento": "CANDIDATO", "detalle": "ACC02 DEL_RIO rango=6 ETA=511.6 stock=0 sin_stock"}
+{"t": 1170.0, "evento": "CANDIDATO", "detalle": "ACC02 MUNI_PATAMARCA rango=7 ETA=626.6 stock=3 negativa_aleatoria"}
+{"t": 1170.0, "evento": "SIN_AMBULANCIA", "detalle": "ACC02 queda en cola; reintento a 1200"}
+{"t": 1173.0, "evento": "CANDIDATO", "detalle": "ACC01 IESS rango=1 ETA=3583.2 stock=1 negativa_aleatoria"}
+{"t": 1173.0, "evento": "CANDIDATO", "detalle": "ACC01 MUNI_VALLE rango=2 ETA=3602.1 stock=2 negativa_aleatoria"}
+{"t": 1173.0, "evento": "CANDIDATO", "detalle": "ACC01 VCM rango=3 ETA=3691.6 stock=3 negativa_aleatoria"}
+{"t": 1173.0, "evento": "CANDIDATO", "detalle": "ACC01 DEL_RIO rango=4 ETA=3750.6 stock=0 sin_stock"}
+{"t": 1173.0, "evento": "CANDIDATO", "detalle": "ACC01 MONTE_SINAI rango=5 ETA=3802.8 stock=0 sin_stock"}
+{"t": 1173.0, "evento": "CANDIDATO", "detalle": "ACC01 MILITAR rango=6 ETA=3873.1 stock=1 negativa_aleatoria"}
+{"t": 1173.0, "evento": "CANDIDATO", "detalle": "ACC01 MUNI_PATAMARCA rango=7 ETA=3983.8 stock=3 negativa_aleatoria"}
+{"t": 1173.0, "evento": "SIN_AMBULANCIA", "detalle": "ACC01 queda en cola; reintento a 1203"}
+{"t": 1200.0, "evento": "CANDIDATO", "detalle": "ACC02 VCM rango=1 ETA=181.3 stock=3 negativa_aleatoria"}
+{"t": 1200.0, "evento": "CANDIDATO", "detalle": "ACC02 MONTE_SINAI rango=2 ETA=266.7 stock=0 sin_stock"}
+{"t": 1200.0, "evento": "CANDIDATO", "detalle": "ACC02 MILITAR rango=3 ETA=310.7 stock=1 negativa_aleatoria"}
+{"t": 1200.0, "evento": "CANDIDATO", "detalle": "ACC02 IESS rango=4 ETA=368.1 stock=1 negativa_aleatoria"}
+{"t": 1200.0, "evento": "CANDIDATO", "detalle": "ACC02 MUNI_VALLE rango=5 ETA=502.6 stock=2 negativa_aleatoria"}
+{"t": 1200.0, "evento": "CANDIDATO", "detalle": "ACC02 DEL_RIO rango=6 ETA=535.2 stock=0 sin_stock"}
+{"t": 1200.0, "evento": "CANDIDATO", "detalle": "ACC02 MUNI_PATAMARCA rango=7 ETA=653.0 stock=3 negativa_aleatoria"}
+{"t": 1200.0, "evento": "SIN_AMBULANCIA", "detalle": "ACC02 queda en cola; reintento a 1230"}

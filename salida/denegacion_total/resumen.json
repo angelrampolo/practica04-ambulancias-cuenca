@@ -1,0 +1,47 @@
+{
+  "carpeta": "denegacion_total",
+  "semilla": 42,
+  "retorno": "cercano",
+  "tasa": 5,
+  "accidentes": 2,
+  "cerrados": 0,
+  "censurados": 2,
+  "respuesta_total": {
+    "n": 0,
+    "media": null,
+    "mediana": null,
+    "p90": null,
+    "maximo": null
+  },
+  "desplazamiento": {
+    "n": 0,
+    "media": null,
+    "mediana": null,
+    "p90": null,
+    "maximo": null
+  },
+  "espera": {
+    "n": 0,
+    "media": null,
+    "mediana": null,
+    "p90": null,
+    "maximo": null
+  },
+  "mision": {
+    "n": 0,
+    "media": null,
+    "mediana": null,
+    "p90": null,
+    "maximo": null
+  },
+  "migracion_pct": null,
+  "rechazos": 205,
+  "flota": 10,
+  "teleports": 0,
+  "intentos": 2,
+  "planes_pendientes": 13,
+  "vehiculos_fondo_retirados": 2,
+  "running_final": 240,
+  "expected_final": 247,
+  "wall_seconds": 4.3639044249994186
+}

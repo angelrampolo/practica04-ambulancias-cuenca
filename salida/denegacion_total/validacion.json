@@ -1,0 +1,199 @@
+{
+  "carpeta": "denegacion_total",
+  "pruebas": [
+    {
+      "prueba": "Controlador coincide con la ejecución",
+      "ok": true,
+      "detalle": "",
+      "nivel": "error"
+    },
+    {
+      "prueba": "Hospitales coinciden con la ejecución",
+      "ok": true,
+      "detalle": "",
+      "nivel": "error"
+    },
+    {
+      "prueba": "Entradas SUMO coinciden con la ejecución",
+      "ok": true,
+      "detalle": "",
+      "nivel": "error"
+    },
+    {
+      "prueba": "Red de origen coincide con la ejecución",
+      "ok": true,
+      "detalle": "",
+      "nivel": "error"
+    },
+    {
+      "prueba": "Sin teleportación (TraCI y estadística SUMO)",
+      "ok": true,
+      "detalle": "",
+      "nivel": "error"
+    },
+    {
+      "prueba": "Siete hospitales",
+      "ok": true,
+      "detalle": "",
+      "nivel": "error"
+    },
+    {
+      "prueba": "Distancia de hospitales <150 m",
+      "ok": false,
+      "detalle": "Máxima: 158.08 m",
+      "nivel": "advertencia"
+    },
+    {
+      "prueba": "Conectividad dirigida emergency: 49 pares",
+      "ok": true,
+      "detalle": "",
+      "nivel": "error"
+    },
+    {
+      "prueba": "Algún hospital con stock inicial cero",
+      "ok": true,
+      "detalle": "",
+      "nivel": "advertencia"
+    },
+    {
+      "prueba": "Conservación global de flota",
+      "ok": true,
+      "detalle": "Inicial=10; final=10; en misión=0",
+      "nivel": "error"
+    },
+    {
+      "prueba": "No hay ambulancias duplicadas en misión",
+      "ok": true,
+      "detalle": "",
+      "nivel": "error"
+    },
+    {
+      "prueba": "Balance local VCM",
+      "ok": true,
+      "detalle": "",
+      "nivel": "error"
+    },
+    {
+      "prueba": "Utilización bien definida VCM",
+      "ok": true,
+      "detalle": "",
+      "nivel": "error"
+    },
+    {
+      "prueba": "Balance local IESS",
+      "ok": true,
+      "detalle": "",
+      "nivel": "error"
+    },
+    {
+      "prueba": "Utilización bien definida IESS",
+      "ok": true,
+      "detalle": "",
+      "nivel": "error"
+    },
+    {
+      "prueba": "Balance local MILITAR",
+      "ok": true,
+      "detalle": "",
+      "nivel": "error"
+    },
+    {
+      "prueba": "Utilización bien definida MILITAR",
+      "ok": true,
+      "detalle": "",
+      "nivel": "error"
+    },
+    {
+      "prueba": "Balance local MUNI_PATAMARCA",
+      "ok": true,
+      "detalle": "",
+      "nivel": "error"
+    },
+    {
+      "prueba": "Utilización bien definida MUNI_PATAMARCA",
+      "ok": true,
+      "detalle": "",
+      "nivel": "error"
+    },
+    {
+      "prueba": "Balance local MUNI_VALLE",
+      "ok": true,
+      "detalle": "",
+      "nivel": "error"
+    },
+    {
+      "prueba": "Utilización bien definida MUNI_VALLE",
+      "ok": true,
+      "detalle": "",
+      "nivel": "error"
+    },
+    {
+      "prueba": "Balance local MONTE_SINAI",
+      "ok": true,
+      "detalle": "",
+      "nivel": "error"
+    },
+    {
+      "prueba": "Utilización bien definida MONTE_SINAI",
+      "ok": true,
+      "detalle": "",
+      "nivel": "error"
+    },
+    {
+      "prueba": "Balance local DEL_RIO",
+      "ok": true,
+      "detalle": "",
+      "nivel": "error"
+    },
+    {
+      "prueba": "Utilización bien definida DEL_RIO",
+      "ok": true,
+      "detalle": "",
+      "nivel": "error"
+    },
+    {
+      "prueba": "Identificadores de accidentes únicos",
+      "ok": true,
+      "detalle": "",
+      "nivel": "error"
+    },
+    {
+      "prueba": "Parejas bus–moto únicas",
+      "ok": true,
+      "detalle": "",
+      "nivel": "error"
+    },
+    {
+      "prueba": "Cada accidente tiene una colisión física en XML",
+      "ok": true,
+      "detalle": "",
+      "nivel": "error"
+    },
+    {
+      "prueba": "Cronología, atención 120 s e identidades de tiempos",
+      "ok": true,
+      "detalle": "",
+      "nivel": "error"
+    },
+    {
+      "prueba": "Ninguna misión queda abierta",
+      "ok": false,
+      "detalle": "",
+      "nivel": "advertencia"
+    },
+    {
+      "prueba": "Vaciado: ningún vehículo restante",
+      "ok": false,
+      "detalle": "Activos=200; esperados=207",
+      "nivel": "advertencia"
+    },
+    {
+      "prueba": "Negativas aleatorias observadas",
+      "ok": true,
+      "detalle": "",
+      "nivel": "advertencia"
+    }
+  ],
+  "errores": 0,
+  "advertencias": 3
+}

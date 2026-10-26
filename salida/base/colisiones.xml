@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-10-26 12:32:06 by Eclipse SUMO sumo Version 1.12.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="/work/escenario/cuenca_ciudad.net.xml"/>
+        <route-files value="/work/escenario/fondo_car.rou.xml,/work/escenario/fondo_bus.rou.xml,/work/escenario/fondo_moto.rou.xml"/>
+        <additional-files value="/work/escenario/vtypes.add.xml,/work/escenario/macro.add.xml"/>
+    </input>
+
+    <output>
+        <summary-output value="/work/escenario/../salida/base/summary.xml"/>
+        <tripinfo-output value="/work/escenario/../salida/base/tripinfo.xml"/>
+        <tripinfo-output.write-unfinished value="true"/>
+        <collision-output value="/work/escenario/../salida/base/colisiones.xml"/>
+        <statistic-output value="/work/escenario/../salida/base/estadisticas.xml"/>
+    </output>
+
+    <time>
+        <begin value="0"/>
+        <end value="12600"/>
+        <step-length value="1"/>
+    </time>
+
+    <processing>
+        <ignore-junction-blocker value="60"/>
+        <ignore-route-errors value="true"/>
+        <collision.action value="warn"/>
+        <collision.check-junctions value="true"/>
+        <collision.mingap-factor value="0"/>
+        <time-to-teleport value="-1"/>
+        <time-to-teleport.disconnected value="-1"/>
+    </processing>
+
+    <routing>
+        <device.rerouting.probability value="0.3"/>
+        <device.rerouting.period value="120"/>
+    </routing>
+
+    <report>
+        <verbose value="true"/>
+        <log value="/work/salida/base/sumo.log"/>
+        <error-log value="/work/salida/base/sumo_avisos.log"/>
+        <duration-log.statistics value="true"/>
+        <no-step-log value="true"/>
+    </report>
+
+    <random_number>
+        <seed value="42"/>
+    </random_number>
+
+    <gui_only>
+        <tracker-interval value="1"/>
+    </gui_only>
+
+</configuration>
+-->
+
+<collisions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/collision_file.xsd">
+    <collision time="1247.00" type="junction" lane=":601481960_2_0" pos="2.91" collider="car302" victim="bus30" colliderType="car" victimType="bus" colliderSpeed="0.03" victimSpeed="6.62"/>
+    <collision time="1248.00" type="junction" lane=":601481960_2_0" pos="2.91" collider="car302" victim="bus30" colliderType="car" victimType="bus" colliderSpeed="0.03" victimSpeed="6.62"/>
+    <collision time="2279.00" type="junction" lane=":cluster_525696816_620719681_21_0" pos="23.41" collider="bus63" victim="car754" colliderType="bus" victimType="car" colliderSpeed="0.00" victimSpeed="1.46"/>
+    <collision time="2280.00" type="junction" lane=":cluster_525696816_620719681_21_0" pos="23.41" collider="bus63" victim="car754" colliderType="bus" victimType="car" colliderSpeed="0.00" victimSpeed="1.46"/>
+    <collision time="4258.00" type="junction" lane=":cluster_5166436918_5166437831_5166437833_5166437839_0_0" pos="1.84" collider="moto342" victim="car1311" colliderType="moto" victimType="car" colliderSpeed="5.17" victimSpeed="8.39"/>
+    <collision time="4259.00" type="junction" lane=":cluster_5166436918_5166437831_5166437833_5166437839_0_0" pos="1.84" collider="moto342" victim="car1311" colliderType="moto" victimType="car" colliderSpeed="5.17" victimSpeed="8.39"/>
+    <collision time="7012.00" type="junction" lane=":cluster_5166436918_5166437831_5166437833_5166437839_0_0" pos="1.08" collider="car2235" victim="car2222" colliderType="car" victimType="car" colliderSpeed="4.99" victimSpeed="8.07"/>
+    <collision time="7013.00" type="junction" lane=":cluster_5166436918_5166437831_5166437833_5166437839_0_0" pos="1.08" collider="car2235" victim="car2222" colliderType="car" victimType="car" colliderSpeed="4.99" victimSpeed="8.07"/>
+    <collision time="7017.00" type="junction" lane=":cluster_5166436918_5166437831_5166437833_5166437839_0_0" pos="2.07" collider="moto576" victim="car2235" colliderType="moto" victimType="car" colliderSpeed="4.89" victimSpeed="7.24"/>
+    <collision time="7018.00" type="junction" lane=":cluster_5166436918_5166437831_5166437833_5166437839_0_0" pos="2.07" collider="moto576" victim="car2235" colliderType="moto" victimType="car" colliderSpeed="4.89" victimSpeed="7.24"/>
+    <collision time="7673.00" type="junction" lane=":8370180733_3_1" pos="33.95" collider="bus211" victim="car2496" colliderType="bus" victimType="car" colliderSpeed="3.04" victimSpeed="5.27"/>
+    <collision time="7674.00" type="junction" lane=":8370180733_3_1" pos="38.08" collider="bus211" victim="car2496" colliderType="bus" victimType="car" colliderSpeed="4.13" victimSpeed="2.86"/>
+    <collision time="7675.00" type="junction" lane=":8370180733_3_1" pos="38.08" collider="bus211" victim="car2496" colliderType="bus" victimType="car" colliderSpeed="4.13" victimSpeed="2.86"/>
+    <collision time="8349.00" type="junction" lane=":cluster_413678740_616235235_7_0" pos="10.68" collider="car2706" victim="car2703" colliderType="car" victimType="car" colliderSpeed="0.03" victimSpeed="9.26"/>
+    <collision time="8350.00" type="junction" lane=":cluster_413678740_616235235_7_0" pos="10.68" collider="car2706" victim="car2703" colliderType="car" victimType="car" colliderSpeed="0.03" victimSpeed="9.26"/>
+    <collision time="9007.00" type="junction" lane=":cluster_999955644_cluster_3025001860_999955730_4_0" pos="3.53" collider="car2956" victim="car2895" colliderType="car" victimType="car" colliderSpeed="14.85" victimSpeed="13.63"/>
+    <collision time="9008.00" type="junction" lane=":cluster_999955644_cluster_3025001860_999955730_4_0" pos="3.53" collider="car2956" victim="car2895" colliderType="car" victimType="car" colliderSpeed="14.85" victimSpeed="13.63"/>
+    <collision time="10564.00" type="junction" lane=":cluster_413678740_616235235_15_0" pos="26.12" collider="car3410" victim="car3392" colliderType="car" victimType="car" colliderSpeed="15.50" victimSpeed="4.21"/>
+    <collision time="10565.00" type="junction" lane=":cluster_413678740_616235235_15_0" pos="26.12" collider="car3410" victim="car3392" colliderType="car" victimType="car" colliderSpeed="15.50" victimSpeed="4.21"/>
+</collisions>

@@ -1,0 +1,135 @@
+{"t": 0, "evento": "HOSPITAL", "detalle": "VCM publico -> 208782596#1 | Avenida Del Paraíso | 102.2 m | stock 3"}
+{"t": 0, "evento": "HOSPITAL", "detalle": "IESS publico -> 357285817#5 | Circunvalación Sur | 117.8 m | stock 2"}
+{"t": 0, "evento": "HOSPITAL", "detalle": "MILITAR publico -> 334948974#1 | Avenida 12 de Abril | 26.7 m | stock 1"}
+{"t": 0, "evento": "HOSPITAL", "detalle": "MUNI_PATAMARCA publico -> 378364650#0 | Via Checa Chiquintad | 158.1 m | stock 2"}
+{"t": 0, "evento": "HOSPITAL", "detalle": "MUNI_VALLE publico -> 171302162#22 |  | 54.8 m | stock 1"}
+{"t": 0, "evento": "HOSPITAL", "detalle": "MONTE_SINAI privado -> 269103111#3 | Avenida Fray Vicente Solano | 29.0 m | stock 1"}
+{"t": 0, "evento": "HOSPITAL", "detalle": "DEL_RIO privado -> 40972441#0 | Avenida de las Américas | 88.7 m | stock 0"}
+{"t": 0, "evento": "AGENDA", "detalle": "15 instantes: [641, 911, 935, 2256, 3179, 5367, 5752, 6067, 6353, 6788, 8215, 9206, 9413, 9676, 10192]; flota=10"}
+{"t": 641.0, "evento": "IMPRUDENTE", "detalle": "imprudente_1_1 persigue a bus16; plan 1"}
+{"t": 647.0, "evento": "ACCIDENTE", "detalle": "ACC01 collision bus16 x imprudente_1_1 en 542537659#1", "accidente": "ACC01"}
+{"t": 647.0, "evento": "CANDIDATO", "detalle": "ACC01 MONTE_SINAI rango=1 ETA=263.7 stock=1 negativa_aleatoria"}
+{"t": 647.0, "evento": "CANDIDATO", "detalle": "ACC01 MILITAR rango=2 ETA=329.0 stock=1 negativa_aleatoria"}
+{"t": 647.0, "evento": "CANDIDATO", "detalle": "ACC01 VCM rango=3 ETA=423.8 stock=3 despacho"}
+{"t": 647.0, "evento": "DESPACHO", "detalle": "ACC01 <- VCM U01 | espera 0 s | 36 aristas, 5257 m, ETA 424 s"}
+{"t": 911.0, "evento": "IMPRUDENTE", "detalle": "imprudente_2_2 persigue a bus25; plan 2"}
+{"t": 917.0, "evento": "ACCIDENTE", "detalle": "ACC02 collision bus25 x imprudente_2_2 en 400672352#0", "accidente": "ACC02"}
+{"t": 917.0, "evento": "CANDIDATO", "detalle": "ACC02 VCM rango=1 ETA=113.0 stock=2 despacho"}
+{"t": 917.0, "evento": "DESPACHO", "detalle": "ACC02 <- VCM U02 | espera 0 s | 11 aristas, 1299 m, ETA 113 s"}
+{"t": 935.0, "evento": "IMPRUDENTE", "detalle": "imprudente_3_3 persigue a bus11; plan 3"}
+{"t": 941.0, "evento": "ACCIDENTE", "detalle": "ACC03 collision bus11 x imprudente_3_3 en 48908522#0", "accidente": "ACC03"}
+{"t": 941.0, "evento": "CANDIDATO", "detalle": "ACC03 VCM rango=1 ETA=190.8 stock=1 despacho"}
+{"t": 941.0, "evento": "DESPACHO", "detalle": "ACC03 <- VCM U03 | espera 0 s | 20 aristas, 2376 m, ETA 191 s"}
+{"t": 1027.0, "evento": "LLEGADA", "detalle": "ACC02 amb_U02_ACC02 | desplazamiento 110 s | desde accidente 110 s | carretera_50m"}
+{"t": 1146.0, "evento": "LLEGADA", "detalle": "ACC01 amb_U01_ACC01 | desplazamiento 499 s | desde accidente 499 s | carretera_50m"}
+{"t": 1147.0, "evento": "RETORNO", "detalle": "ACC02 amb_U02_ACC02 -> VCM"}
+{"t": 1148.0, "evento": "LLEGADA", "detalle": "ACC03 amb_U03_ACC03 | desplazamiento 207 s | desde accidente 207 s | carretera_50m"}
+{"t": 1254.0, "evento": "DISPONIBLE", "detalle": "U02 en VCM | ACC02 misión 337 s | stock=1"}
+{"t": 1259.0, "evento": "COLISION_FONDO", "detalle": "junction ('bus30', 'car216'); retirados=['bus30', 'car216']; protegidos=[]"}
+{"t": 1266.0, "evento": "RETORNO", "detalle": "ACC01 amb_U01_ACC01 -> VCM"}
+{"t": 1268.0, "evento": "RETORNO", "detalle": "ACC03 amb_U03_ACC03 -> VCM"}
+{"t": 1542.0, "evento": "DISPONIBLE", "detalle": "U03 en VCM | ACC03 misión 601 s | stock=2"}
+{"t": 1660.0, "evento": "DISPONIBLE", "detalle": "U01 en VCM | ACC01 misión 1013 s | stock=3"}
+{"t": 2256.0, "evento": "IMPRUDENTE", "detalle": "imprudente_4_4 persigue a bus53; plan 4"}
+{"t": 2269.0, "evento": "ACCIDENTE", "detalle": "ACC04 collision bus53 x imprudente_4_4 en 82898748", "accidente": "ACC04"}
+{"t": 2269.0, "evento": "CANDIDATO", "detalle": "ACC04 DEL_RIO rango=1 ETA=195.2 stock=0 sin_stock"}
+{"t": 2269.0, "evento": "CANDIDATO", "detalle": "ACC04 IESS rango=2 ETA=299.1 stock=2 despacho"}
+{"t": 2269.0, "evento": "DESPACHO", "detalle": "ACC04 <- IESS U04 | espera 0 s | 28 aristas, 5350 m, ETA 299 s"}
+{"t": 2702.0, "evento": "LLEGADA", "detalle": "ACC04 amb_U04_ACC04 | desplazamiento 433 s | desde accidente 433 s | carretera_50m"}
+{"t": 2822.0, "evento": "RETORNO", "detalle": "ACC04 amb_U04_ACC04 -> IESS"}
+{"t": 2961.0, "evento": "DISPONIBLE", "detalle": "U04 en IESS | ACC04 misión 692 s | stock=2"}
+{"t": 3179.0, "evento": "IMPRUDENTE", "detalle": "imprudente_5_5 persigue a bus87; plan 5"}
+{"t": 3197.0, "evento": "ACCIDENTE", "detalle": "ACC05 collision bus87 x imprudente_5_5 en 538111981#2", "accidente": "ACC05"}
+{"t": 3197.0, "evento": "CANDIDATO", "detalle": "ACC05 MUNI_VALLE rango=1 ETA=191.7 stock=1 despacho"}
+{"t": 3197.0, "evento": "DESPACHO", "detalle": "ACC05 <- MUNI_VALLE U09 | espera 0 s | 4 aristas, 4001 m, ETA 192 s"}
+{"t": 3352.0, "evento": "LLEGADA", "detalle": "ACC05 amb_U09_ACC05 | desplazamiento 155 s | desde accidente 155 s | carretera_50m"}
+{"t": 3472.0, "evento": "RETORNO", "detalle": "ACC05 amb_U09_ACC05 -> MUNI_VALLE"}
+{"t": 3612.0, "evento": "DISPONIBLE", "detalle": "U09 en MUNI_VALLE | ACC05 misión 415 s | stock=1"}
+{"t": 4219.0, "evento": "COLISION_FONDO", "detalle": "junction ('car1311', 'moto342'); retirados=['car1311', 'moto342']; protegidos=[]"}
+{"t": 4446.0, "evento": "COLISION_FONDO", "detalle": "junction ('car1387', 'car1397'); retirados=['car1387', 'car1397']; protegidos=[]"}
+{"t": 5367.0, "evento": "IMPRUDENTE", "detalle": "imprudente_6_6 persigue a bus142; plan 6"}
+{"t": 5377.0, "evento": "ACCIDENTE", "detalle": "ACC06 collision bus142 x imprudente_6_6 en 329974456", "accidente": "ACC06"}
+{"t": 5377.0, "evento": "CANDIDATO", "detalle": "ACC06 DEL_RIO rango=1 ETA=117.7 stock=0 sin_stock"}
+{"t": 5377.0, "evento": "CANDIDATO", "detalle": "ACC06 IESS rango=2 ETA=219.7 stock=2 despacho"}
+{"t": 5377.0, "evento": "DESPACHO", "detalle": "ACC06 <- IESS U05 | espera 0 s | 21 aristas, 4113 m, ETA 220 s"}
+{"t": 5577.0, "evento": "LLEGADA", "detalle": "ACC06 amb_U05_ACC06 | desplazamiento 200 s | desde accidente 200 s | carretera_50m"}
+{"t": 5697.0, "evento": "RETORNO", "detalle": "ACC06 amb_U05_ACC06 -> IESS"}
+{"t": 5752.0, "evento": "REPROGRAMAR", "detalle": "plan 7: sin bus apto; +20 s"}
+{"t": 5772.0, "evento": "IMPRUDENTE", "detalle": "imprudente_7_7 persigue a bus160; plan 7"}
+{"t": 5778.0, "evento": "ACCIDENTE", "detalle": "ACC07 collision bus160 x imprudente_7_7 en 48501816", "accidente": "ACC07"}
+{"t": 5778.0, "evento": "CANDIDATO", "detalle": "ACC07 VCM rango=1 ETA=226.3 stock=3 despacho"}
+{"t": 5778.0, "evento": "DESPACHO", "detalle": "ACC07 <- VCM U02 | espera 0 s | 21 aristas, 2596 m, ETA 226 s"}
+{"t": 5926.0, "evento": "DISPONIBLE", "detalle": "U05 en IESS | ACC06 misión 549 s | stock=2"}
+{"t": 6021.0, "evento": "LLEGADA", "detalle": "ACC07 amb_U02_ACC07 | desplazamiento 243 s | desde accidente 243 s | cola_misma_arista"}
+{"t": 6067.0, "evento": "IMPRUDENTE", "detalle": "imprudente_8_8 persigue a bus167; plan 8"}
+{"t": 6071.0, "evento": "ACCIDENTE", "detalle": "ACC08 collision bus167 x imprudente_8_8 en -48963737", "accidente": "ACC08"}
+{"t": 6071.0, "evento": "CANDIDATO", "detalle": "ACC08 MONTE_SINAI rango=1 ETA=260.7 stock=1 negativa_aleatoria"}
+{"t": 6071.0, "evento": "CANDIDATO", "detalle": "ACC08 MILITAR rango=2 ETA=320.8 stock=1 despacho"}
+{"t": 6071.0, "evento": "DESPACHO", "detalle": "ACC08 <- MILITAR U06 | espera 0 s | 32 aristas, 3402 m, ETA 321 s"}
+{"t": 6141.0, "evento": "RETORNO", "detalle": "ACC07 amb_U02_ACC07 -> VCM"}
+{"t": 6353.0, "evento": "ARISTA_NO_SERVIBLE", "detalle": "61429336#2: no hay ida y retorno emergency; no se programa un choque aquí"}
+{"t": 6353.0, "evento": "IMPRUDENTE", "detalle": "imprudente_9_9 persigue a bus169; plan 9"}
+{"t": 6359.0, "evento": "ACCIDENTE", "detalle": "ACC09 collision bus169 x imprudente_9_9 en 42143234#2", "accidente": "ACC09"}
+{"t": 6359.0, "evento": "CANDIDATO", "detalle": "ACC09 MONTE_SINAI rango=1 ETA=77.7 stock=1 despacho"}
+{"t": 6359.0, "evento": "DESPACHO", "detalle": "ACC09 <- MONTE_SINAI U10 | espera 0 s | 6 aristas, 945 m, ETA 78 s"}
+{"t": 6434.0, "evento": "LLEGADA", "detalle": "ACC09 amb_U10_ACC09 | desplazamiento 75 s | desde accidente 75 s | carretera_50m"}
+{"t": 6438.0, "evento": "DISPONIBLE", "detalle": "U02 en VCM | ACC07 misión 660 s | stock=3"}
+{"t": 6540.0, "evento": "LLEGADA", "detalle": "ACC08 amb_U06_ACC08 | desplazamiento 469 s | desde accidente 469 s | carretera_50m"}
+{"t": 6554.0, "evento": "RETORNO", "detalle": "ACC09 amb_U10_ACC09 -> MONTE_SINAI"}
+{"t": 6660.0, "evento": "RETORNO", "detalle": "ACC08 amb_U06_ACC08 -> MILITAR"}
+{"t": 6660.0, "evento": "DISPONIBLE", "detalle": "U10 en MONTE_SINAI | ACC09 misión 301 s | stock=1"}
+{"t": 6788.0, "evento": "REPROGRAMAR", "detalle": "plan 10: sin bus apto; +20 s"}
+{"t": 6808.0, "evento": "IMPRUDENTE", "detalle": "imprudente_10_10 persigue a bus185; plan 10"}
+{"t": 6818.0, "evento": "REPROGRAMAR", "detalle": "imprudente_10_10: intento expirado, vehículo ausente o pareja salió de la arista; +60 s"}
+{"t": 6878.0, "evento": "IMPRUDENTE", "detalle": "imprudente_10_11 persigue a bus190; plan 10"}
+{"t": 6884.0, "evento": "ACCIDENTE", "detalle": "ACC10 collision bus190 x imprudente_10_11 en 82898761#0", "accidente": "ACC10"}
+{"t": 6884.0, "evento": "CANDIDATO", "detalle": "ACC10 DEL_RIO rango=1 ETA=191.2 stock=0 sin_stock"}
+{"t": 6884.0, "evento": "CANDIDATO", "detalle": "ACC10 IESS rango=2 ETA=296.2 stock=2 despacho"}
+{"t": 6884.0, "evento": "DESPACHO", "detalle": "ACC10 <- IESS U04 | espera 0 s | 26 aristas, 4992 m, ETA 296 s"}
+{"t": 6998.0, "evento": "DISPONIBLE", "detalle": "U06 en MILITAR | ACC08 misión 927 s | stock=1"}
+{"t": 7021.0, "evento": "COLISION_FONDO", "detalle": "junction ('car2235', 'moto576'); retirados=['car2235', 'moto576']; protegidos=[]"}
+{"t": 7145.0, "evento": "LLEGADA", "detalle": "ACC10 amb_U04_ACC10 | desplazamiento 261 s | desde accidente 261 s | carretera_50m"}
+{"t": 7265.0, "evento": "RETORNO", "detalle": "ACC10 amb_U04_ACC10 -> IESS"}
+{"t": 7584.0, "evento": "DISPONIBLE", "detalle": "U04 en IESS | ACC10 misión 700 s | stock=2"}
+{"t": 7670.0, "evento": "COLISION_FONDO", "detalle": "junction ('bus211', 'car2496'); retirados=['bus211', 'car2496']; protegidos=[]"}
+{"t": 8215.0, "evento": "IMPRUDENTE", "detalle": "imprudente_11_12 persigue a bus219; plan 11"}
+{"t": 8222.0, "evento": "ACCIDENTE", "detalle": "ACC11 collision bus219 x imprudente_11_12 en -334948980", "accidente": "ACC11"}
+{"t": 8222.0, "evento": "CANDIDATO", "detalle": "ACC11 VCM rango=1 ETA=73.6 stock=3 despacho"}
+{"t": 8222.0, "evento": "DESPACHO", "detalle": "ACC11 <- VCM U03 | espera 0 s | 7 aristas, 799 m, ETA 74 s"}
+{"t": 8265.0, "evento": "LLEGADA", "detalle": "ACC11 amb_U03_ACC11 | desplazamiento 43 s | desde accidente 43 s | carretera_50m"}
+{"t": 8385.0, "evento": "RETORNO", "detalle": "ACC11 amb_U03_ACC11 -> VCM"}
+{"t": 8512.0, "evento": "DISPONIBLE", "detalle": "U03 en VCM | ACC11 misión 290 s | stock=3"}
+{"t": 9206.0, "evento": "IMPRUDENTE", "detalle": "imprudente_12_13 persigue a bus250; plan 12"}
+{"t": 9209.0, "evento": "COLISION_FONDO", "detalle": "collision ('car2956', 'imprudente_12_13'); retirados=['car2956', 'imprudente_12_13']; protegidos=[]"}
+{"t": 9209.0, "evento": "REPROGRAMAR", "detalle": "imprudente_12_13: intento expirado, vehículo ausente o pareja salió de la arista; +60 s"}
+{"t": 9269.0, "evento": "IMPRUDENTE", "detalle": "imprudente_12_14 persigue a bus253; plan 12"}
+{"t": 9277.0, "evento": "ACCIDENTE", "detalle": "ACC12 collision bus253 x imprudente_12_14 en 80676863#0", "accidente": "ACC12"}
+{"t": 9277.0, "evento": "CANDIDATO", "detalle": "ACC12 DEL_RIO rango=1 ETA=275.2 stock=0 sin_stock"}
+{"t": 9277.0, "evento": "CANDIDATO", "detalle": "ACC12 MUNI_PATAMARCA rango=2 ETA=278.9 stock=2 despacho"}
+{"t": 9277.0, "evento": "DESPACHO", "detalle": "ACC12 <- MUNI_PATAMARCA U07 | espera 0 s | 15 aristas, 5407 m, ETA 279 s"}
+{"t": 9413.0, "evento": "IMPRUDENTE", "detalle": "imprudente_13_15 persigue a bus257; plan 13"}
+{"t": 9417.0, "evento": "ACCIDENTE", "detalle": "ACC13 collision bus257 x imprudente_13_15 en 49217104#1", "accidente": "ACC13"}
+{"t": 9417.0, "evento": "CANDIDATO", "detalle": "ACC13 MILITAR rango=1 ETA=187.5 stock=1 despacho"}
+{"t": 9417.0, "evento": "DESPACHO", "detalle": "ACC13 <- MILITAR U06 | espera 0 s | 13 aristas, 1624 m, ETA 188 s"}
+{"t": 9595.0, "evento": "LLEGADA", "detalle": "ACC12 amb_U07_ACC12 | desplazamiento 318 s | desde accidente 318 s | carretera_50m"}
+{"t": 9603.0, "evento": "LLEGADA", "detalle": "ACC13 amb_U06_ACC13 | desplazamiento 186 s | desde accidente 186 s | carretera_50m"}
+{"t": 9676.0, "evento": "IMPRUDENTE", "detalle": "imprudente_14_16 persigue a bus249; plan 14"}
+{"t": 9682.0, "evento": "ACCIDENTE", "detalle": "ACC14 collision bus249 x imprudente_14_16 en 74346273#0", "accidente": "ACC14"}
+{"t": 9682.0, "evento": "CANDIDATO", "detalle": "ACC14 MUNI_PATAMARCA rango=1 ETA=324.5 stock=1 negativa_aleatoria"}
+{"t": 9682.0, "evento": "CANDIDATO", "detalle": "ACC14 DEL_RIO rango=2 ETA=332.2 stock=0 sin_stock"}
+{"t": 9682.0, "evento": "CANDIDATO", "detalle": "ACC14 VCM rango=3 ETA=389.9 stock=3 despacho"}
+{"t": 9682.0, "evento": "DESPACHO", "detalle": "ACC14 <- VCM U01 | espera 0 s | 47 aristas, 5494 m, ETA 390 s"}
+{"t": 9715.0, "evento": "RETORNO", "detalle": "ACC12 amb_U07_ACC12 -> MUNI_PATAMARCA"}
+{"t": 9723.0, "evento": "RETORNO", "detalle": "ACC13 amb_U06_ACC13 -> MILITAR"}
+{"t": 9940.0, "evento": "DISPONIBLE", "detalle": "U06 en MILITAR | ACC13 misión 523 s | stock=1"}
+{"t": 9987.0, "evento": "DISPONIBLE", "detalle": "U07 en MUNI_PATAMARCA | ACC12 misión 710 s | stock=2"}
+{"t": 10192.0, "evento": "IMPRUDENTE", "detalle": "imprudente_15_17 persigue a bus273; plan 15"}
+{"t": 10198.0, "evento": "ACCIDENTE", "detalle": "ACC15 collision bus273 x imprudente_15_17 en -329243314", "accidente": "ACC15"}
+{"t": 10198.0, "evento": "CANDIDATO", "detalle": "ACC15 VCM rango=1 ETA=93.0 stock=2 despacho"}
+{"t": 10198.0, "evento": "DESPACHO", "detalle": "ACC15 <- VCM U02 | espera 0 s | 8 aristas, 947 m, ETA 93 s"}
+{"t": 10271.0, "evento": "LLEGADA", "detalle": "ACC15 amb_U02_ACC15 | desplazamiento 73 s | desde accidente 73 s | carretera_50m"}
+{"t": 10315.0, "evento": "LLEGADA", "detalle": "ACC14 amb_U01_ACC14 | desplazamiento 633 s | desde accidente 633 s | carretera_50m"}
+{"t": 10391.0, "evento": "RETORNO", "detalle": "ACC15 amb_U02_ACC15 -> VCM"}
+{"t": 10435.0, "evento": "RETORNO", "detalle": "ACC14 amb_U01_ACC14 -> VCM"}
+{"t": 10528.0, "evento": "DISPONIBLE", "detalle": "U02 en VCM | ACC15 misión 330 s | stock=2"}
+{"t": 11014.0, "evento": "DISPONIBLE", "detalle": "U01 en VCM | ACC14 misión 1332 s | stock=3"}

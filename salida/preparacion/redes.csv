@@ -1,0 +1,3 @@
+red,aristas,nodos,semaforos,km_arista,km_carril,componentes_debiles,fraccion_aristas,fraccion_km
+cuenca_net.xml,34256,15405,337,3984.2801100000397,4331.324769999977,17,1.0,1.0
+cuenca_ciudad.net.xml,1745,1009,176,355.56300000000226,538.2072800000012,1,0.050939981317141524,0.08924146650924067

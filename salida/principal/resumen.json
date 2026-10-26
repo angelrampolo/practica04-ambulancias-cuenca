@@ -1,0 +1,47 @@
+{
+  "carpeta": "principal",
+  "semilla": 42,
+  "retorno": "cercano",
+  "tasa": 5,
+  "accidentes": 16,
+  "cerrados": 16,
+  "censurados": 0,
+  "respuesta_total": {
+    "n": 16,
+    "media": 359.125,
+    "mediana": 355.5,
+    "p90": 590.5,
+    "maximo": 648.0
+  },
+  "desplazamiento": {
+    "n": 16,
+    "media": 359.125,
+    "mediana": 355.5,
+    "p90": 590.5,
+    "maximo": 648.0
+  },
+  "espera": {
+    "n": 16,
+    "media": 0.0,
+    "mediana": 0.0,
+    "p90": 0.0,
+    "maximo": 0.0
+  },
+  "mision": {
+    "n": 16,
+    "media": 761.75,
+    "mediana": 769.0,
+    "p90": 1061.0,
+    "maximo": 1142.0
+  },
+  "migracion_pct": 62.5,
+  "rechazos": 9,
+  "flota": 10,
+  "teleports": 0,
+  "intentos": 18,
+  "planes_pendientes": 0,
+  "vehiculos_fondo_retirados": 34,
+  "running_final": 0,
+  "expected_final": 0,
+  "wall_seconds": 84.50900037399992
+}

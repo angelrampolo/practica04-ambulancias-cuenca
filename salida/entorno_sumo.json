@@ -1,0 +1,6 @@
+{
+  "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+  "sumo": "Eclipse SUMO sumo Version 1.12.0\n Build features: Linux-4.15.0-167-generic x86_64 GNU 11.2.0 None Proj GUI SWIG GDAL FFmpeg OSG GL2PS Eigen\n Copyright (C) 2001-2022 German Aerospace Center (DLR) and others; https://sumo.dlr.de\n\nEclipse SUMO sumo Version 1.12.0 is part of SUMO.\nThis program and the accompanying materials\nare made available under the terms of the Eclipse Public License v2.0\nwhich accompanies this distribution, and is available at\nhttp://www.eclipse.org/legal/epl-v20.html\nThis program may also be made available under the following Secondary\nLicenses when the conditions for such availability set forth in the Eclipse\nPublic License 2.0 are satisfied: GNU General Public License, version 2\nor later which is available at\nhttps://www.gnu.org/licenses/old-licenses/gpl-2.0-standalone.html\nSPDX-License-Identifier: EPL-2.0 OR GPL-2.0-or-later\n",
+  "sumo_sha256": "85e96297ec105f090ddb602131bed9d8644ed14c94c4f17da192a1af7edbd1ed",
+  "traci": "/usr/share/sumo/tools/traci/__init__.py"
+}

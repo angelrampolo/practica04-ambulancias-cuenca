@@ -1,0 +1,3 @@
+id,t_accidente,bus,moto,edge,pos,x,y,tipo_colision,plan_id,t_programado,estado,hospital_origen,hospital_retorno,unidad,vehiculo,t_despacho,t_llegada,t_retorno,t_disponible,eta_s,ruta_m,rango_hospital,criterio_llegada,espera_s,desplazamiento_s,respuesta_total_s,mision_s
+ACC01,513.0,bus9,imprudente_1_2,-144175337#11,425.8469713843375,14235.337057009798,6089.318280275561,collision,1,423,espera,,,,,-1,-1,-1,-1,-1,-1,0,,,,,
+ACC02,840.0,bus14,imprudente_2_4,-389741418,197.5668674618352,12143.712508422806,7343.751406427794,collision,2,758,espera,,,,,-1,-1,-1,-1,-1,-1,0,,,,,
